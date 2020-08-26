@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Ceiling Fan.ma
-//Last modified: Wed, Aug 26, 2020 08:51:00 AM
+//Last modified: Wed, Aug 26, 2020 09:13:39 AM
 //Codeset: 1252
 requires maya "2019";
 requires "mtoa" "3.1.2";
@@ -15,8 +15,8 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "9E3FD105-4F9E-468E-0B00-38A151C610EB";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 51.991645331316391 33.997409488959775 4.1873040501994545 ;
-	setAttr ".r" -type "double3" -24.338352731912185 -995.39999999899521 1.6898372576760535e-14 ;
+	setAttr ".t" -type "double3" -54.65452871833336 -14.807793255766356 20.449069377420695 ;
+	setAttr ".r" -type "double3" 23.061647263570197 -1147.4000000008741 -4.1381647056834668e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "CA8E76A1-431C-F9D0-461C-36BC0D7D7C78";
 	setAttr -k off ".v" no;
