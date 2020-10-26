@@ -1,14 +1,14 @@
 //Maya ASCII 2019 scene
 //Name: WalkWithPersonality.ma
-//Last modified: Wed, Oct 21, 2020 09:19:57 PM
+//Last modified: Mon, Oct 26, 2020 12:00:41 PM
 //Codeset: 1252
 requires maya "2019";
 requires -nodeType "displayPoints" "Type" "2.0a";
 requires "mtoa" "3.1.2";
 requires "stereoCamera" "10.0";
-requires "mtoa" "3.0.0.2";
+requires "mtoa" "3.1.2";
 requires "stereoCamera" "10.0";
-currentUnit -l centimeter -a degree -t pal;
+currentUnit -l centimeter -a degree -t film;
 fileInfo "application" "maya";
 fileInfo "product" "Maya 2019";
 fileInfo "version" "2019";
@@ -18,19 +18,19 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "A6FC49D6-4822-38C2-343E-23AF7F566F0D";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" -94.85624929940785 21.513833921628304 1.5289539499424427 ;
-	setAttr ".r" -type "double3" -5.1383527574563574 -91.800000000002129 -2.5444437451708134e-14 ;
-	setAttr ".rp" -type "double3" -1.3322676295501878e-15 -3.5527136788005009e-15 0 ;
-	setAttr ".rpt" -type "double3" -3.8114636435019768e-16 2.3019022557629855e-16 6.4943198917586076e-16 ;
+	setAttr ".t" -type "double3" -87.541797689678219 8.671564692639441 1.4115738354530087 ;
+	setAttr ".r" -type "double3" 3.8616472423597807 -450.59999999994193 0 ;
+	setAttr ".rp" -type "double3" 0 0 -7.1054273576010019e-15 ;
+	setAttr ".rpt" -type "double3" 3.4144885028528376e-15 1.1335095193850832e-16 2.5796112841070093e-15 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "62BF97A9-4F27-C5FD-2270-31831B6E62BF";
 	setAttr -k off ".v" no;
-	setAttr ".fl" 34.999999999999993;
-	setAttr ".coi" 85.162053268379509;
+	setAttr ".fl" 34.999999999999979;
+	setAttr ".coi" 93.287390484522305;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
-	setAttr ".tp" -type "double3" -0.056692102346033835 12.609266332395894 1.1283133726961232 ;
+	setAttr ".tp" -type "double3" 93.54145866303827 1.7763568394002505e-15 -4.7244341600602837 ;
 	setAttr ".hc" -type "string" "viewSet -p %camera";
 	setAttr -k on ".ai_translator" -type "string" "perspective";
 createNode transform -s -n "top";
@@ -17038,7 +17038,7 @@ createNode joint -n "Max__lKneeJ" -p "Max__lHipJ";
 	setAttr ".t" -type "double3" 5.7472016792470715 0 4.4408920985006262e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 0 -8.4859298709408879 ;
+	setAttr ".jo" -type "double3" 0 0 -8.4859298709408897 ;
 	setAttr ".bps" -type "matrix" 0.12827201314412928 -0.98926772000489882 -0.069969056019509548 0
 		 0.014634053352693088 -0.068656143066081865 0.99753304632065187 0 -0.99163104788344669 -0.12897950292817295 0.0056703349088511601 0
 		 2.1680777936557849 8.6804560994603754 0.12834527512484278 1;
@@ -17206,6 +17206,7 @@ createNode parentConstraint -n "Max__ROOTJ_parentConstraint1" -p "Max__ROOTJ";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 1.7763568394002505e-15 0 ;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr ".rst" -type "double3" 0 15.16195972886516 -0.31993379417754686 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -17232,7 +17233,7 @@ createNode parentConstraint -n "Max__Spine01J_parentConstraint1" -p "Max__Spine0
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 2.6857950513908455 -0.074888182403281087 4.3760097397583966 ;
 	setAttr ".rst" -type "double3" 0 17.131079661077059 -0.33314519985188923 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -17260,7 +17261,7 @@ createNode parentConstraint -n "Max__Spine02J_parentConstraint1" -p "Max__Spine0
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 7.03544644437783 -0.10313108472018871 0.047681975591923588 ;
 	setAttr ".rst" -type "double3" 0 19.100199593288956 -0.34635660552623132 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -17288,7 +17289,7 @@ createNode parentConstraint -n "Max__Spine03J_parentConstraint1" -p "Max__Spine0
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 8.3746483048005214 -0.11168624954000587 -1.2803732000658405 ;
 	setAttr ".rst" -type "double3" 0 21.069319525500855 -0.35956801120057341 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -17330,7 +17331,7 @@ createNode joint -n "Max__lElbowJ" -p "Max__lShoulderJ";
 	setAttr ".t" -type "double3" 3.5426486778406563 7.1054273576010019e-15 7.7715611723760958e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 2.8902471212950176 -17.369196107743218 -0.86348610584651786 ;
+	setAttr ".jo" -type "double3" 2.8902471212950176 -17.369196107743218 -0.86348610584651797 ;
 	setAttr ".bps" -type "matrix" 0.82695060066779036 -0.46013940037850309 0.32314770040105895 0
 		 0.4666931108266304 0.8822459057676475 0.061965329525357118 0 -0.3136084252091188 0.099568539085070448 0.94431766988779864 0
 		 6.5270933518983751 20.37723880359458 -0.47149154752502509 1;
@@ -17338,7 +17339,7 @@ createNode joint -n "Max__lWristJProxy" -p "Max__lElbowJ";
 	rename -uid "4E27CEC4-4DB3-A496-43DA-2FAB8CAC3AE4";
 	addAttr -ci true -sn "liw" -ln "lockInfluenceWeights" -min 0 -max 1 -at "bool";
 	setAttr ".t" -type "double3" 3.331727917927974 -7.1054273576010019e-15 1.7763568394002505e-15 ;
-	setAttr ".r" -type "double3" 2.9022561468354581e-14 4.9149509061990915e-14 -3.1407977479452215e-14 ;
+	setAttr ".r" -type "double3" 2.9022561468354581e-14 4.9149509061990922e-14 -3.1407977479452215e-14 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -5.528156633368285 5.5385027055939906 -5.7292469850824279 ;
@@ -17396,7 +17397,7 @@ createNode parentConstraint -n "Max__lClavicleJ_parentConstraint1" -p "Max__lCla
 		5.5511151231257827e-17 ;
 	setAttr ".tg[0].tor" -type "double3" 1.3318572728628474e-14 -5.5659706925611543e-15 
 		3.1805546814635168e-15 ;
-	setAttr ".lr" -type "double3" 6.361109362927032e-15 1.2722218725854067e-14 -1.5902773407317584e-14 ;
+	setAttr ".lr" -type "double3" -3.8802767113854903e-13 -1.2404163257707728e-13 -3.8166656177561785e-14 ;
 	setAttr ".rst" -type "double3" 0.093822377469933826 -0.00062948196796461242 -0.7986938768179388 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270335e-15 6.3611093629270335e-15 -3.5311250384401269e-31 ;
 	setAttr -l on ".int" 2;
@@ -17493,7 +17494,7 @@ createNode parentConstraint -n "Max__rClavicleJ_parentConstraint1" -p "Max__rCla
 	setAttr ".tg[0].tot" -type "double3" 0 -3.5527136788005009e-15 0 ;
 	setAttr ".tg[0].tor" -type "double3" -1.2678486098983943e-12 9.3269766033917636e-13 
 		6.9972202992197363e-14 ;
-	setAttr ".lr" -type "double3" 1.1863468961858923e-12 -9.3508307635027324e-13 -7.3152757673670563e-14 ;
+	setAttr ".lr" -type "double3" 8.4284699058783288e-13 -1.1068330291493025e-12 -1.1768052321415824e-13 ;
 	setAttr ".rst" -type "double3" 0.093822377469930274 -0.00062948196796414058 0.79869387681794313 ;
 	setAttr ".rsrr" -type "double3" 1.2626802085410166e-12 -9.3190252166880972e-13 -6.9972202992207637e-14 ;
 	setAttr -l on ".int" 2;
@@ -17517,7 +17518,7 @@ createNode parentConstraint -n "Max__SpineTopJ_parentConstraint1" -p "Max__Spine
 	setAttr ".tg[0].tot" -type "double3" 3.4512664603419266e-31 0 -1.3877787807814457e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -90.000000000000014 4.3255543667903831e-13 
 		90 ;
-	setAttr ".lr" -type "double3" -1.2722218725854067e-14 -4.5904625499721662e-29 -4.1347210859025719e-13 ;
+	setAttr ".lr" -type "double3" -0.82548174890526871 4.1273120790783349 -9.928972180279283 ;
 	setAttr ".rst" -type "double3" 1.9691642513193486 7.4940054162198066e-16 1.0930811434949873e-16 ;
 	setAttr ".rsrr" -type "double3" -1.2722218725854067e-14 -4.6610850507409676e-29 
 		-4.1983321795318423e-13 ;
@@ -17546,7 +17547,7 @@ createNode parentConstraint -n "Max__Neck01J_parentConstraint1" -p "Max__Neck01J
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.6312639453009066 0 0 ;
+	setAttr ".lr" -type "double3" 14.535277368735642 -0.13032028473715565 -4.2068982874234404 ;
 	setAttr ".rst" -type "double3" 0 23.479016495793047 -0.33708945842436761 ;
 	setAttr ".rsrr" -type "double3" 4.6312639453009066 0 0 ;
 	setAttr -l on ".int" 2;
@@ -17574,7 +17575,7 @@ createNode parentConstraint -n "Max__Neck02J_parentConstraint1" -p "Max__Neck02J
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.6312639453009501 0 0 ;
+	setAttr ".lr" -type "double3" 14.535277368735375 -0.13032028473715568 -4.2068982874234395 ;
 	setAttr ".rst" -type "double3" 0 23.919593533873343 -0.30139949997381987 ;
 	setAttr ".rsrr" -type "double3" 4.6312639453009057 0 0 ;
 	setAttr -l on ".int" 2;
@@ -17602,7 +17603,7 @@ createNode parentConstraint -n "Max__Neck03J_parentConstraint1" -p "Max__Neck03J
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.6312639453009057 0 0 ;
+	setAttr ".lr" -type "double3" 14.535277368735469 -0.13032028473715568 -4.2068982874234431 ;
 	setAttr ".rst" -type "double3" 0 24.360170571953635 -0.26570954152327214 ;
 	setAttr ".rsrr" -type "double3" 4.6312639453009057 0 0 ;
 	setAttr -l on ".int" 2;
@@ -17723,7 +17724,7 @@ createNode orientConstraint -n "Max__Spine01CurveCG_orientConstraint1" -p "Max__
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 2.685795051390846 -0.074888182403281114 4.3760097397583984 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -17847,7 +17848,7 @@ createNode orientConstraint -n "Max__Spine02CurveCG_orientConstraint1" -p "Max__
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 7.0354464443778282 -0.10313108472018866 0.04768197559192356 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -17972,7 +17973,7 @@ createNode orientConstraint -n "Max__Spine03CurveCG_orientConstraint1" -p "Max__
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 8.3746483048005214 -0.11168624954000582 -1.2803732000658405 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -18097,7 +18098,7 @@ createNode orientConstraint -n "Max__Neck01CurveCG_orientConstraint1" -p "Max__N
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 4.6312639453009066 0 0 ;
+	setAttr ".lr" -type "double3" 14.535277368735649 -0.13032028473715557 -4.2068982874234386 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -18222,7 +18223,7 @@ createNode orientConstraint -n "Max__Neck02CurveCG_orientConstraint1" -p "Max__N
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 4.6312639453009501 0 0 ;
+	setAttr ".lr" -type "double3" 14.535277368735375 -0.13032028473715568 -4.2068982874234377 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -18347,7 +18348,7 @@ createNode orientConstraint -n "Max__Neck03CurveCG_orientConstraint1" -p "Max__N
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 4.6312639453009057 0 0 ;
+	setAttr ".lr" -type "double3" 14.535277368735466 -0.13032028473715557 -4.2068982874234395 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -18386,6 +18387,7 @@ createNode parentConstraint -n "Max__SpineSplineBtm_ClusterG_parentConstraint1" 
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 -1.7763568394002505e-15 0 ;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr ".rst" -type "double3" 0 -1.7763568394002505e-15 0 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -18432,6 +18434,7 @@ createNode parentConstraint -n "Max__SpineSplineMid_ClusterG_parentConstraint1" 
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 -3.5527136788005009e-15 -1.3877787807814457e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.9040134234346962 -0.13032028473715573 -4.2068982874234297 ;
 	setAttr ".rst" -type "double3" 0 0 -5.5511151231257827e-17 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -18469,6 +18472,7 @@ createNode parentConstraint -n "Max__SpineSplineTop_ClusterG_parentConstraint1" 
 	setAttr ".tg[0].tot" -type "double3" -2.1862606951770238e-16 -3.5527136788005009e-15 
 		8.3266726846886741e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.9040134234346944 -0.13032028473715568 -4.2068982874234351 ;
 	setAttr ".rst" -type "double3" -2.4651903288156619e-32 -3.5527136788005009e-15 0 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -18506,6 +18510,7 @@ createNode parentConstraint -n "Max__NeckSplineBtm_ClusterG_parentConstraint1" -
 	setAttr ".tg[0].tot" -type "double3" -2.1862606951770238e-16 -3.5527136788005009e-15 
 		8.3266726846886741e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.9040134234346944 -0.13032028473715568 -4.2068982874234351 ;
 	setAttr ".rst" -type "double3" -2.4651903288156619e-32 -3.5527136788005009e-15 0 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -18552,7 +18557,7 @@ createNode parentConstraint -n "Max__NeckSplineMid_ClusterG_parentConstraint1" -
 	setAttr ".tg[0].tot" -type "double3" -1.8553283597709338e-16 -3.5527136788005009e-15 
 		1.3322676295501878e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -4.6312639453009057 0 0 ;
-	setAttr ".lr" -type "double3" 2.3854160110976376e-15 0 0 ;
+	setAttr ".lr" -type "double3" 9.9040134234346873 -0.13032028473715535 -4.2068982874234386 ;
 	setAttr ".rst" -type "double3" 0 0 -4.4408920985006262e-16 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -18588,6 +18593,7 @@ createNode parentConstraint -n "Max__NeckSplineTop_ClusterG_parentConstraint1" -
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -7.906878666680031e-17 3.5527136788005009e-15 
 		1.4710455076283324e-15 ;
+	setAttr ".lr" -type "double3" 9.9040134234346819 -0.13032028473715548 -4.2068982874234422 ;
 	setAttr ".rst" -type "double3" 0 3.5527136788005009e-15 -8.3266726846886741e-17 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -18651,7 +18657,7 @@ createNode parentConstraint -n "Max__Neck01FKCG_parentConstraint1" -p "Max__Neck
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 2.013879111453778e-17 0.44032767315283294 0.038645049794436115 ;
-	setAttr ".tg[0].tor" -type "double3" 5.0156724398975037 0 0 ;
+	setAttr ".tg[0].tor" -type "double3" 5.0156724398975046 0 0 ;
 	setAttr ".lr" -type "double3" 4.6312639453009057 0 0 ;
 	setAttr ".rst" -type "double3" 2.3876486063224014e-16 23.479016495793044 -0.3370894584243686 ;
 	setAttr ".rsrr" -type "double3" 4.6312639453009057 0 0 ;
@@ -18675,7 +18681,7 @@ createNode orientConstraint -n "Max__Neck01FKCG_orientConstraint1" -p "Max__Neck
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380955 -0.13032028473715557 -4.2068982874234351 ;
 	setAttr ".o" -type "double3" 5.0156724398975054 0 0 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -18748,7 +18754,7 @@ createNode parentConstraint -n "Max__Neck02FKCG_parentConstraint1" -p "Max__Neck
 	setAttr ".tg[0].tot" -type "double3" -5.3232024655146753e-17 0.44202024797265693 
 		0 ;
 	setAttr ".tg[0].tor" -type "double3" -3.1805546814635176e-15 0 0 ;
-	setAttr ".lr" -type "double3" 4.6312639453009083 0 0 ;
+	setAttr ".lr" -type "double3" 14.535277368735601 -0.13032028473715535 -4.2068982874234369 ;
 	setAttr ".rst" -type "double3" 0 -3.5527136788005009e-15 4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" 4.6312639453009083 0 0 ;
 	setAttr -l on ".int" 2;
@@ -18817,7 +18823,7 @@ createNode parentConstraint -n "Max__Neck03FKCG_parentConstraint1" -p "Max__Neck
 	setAttr ".tg[0].tot" -type "double3" -5.3232024655146358e-17 0.44202024797265338 
 		-4.4408920985006262e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -3.1805546814635176e-15 0 0 ;
-	setAttr ".lr" -type "double3" 4.6312639453009083 0 0 ;
+	setAttr ".lr" -type "double3" 14.535277368735597 -0.13032028473715526 -4.2068982874234377 ;
 	setAttr ".rst" -type "double3" -2.4651903288156619e-32 0 2.7755575615628914e-16 ;
 	setAttr ".rsrr" -type "double3" 4.6312639453009083 0 0 ;
 	setAttr -l on ".int" 2;
@@ -18857,7 +18863,7 @@ createNode parentConstraint -n "Max__HeadJ_parentConstraint1" -p "Max__HeadJ";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -3.6977854932234928e-32 0 1.9428902930940239e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -90 -1.1927080055488187e-14 90 ;
-	setAttr ".lr" -type "double3" -2.5444437451708128e-14 -2.5444437451708128e-14 5.6498000615042002e-30 ;
+	setAttr ".lr" -type "double3" -0.85319882379946188 4.121680962474235 -9.929928986043242 ;
 	setAttr ".rst" -type "double3" 0.44202024797265693 4.4408920985006262e-16 9.7827754359579706e-17 ;
 	setAttr ".rsrr" -type "double3" 9.6623808110310401e-15 2.7924322517142735e-15 1.033680271475643e-14 ;
 	setAttr -l on ".int" 2;
@@ -19162,6 +19168,7 @@ createNode parentConstraint -n "Max__MainHipCG_parentConstraint1" -p "Max__MainH
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 -1.7763568394002505e-15 0 ;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr ".rst" -type "double3" 0 15.161959728865158 -0.31993379417754686 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -19248,7 +19255,7 @@ createNode parentConstraint -n "Max__SpineMidIKCG_parentConstraint1" -p "Max__Sp
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380991 -0.13032028473715571 -4.2068982874234289 ;
 	setAttr ".rst" -type "double3" 0 19.100199593288956 -0.34635660552623104 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -19311,7 +19318,7 @@ createNode parentConstraint -n "Max__Spine01FKCG_parentConstraint1" -p "Max__Spi
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 1.969119932211898 -0.013211405674342092 ;
 	setAttr ".tg[0].tor" -type "double3" -0.38440849459659826 0 0 ;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" -0.38440849459659815 0 15.609707607570371 ;
 	setAttr ".rst" -type "double3" 0 17.131079661077059 -0.33314519985188895 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -19378,7 +19385,7 @@ createNode parentConstraint -n "Max__Spine02FKCG_parentConstraint1" -p "Max__Spi
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 1.969164251319345 -1.50712775592865e-14 ;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" -0.36164449345111016 -0.13032028473715571 -4.2068982874234271 ;
 	setAttr ".rst" -type "double3" 0 0 -5.5511151231257827e-17 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -19445,7 +19452,7 @@ createNode parentConstraint -n "Max__Spine03FKCG_parentConstraint1" -p "Max__Spi
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.0931303475885103e-16 1.969164251319345 -1.5515366769136563e-14 ;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380991 -0.13032028473715571 -4.2068982874234289 ;
 	setAttr ".rst" -type "double3" 0 -3.5527136788005009e-15 -5.5511151231257827e-17 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -19512,7 +19519,7 @@ createNode parentConstraint -n "Max__SpineTopFKCG_parentConstraint1" -p "Max__Sp
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.0931303475885102e-16 1.9691642513193521 -1.5293322164211531e-14 ;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380973 -0.1303202847371556 -4.2068982874234297 ;
 	setAttr ".rst" -type "double3" 2.1862606951770206e-16 23.038439457712755 -0.37277941687491606 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -19581,6 +19588,7 @@ createNode parentConstraint -n "Max__HeadFKCG_parentConstraint1" -p "Max__HeadFK
 	setAttr ".tg[0].tot" -type "double3" -5.3232024655146728e-17 0.44202024797265693 
 		-4.4408920985006262e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -4.6312639453009083 0 0 ;
+	setAttr ".lr" -type "double3" 9.9040134234346855 -0.13032028473715518 -4.2068982874234386 ;
 	setAttr ".rst" -type "double3" 7.9068786666800297e-17 24.80074761003393 -0.23001958307272594 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -19753,6 +19761,7 @@ createNode orientConstraint -n "Max__HeadCG_orientConstraint1" -p "Max__HeadCG";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
+	setAttr ".lr" -type "double3" 9.9040134234346819 -0.13032028473715537 -4.2068982874234404 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -19866,7 +19875,7 @@ createNode parentConstraint -n "Max__NeckMidIKCG_parentConstraint1" -p "Max__Nec
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.6312639453009083 0 0 ;
+	setAttr ".lr" -type "double3" 14.535277368735597 -0.13032028473715526 -4.2068982874234377 ;
 	setAttr ".rst" -type "double3" 1.8553283597709338e-16 23.919593533873346 -0.30139949997382121 ;
 	setAttr ".rsrr" -type "double3" 4.6312639453009057 0 0 ;
 	setAttr -l on ".int" 2;
@@ -20089,7 +20098,7 @@ createNode orientConstraint -n "Max__SpineTopIKCG_orientConstraint1" -p "Max__Sp
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380955 -0.13032028473715562 -4.2068982874234324 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -20213,6 +20222,7 @@ createNode orientConstraint -n "Max__SpineBtm01JIK_orientConstraint1" -p "Max__S
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -20243,7 +20253,7 @@ createNode parentConstraint -n "Max__SpineMidJIK_parentConstraint1" -p "Max__Spi
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380991 -0.13032028473715576 -4.2068982874234297 ;
 	setAttr ".rst" -type "double3" 0 9.699647746749287 -0.17589015507171166 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -20295,7 +20305,7 @@ createNode orientConstraint -n "Max__SpineTopJIK_orientConstraint1" -p "Max__Spi
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380973 -0.13032028473715551 -4.2068982874234351 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -20351,7 +20361,7 @@ createNode orientConstraint -n "Max__NeckBtm01JIK_orientConstraint1" -p "Max__Ne
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380955 -0.13032028473715557 -4.2068982874234351 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -20381,7 +20391,7 @@ createNode parentConstraint -n "Max__NeckMidJIK_parentConstraint1" -p "Max__Neck
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.6312639453009083 0 0 ;
+	setAttr ".lr" -type "double3" 14.53527736873559 -0.13032028473715526 -4.2068982874234377 ;
 	setAttr ".rst" -type "double3" 4.1973831929204171e-16 54.114248484275642 -0.68186808490381057 ;
 	setAttr ".rsrr" -type "double3" 4.6312639453009057 0 0 ;
 	setAttr -l on ".int" 2;
@@ -20431,6 +20441,7 @@ createNode orientConstraint -n "Max__NeckTopJIK_orientConstraint1" -p "Max__Neck
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
+	setAttr ".lr" -type "double3" 9.9040134234346819 -0.13032028473715548 -4.2068982874234422 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -20506,6 +20517,7 @@ createNode parentConstraint -n "Max__JawCG_parentConstraint1" -p "Max__JawCG";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.4791141972893971e-31 5.5511151231257827e-17 
 		0 ;
+	setAttr ".lr" -type "double3" 9.9040134234346819 -0.13032028473715548 -4.2068982874234422 ;
 	setAttr ".rst" -type "double3" -3.06107469658625e-16 24.985561369286639 0.8014925620966783 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -20613,10 +20625,10 @@ createNode parentConstraint -n "Max__lLegSwitchCG_parentConstraint1" -p "Max__lL
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.9514947536841014e-16 -1.3906297280402955e-16 
-		2.8213193030617e-31 ;
+		2.8213193030617005e-31 ;
 	setAttr ".tg[0].tor" -type "double3" -5.9981356595380034e-13 81.768709758566416 
 		51.223511674591393 ;
-	setAttr ".lr" -type "double3" 7.9810297341293229e-07 -5.1834491390811532 -8.9537775902759383e-07 ;
+	setAttr ".lr" -type "double3" 45.863780442246679 -5.5320979750761907 -1.5965831702833131 ;
 	setAttr ".rst" -type "double3" 3.0380025865850766 1.9713678917065127 -0.34617546771961438 ;
 	setAttr ".rsrr" -type "double3" 5.4712453676351278e-13 13.270998693137425 -3.5940593519587787e-15 ;
 	setAttr -l on ".int" 2;
@@ -20748,10 +20760,10 @@ createNode parentConstraint -n "Max__lFootIKCG_parentConstraint1" -p "Max__lFoot
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.0380025865850766 0 -0.34617546771961449 ;
-	setAttr ".tg[0].tor" -type "double3" 0 19.554683677027121 0 ;
+	setAttr ".tg[0].tor" -type "double3" 0 19.554683677027125 0 ;
 	setAttr ".lr" -type "double3" 0 19.554683677027121 0 ;
 	setAttr ".rst" -type "double3" 3.0380025865850766 0 -0.34617546771961449 ;
-	setAttr ".rsrr" -type "double3" 0 19.554683677027121 0 ;
+	setAttr ".rsrr" -type "double3" 0 19.554683677027125 0 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lKneeIKCG" -p "Max__MainC";
@@ -21110,9 +21122,9 @@ createNode parentConstraint -n "Max__lBallFKCG_parentConstraint1" -p "Max__lBall
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.9713678917065121 1.5750264891478984 -0.16541588040120114 ;
 	setAttr ".tg[0].tor" -type "double3" 0 1.0696652434174863 89.999999999999986 ;
-	setAttr ".lr" -type "double3" 1.9923933771852541e-14 -73.42350960814143 -8.7617940594636669e-15 ;
+	setAttr ".lr" -type "double3" 1.9814132953334921e-14 -73.423509608141401 15.609707607570396 ;
 	setAttr ".rst" -type "double3" 3.6184854132888167 1.1102230246251565e-16 1.1272934131558845 ;
-	setAttr ".rsrr" -type "double3" 8.3668930974945943e-15 -73.423509608141444 6.4871290304031911e-15 ;
+	setAttr ".rsrr" -type "double3" 8.3668930974945943e-15 -73.423509608141458 6.4871290304031911e-15 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lAnkleFKCG" -p "Max__MainC";
@@ -21153,7 +21165,7 @@ createNode nurbsCurve -n "Max__lAnkleFKCShape" -p "Max__lAnkleFKC";
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
 		7.5146843445203448e-17 1.2272410869407182 -1.227241086940718
-		6.5073864188354384e-33 1.7355809894530616 -1.062736851697344e-16
+		6.5073864188354384e-33 1.7355809894530616 -1.0627368516973441e-16
 		-7.5146843445203448e-17 1.2272410869407178 1.227241086940718
 		-1.0627368516973443e-16 8.9972824973882598e-17 1.7355809894530623
 		-7.5146843445203448e-17 -1.227241086940718 1.227241086940718
@@ -21161,7 +21173,7 @@ createNode nurbsCurve -n "Max__lAnkleFKCShape" -p "Max__lAnkleFKC";
 		7.5146843445203448e-17 -1.2272410869407178 -1.227241086940718
 		1.0627368516973443e-16 -2.3668056673654917e-16 -1.7355809894530623
 		7.5146843445203448e-17 1.2272410869407182 -1.227241086940718
-		6.5073864188354384e-33 1.7355809894530616 -1.062736851697344e-16
+		6.5073864188354384e-33 1.7355809894530616 -1.0627368516973441e-16
 		-7.5146843445203448e-17 1.2272410869407178 1.227241086940718
 		;
 createNode parentConstraint -n "Max__lAnkleFKCG_parentConstraint1" -p "Max__lAnkleFKCG";
@@ -21181,7 +21193,7 @@ createNode parentConstraint -n "Max__lAnkleFKCG_parentConstraint1" -p "Max__lAnk
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 6.7818700888752348 -0.0041230476036093755 1.7581270023159234e-05 ;
 	setAttr ".tg[0].tor" -type "double3" 8.6686882574016302 -6.5642943743174849 1.9285197998389878 ;
-	setAttr ".lr" -type "double3" 90.000000000000014 -90 -15.506825148441068 ;
+	setAttr ".lr" -type "double3" 85.730341744899548 -73.830908904363895 -14.921320342065686 ;
 	setAttr ".rst" -type "double3" 3.038002586585077 1.9713678917065121 -0.34617546771961438 ;
 	setAttr ".rsrr" -type "double3" 90.000000000000014 -90 -15.506825148441072 ;
 	setAttr -l on ".int" 2;
@@ -21254,7 +21266,7 @@ createNode parentConstraint -n "Max__lKneeFKCG_parentConstraint1" -p "Max__lKnee
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 5.7472016792470697 2.7791692662596329e-15 -3.1114649073825558e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 0.49397035034460823 -0.07266001930043707 -8.4310658248999335 ;
-	setAttr ".lr" -type "double3" 90.994871044759549 -83.629527607910575 -24.336575063370592 ;
+	setAttr ".lr" -type "double3" 84.006144774311238 -66.549268384583229 -23.65031758318187 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.704862343484173 0.08677499146560741 ;
 	setAttr ".rsrr" -type "double3" 90.994871044759549 -83.629527607910575 -24.336575063370592 ;
 	setAttr -l on ".int" 2;
@@ -21319,7 +21331,7 @@ createNode parentConstraint -n "Max__lHipFKCG_parentConstraint1" -p "Max__lHipFK
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.4265324295505233 -0.80000000000000249 0 ;
-	setAttr ".tg[0].tor" -type "double3" 81.785198135669773 -79.844778899025371 -23.605837088151723 ;
+	setAttr ".tg[0].tor" -type "double3" 81.785198135669773 -79.844778899025371 -23.605837088151727 ;
 	setAttr ".lr" -type "double3" 81.785198135669788 -79.844778899025385 -23.605837088151727 ;
 	setAttr ".rst" -type "double3" 1.4265324295505233 14.361959728865157 -0.31993379417754686 ;
 	setAttr ".rsrr" -type "double3" 81.785198135669788 -79.844778899025385 -23.605837088151727 ;
@@ -21345,8 +21357,8 @@ createNode parentConstraint -n "Max__lHipFKCG_parentConstraint2" -p "Max__lHipFK
 	setAttr ".tg[0].tot" -type "double3" 1.4265324295505233 -0.80000000000000249 0 ;
 	setAttr ".tg[0].tor" -type "double3" 81.785198135669802 -79.8447788990254 -23.605837088151727 ;
 	setAttr ".tg[1].tot" -type "double3" 1.4265324295505233 14.361959728865157 -0.31993379417754686 ;
-	setAttr ".tg[1].tor" -type "double3" 81.785198135669773 -79.844778899025371 -23.605837088151723 ;
-	setAttr ".lr" -type "double3" 81.785198135669802 -79.8447788990254 -23.605837088151727 ;
+	setAttr ".tg[1].tor" -type "double3" 81.785198135669773 -79.844778899025371 -23.605837088151727 ;
+	setAttr ".lr" -type "double3" 75.541097299108912 -63.324506627631258 -20.514369303011367 ;
 	setAttr ".rst" -type "double3" 1.4265324295505233 14.361959728865155 -0.31993379417754686 ;
 	setAttr ".rsrr" -type "double3" 81.785198135669802 -79.8447788990254 -23.605837088151727 ;
 	setAttr -l on ".int";
@@ -21380,7 +21392,7 @@ createNode orientConstraint -n "Max__lHipFKtoIKOrientLctr_orientConstraint1" -p 
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" 1.2722218725854078e-14 4.1347210859025715e-14 2.8624992133171654e-14 ;
+	setAttr ".rsrr" -type "double3" 1.2722218725854078e-14 4.1347210859025721e-14 2.8624992133171654e-14 ;
 	setAttr -l on ".int";
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lArmSwitchCG" -p "Max__MainC";
@@ -21510,9 +21522,9 @@ createNode parentConstraint -n "Max__lArmSwitchCG_parentConstraint1" -p "Max__lA
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 8.8817841970012523e-16 -3.5527136788005017e-15 
 		4.4408920985006252e-16 ;
-	setAttr ".tg[0].tor" -type "double3" -1.9974653103669427e-17 3.1805546814635176e-15 
+	setAttr ".tg[0].tor" -type "double3" -1.997465310366943e-17 3.1805546814635176e-15 
 		-3.1805546814635176e-15 ;
-	setAttr ".lr" -type "double3" -108.95671106497636 -24.021022834361613 105.95016167354838 ;
+	setAttr ".lr" -type "double3" -66.687458002551466 -103.84402162280817 -13.125266693502295 ;
 	setAttr ".rst" -type "double3" 9.2822677548905634 18.844179517214879 0.60514866751540597 ;
 	setAttr ".rsrr" -type "double3" 8.1562803617257228e-16 -12.869722718328671 -34.556866647492669 ;
 	setAttr -l on ".int" 2;
@@ -21909,7 +21921,7 @@ createNode parentConstraint -n "Max__lWristIKCG_parentConstraint1" -p "Max__lWri
 	setAttr ".tg[3].tor" -type "double3" 0 -12.869722718328671 -34.556866647492669 ;
 	setAttr ".lr" -type "double3" 0 -12.869722718328669 -34.556866647492669 ;
 	setAttr ".rst" -type "double3" 9.2822677548905634 18.844179517214876 0.60514866751540564 ;
-	setAttr ".rsrr" -type "double3" 0 -12.869722718328669 -34.556866647492669 ;
+	setAttr ".rsrr" -type "double3" 0 -12.869722718328671 -34.556866647492669 ;
 	setAttr -l on ".int" 0;
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
@@ -21982,7 +21994,7 @@ createNode nurbsCurve -n "Max__lWristFKCShape" -p "Max__lWristFKC";
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
 		1.8231848242515553e-15 1.1447038005439485 -1.1447038005439485
-		1.692916635385466e-15 1.6188556396292777 -2.7283841266725118e-16
+		1.6929166353854662e-15 1.6188556396292777 -2.7283841266725118e-16
 		1.5334841555160754e-15 1.1447038005439483 1.144703800543948
 		1.4382807690680966e-15 9.2346562873712601e-17 1.6188556396292775
 		1.463075328638909e-15 -1.1447038005439485 1.144703800543948
@@ -21990,7 +22002,7 @@ createNode nurbsCurve -n "Max__lWristFKCShape" -p "Max__lWristFKC";
 		1.7527759973743885e-15 -1.1447038005439483 -1.1447038005439485
 		1.8479793838223674e-15 -2.291875726410595e-16 -1.6188556396292779
 		1.8231848242515553e-15 1.1447038005439485 -1.1447038005439485
-		1.692916635385466e-15 1.6188556396292777 -2.7283841266725118e-16
+		1.6929166353854662e-15 1.6188556396292777 -2.7283841266725118e-16
 		1.5334841555160754e-15 1.1447038005439483 1.144703800543948
 		;
 createNode parentConstraint -n "Max__lWristFKCG_parentConstraint1" -p "Max__lWristFKCG";
@@ -22010,7 +22022,7 @@ createNode parentConstraint -n "Max__lWristFKCG_parentConstraint1" -p "Max__lWri
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.331727917927974 -1.0652221672471583e-14 -2.4798306245363326e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -5.5281566333682521 5.5385027055940403 -5.7292469850824848 ;
-	setAttr ".lr" -type "double3" -13.052241490076693 -155.97897737469427 -74.049838736206297 ;
+	setAttr ".lr" -type "double3" -77.235096575479815 -103.84402191777347 -13.125266414228477 ;
 	setAttr ".rst" -type "double3" 9.2822677548905634 18.844179517214879 0.6051486675154053 ;
 	setAttr ".rsrr" -type "double3" 4.8937682170354333e-15 -12.869722718328671 -34.556866647492669 ;
 	setAttr -l on ".int" 2;
@@ -22116,7 +22128,7 @@ createNode parentConstraint -n "Max__lElbowFKCG_parentConstraint1" -p "Max__lElb
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.5426486778406576 1.8855565584114113e-17 3.603076490287838e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 2.8902471212950074 -17.369196107743218 -0.86348610584650598 ;
-	setAttr ".lr" -type "double3" 8.297853530837088 -52.786319996886789 -89.200416575957021 ;
+	setAttr ".lr" -type "double3" 7.4910347313754366 -1.8824167731694597 -85.56834345222093 ;
 	setAttr ".rst" -type "double3" 6.5270933518983787 20.377238803594576 -0.47149154752502448 ;
 	setAttr ".rsrr" -type "double3" 3.7543183896068322 -18.853391683874886 -29.092837142117347 ;
 	setAttr -l on ".int" 2;
@@ -22208,9 +22220,9 @@ createNode parentConstraint -n "Max__lShoulderFKCG_parentConstraint1" -p "Max__l
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 2.8278722534607028 3.5122013592020927e-15 1.1747650570372882e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 2.7758725319957791 -5.2128270471250318 -5.3276950067126752 ;
-	setAttr ".lr" -type "double3" 0.7954940010865087 -1.4981947905905368 -27.97111666007785 ;
+	setAttr ".lr" -type "double3" 0.79549400108650881 -1.4981947905905368 -27.97111666007785 ;
 	setAttr ".rst" -type "double3" 3.399351792415541 22.038266545141724 -0.5641156993474048 ;
-	setAttr ".rsrr" -type "double3" 0.7954940010865087 -1.4981947905905368 -27.97111666007785 ;
+	setAttr ".rsrr" -type "double3" 0.79549400108650881 -1.4981947905905368 -27.97111666007785 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lShoulderFKtoIKOrientLctr" -p "Max__lShoulderFKCG";
@@ -22268,9 +22280,9 @@ createNode parentConstraint -n "Max__lShoulderFKCG2_parentConstraint1" -p "Max__
 	setAttr ".tg[0].tor" -type "double3" 0.38440849459659826 0 0 ;
 	setAttr ".tg[1].tot" -type "double3" 2.8278722534607006 -3.5527136788005009e-15 
 		9.4368957093138306e-16 ;
-	setAttr ".tg[1].tor" -type "double3" 2.6121217366066307e-13 -4.2077988619949771 
-		22.759408104179471 ;
+	setAttr ".tg[1].tor" -type "double3" 2.6121217366066307e-13 -4.207798861994978 22.759408104179471 ;
 	setAttr ".tg[2].tot" -type "double3" 3.399351792415541 22.038266545141724 -0.56411569934740469 ;
+	setAttr ".lr" -type "double3" 9.9040134234346944 -0.13032028473715568 -4.2068982874234351 ;
 	setAttr ".rst" -type "double3" -4.4408920985006262e-16 0 2.2204460492503131e-16 ;
 	setAttr ".rsrr" -type "double3" -8.7034553627131852e-14 3.8928664069996247e-16 1.0746796091663833e-15 ;
 	setAttr -l on ".int" 2;
@@ -22355,7 +22367,7 @@ createNode parentConstraint -n "Max__lClavicleCG2_parentConstraint1" -p "Max__lC
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.4651903288156619e-32 -3.5527136788005009e-15 
 		0 ;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380955 -0.13032028473715557 -4.2068982874234351 ;
 	setAttr ".rst" -type "double3" 2.1862606951770233e-16 23.038439457712752 -0.372779416874916 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -22409,7 +22421,7 @@ createNode parentConstraint -n "Max__lArmIKFKG_parentConstraint1" -p "Max__lArmI
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tor" -type "double3" -1.9878466759146985e-16 1.5902773407317588e-15 
 		-3.7272125173400593e-15 ;
-	setAttr ".lr" -type "double3" -1.6303318181705979 3.8796460103321189 -22.81462992584613 ;
+	setAttr ".lr" -type "double3" 7.623650369003844 7.5331630643669873 -26.087649744381636 ;
 	setAttr ".rst" -type "double3" 0.79869387681794202 23.132263946848905 -0.37277941687491611 ;
 	setAttr ".rsrr" -type "double3" -1.6303318181705999 3.879646010332126 -22.814629925846145 ;
 	setAttr -l on ".int" 2;
@@ -22439,7 +22451,7 @@ createNode parentConstraint -n "Max__lShoulderJFK_parentConstraint1" -p "Max__lS
 	setAttr ".tg[0].tot" -type "double3" -8.8817841970012523e-16 -7.1054273576010019e-15 
 		-1.1102230246251565e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -2.7829853462805776e-15 0 5.7647553601526243e-15 ;
-	setAttr ".lr" -type "double3" 1.3221256412015181 -35.398112781427997 -56.996747261231668 ;
+	setAttr ".lr" -type "double3" 1.3221256412014148 5.9584554529088312 -51.633323041447781 ;
 	setAttr ".rst" -type "double3" 2.8278722534607006 0 4.9960036108132044e-16 ;
 	setAttr ".rsrr" -type "double3" 1.6896696745274934e-15 1.5654292572828248e-15 -4.9199205228888784e-15 ;
 	setAttr -l on ".int" 2;
@@ -22447,17 +22459,17 @@ createNode parentConstraint -n "Max__lShoulderJFK_parentConstraint1" -p "Max__lS
 createNode joint -n "Max__lShoulderJIK" -p "Max__lArmIKFKG";
 	rename -uid "40BA4F9E-42E5-3F55-7030-0A8A5BBD504D";
 	setAttr ".v" no;
-	setAttr ".r" -type "double3" 0.1691214785993477 1.7326582252362146 0.71901983326072061 ;
+	setAttr ".r" -type "double3" -8.0160239381140546 -0.066677317164131125 6.8608273366246157 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 2.7758725319957698 -5.2128270471250318 -5.327695006712684 ;
 createNode joint -n "Max__lElbowJIK" -p "Max__lShoulderJIK";
 	rename -uid "30723C36-497D-7AE2-ABE7-6EAB9B4556A3";
 	setAttr ".t" -type "double3" 3.5426486778406563 7.1054273576010019e-15 7.7715611723760958e-16 ;
-	setAttr ".r" -type "double3" 1.8374820873466439e-13 -3.6817200416836937 -0.012019333223712757 ;
+	setAttr ".r" -type "double3" 1.9651263027016048e-13 2.2284844761732461 -0.012842295840476131 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 2.8902471212950176 -17.369196107743218 -0.86348610584651786 ;
+	setAttr ".jo" -type "double3" 2.8902471212950176 -17.369196107743218 -0.86348610584651797 ;
 	setAttr ".pa" -type "double3" 0 -90 0 ;
 createNode joint -n "Max__lWristJIK" -p "Max__lElbowJIK";
 	rename -uid "B47B3A02-4161-49F5-9D01-3CBDBCFD4AD2";
@@ -22482,9 +22494,9 @@ createNode parentConstraint -n "Max__lWristJIK_parentConstraint1" -p "Max__lWris
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -8.1453995548486091e-08 -8.5266336213862814e-09 
 		4.1364276448518922e-09 ;
-	setAttr ".tg[0].tor" -type "double3" 0.0015720653675957283 0.0007036448439912764 
+	setAttr ".tg[0].tor" -type "double3" 0.0015720653675957285 0.0007036448439912764 
 		-0.0063021220220379299 ;
-	setAttr ".lr" -type "double3" 2.1693178305942489 -9.254839337336545 2.6369476484463648 ;
+	setAttr ".lr" -type "double3" -3.62083673691009 3.7434875396772149 -5.4017709697470853 ;
 	setAttr ".rst" -type "double3" 3.3317279179279762 0 1.1102230246251565e-15 ;
 	setAttr ".rsrr" -type "double3" -9.4422717105948169e-16 1.5405811738338913e-15 1.5902773407317588e-15 ;
 	setAttr -l on ".int" 2;
@@ -22543,6 +22555,7 @@ createNode parentConstraint -n "Max__lLegIKFKG_parentConstraint1" -p "Max__lLegI
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 -1.7763568394002505e-15 0 ;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr ".rst" -type "double3" 0 15.161959728865158 -0.31993379417754686 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -22571,7 +22584,7 @@ createNode parentConstraint -n "Max__lHipJFK_parentConstraint1" -p "Max__lHipJFK
 		-4.4408920985006262e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 6.361109362927032e-15 3.6775163504421905e-14 
 		2.4649298781342248e-14 ;
-	setAttr ".lr" -type "double3" -6.3611093629270185e-15 -4.7708320221952748e-14 -3.4986101496098681e-14 ;
+	setAttr ".lr" -type "double3" -1.9083328088781091e-14 -3.8166656177562208e-14 -2.8624992133171648e-14 ;
 	setAttr ".rst" -type "double3" 1.4265324295505231 -0.79999999999999716 -1.6653345369377348e-16 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270185e-15 -4.7708320221952748e-14 
 		-3.4986101496098681e-14 ;
@@ -22580,29 +22593,29 @@ createNode parentConstraint -n "Max__lHipJFK_parentConstraint1" -p "Max__lHipJFK
 createNode joint -n "Max__lHipJIK" -p "Max__lLegIKFKG";
 	rename -uid "9678307F-4150-A7D6-77A3-ED937CF9F49D";
 	setAttr ".v" no;
-	setAttr ".r" -type "double3" 17.538988016066767 -10.273783695805935 3.2332722952285109 ;
+	setAttr ".r" -type "double3" 6.2095976919436451 -28.661972028513528 23.938110521621557 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 65.394937002866598 -4.058008001808731 -80.678865584889195 ;
 createNode joint -n "Max__lKneeJIK" -p "Max__lHipJIK";
 	rename -uid "FA259DA5-492E-2A59-6A0C-E6AC1F36CF7F";
 	setAttr ".t" -type "double3" 5.7472016792470715 0 4.4408920985006262e-16 ;
-	setAttr ".r" -type "double3" -1.4012602612102704e-26 1.381077949639402e-10 8.4859063592534092 ;
+	setAttr ".r" -type "double3" 1.8293284587145004e-30 7.6874477898745357e-13 -57.489703993079125 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 0 -8.4859298709408879 ;
+	setAttr ".jo" -type "double3" 0 0 -8.4859298709408897 ;
 	setAttr ".pa" -type "double3" 0 0 -90 ;
 createNode joint -n "Max__lAnkleJIK" -p "Max__lKneeJIK";
 	rename -uid "37BF3D82-4262-BD54-2A65-BD8951EABAC2";
 	setAttr ".t" -type "double3" 6.7818731630111708 6.6613381477509392e-16 0 ;
-	setAttr ".r" -type "double3" 1.6277666086836649 6.1035580455761185 -16.739137624080559 ;
+	setAttr ".r" -type "double3" 2.9208648632908343 11.409487249884174 -16.684362909888083 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -1.7627159790264395 -7.3013534463308822 39.989347556151522 ;
+	setAttr ".jo" -type "double3" -1.7627159790264397 -7.3013534463308822 39.989347556151522 ;
 createNode joint -n "Max__lBallJIK" -p "Max__lAnkleJIK";
 	rename -uid "90C1B319-4E17-E885-6D53-63B96B601A43";
 	setAttr ".t" -type "double3" 2.5287076184204929 5.2041704279304213e-16 -6.6613381477509392e-16 ;
-	setAttr ".r" -type "double3" 0.26543052110105597 0.51796198899749812 -4.5635808586687405 ;
+	setAttr ".r" -type "double3" 1.1137081161487554e-08 5.0747399783208572e-24 5.9679024415570602e-25 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 -4.9257985427124353 51.22351167459162 ;
@@ -22674,7 +22687,7 @@ createNode parentConstraint -n "Max__lWristJG2_parentConstraint1" -p "Max__lWris
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 8.8817841970012523e-16 0 0 ;
 	setAttr ".tg[0].tor" -type "double3" -5.5281566333682539 5.5385027055940368 -5.7292469850824643 ;
-	setAttr ".lr" -type "double3" -13.052241492439361 -155.97897716563838 -74.049838326451621 ;
+	setAttr ".lr" -type "double3" -77.23510418507216 -103.84402123951303 -13.125259622789098 ;
 	setAttr ".rst" -type "double3" 6.5270933518983805 20.37723880359458 -0.4714915475250242 ;
 	setAttr ".rsrr" -type "double3" 1.6312560723451451e-15 -12.869722718328678 -34.556866647492669 ;
 	setAttr -l on ".int" 2;
@@ -22782,7 +22795,7 @@ createNode parentConstraint -n "Max__lThumbJ3_parentConstraint1" -p "Max__lThumb
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 4.4408920985006262e-15 0 1.4210854715202004e-14 ;
 	setAttr ".tg[0].tor" -type "double3" 0 -1.9783050118703074e-12 0 ;
-	setAttr ".lr" -type "double3" 0 1.6093606688205391e-12 0 ;
+	setAttr ".lr" -type "double3" 0 1.5966384500946854e-12 0 ;
 	setAttr ".rst" -type "double3" 0 1.9539925233402755e-14 0.80825719410272523 ;
 	setAttr ".rsrr" -type "double3" 0 1.9846661212332344e-12 0 ;
 	setAttr -l on ".int" 2;
@@ -22828,7 +22841,7 @@ createNode parentConstraint -n "Max__lThumbJ1_parentConstraint1" -p "Max__lThumb
 		3.5527136788005009e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 1.4312496066585827e-14 1.783496037630667e-12 
 		-9.1918030294295625e-13 ;
-	setAttr ".lr" -type "double3" -3.1805546814779549e-15 -1.7572564615085936e-12 9.4144418571320149e-13 ;
+	setAttr ".lr" -type "double3" 3.1805546814488901e-15 -1.7683884028937153e-12 9.4780529507612793e-13 ;
 	setAttr ".rst" -type "double3" 0.38518103117240399 -0.096446218420222607 0.47646210307154591 ;
 	setAttr ".rsrr" -type "double3" -1.8288189418429174e-14 -1.7699786802344471e-12 
 		9.0327752953563915e-13 ;
@@ -23049,10 +23062,10 @@ createNode parentConstraint -n "Max__lThumbJ1CG_parentConstraint1" -p "Max__lThu
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.38518103117240732 -0.096446218420230045 0.47646210307154541 ;
-	setAttr ".tg[0].tor" -type "double3" 99.134312129799682 -44.075597043931083 -28.399795171402555 ;
-	setAttr ".lr" -type "double3" 99.134312129799682 -44.07559704393109 -28.399795171402555 ;
+	setAttr ".tg[0].tor" -type "double3" 99.134312129799696 -44.075597043931083 -28.399795171402555 ;
+	setAttr ".lr" -type "double3" 99.134312129799696 -44.075597043931076 -28.399795171402552 ;
 	setAttr ".rst" -type "double3" 0.38518103117240599 -0.096446218420225827 0.47646210307153974 ;
-	setAttr ".rsrr" -type "double3" 99.134312129799682 -44.07559704393109 -28.399795171402562 ;
+	setAttr ".rsrr" -type "double3" 99.134312129799696 -44.07559704393109 -28.399795171402562 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lThumbJ2CG" -p "Max__lWristJG1";
@@ -23117,9 +23130,9 @@ createNode nurbsCurve -n "Max__lThumbJ2CShape" -p "Max__lThumbJ2C";
 		9.3099787112344022e-16 0.77136666189700531 -3.4928976359152704e-15
 		9.0019682477990297e-16 0.54543859740860412 0.54543859740859835
 		8.6235555973872561e-16 2.5332452373730012e-15 0.77136666189699965
-		8.396409758436749e-16 -0.54543859740859901 0.54543859740859812
+		8.396409758436748e-16 -0.54543859740859901 0.54543859740859812
 		8.4535896827681015e-16 -0.77136666189700043 -3.5824939812747492e-15
-		8.761600146203475e-16 -0.54543859740859879 -0.54543859740860545
+		8.7616001462034759e-16 -0.54543859740859879 -0.54543859740860545
 		9.1400127966152486e-16 2.7306220654632067e-15 -0.77136666189700676
 		9.3671586355657557e-16 0.54543859740860445 -0.54543859740860523
 		9.3099787112344022e-16 0.77136666189700531 -3.4928976359152704e-15
@@ -23144,9 +23157,9 @@ createNode parentConstraint -n "Max__lThumbJ2CG_parentConstraint1" -p "Max__lThu
 		-1.4210854715202004e-14 ;
 	setAttr ".tg[0].tor" -type "double3" -3.180554681463516e-15 -1.5902773407317584e-15 
 		-1.5902773407317584e-14 ;
-	setAttr ".lr" -type "double3" 99.134312129799682 -44.07559704393109 -28.399795171402555 ;
+	setAttr ".lr" -type "double3" 99.134312129799682 -44.07559704393109 -28.399795171402541 ;
 	setAttr ".rst" -type "double3" 0.84213212081547228 -0.34351663975877239 0.97943378804889414 ;
-	setAttr ".rsrr" -type "double3" 99.134312129799682 -44.07559704393109 -28.399795171402562 ;
+	setAttr ".rsrr" -type "double3" 99.134312129799696 -44.07559704393109 -28.399795171402562 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lThumbJ3CG" -p "Max__lWristJG1";
@@ -23238,9 +23251,9 @@ createNode parentConstraint -n "Max__lThumbJ3CG_parentConstraint1" -p "Max__lThu
 		-2.8421709430404007e-14 ;
 	setAttr ".tg[0].tor" -type "double3" -3.180554681463516e-15 -1.5902773407317584e-15 
 		-1.5902773407317584e-14 ;
-	setAttr ".lr" -type "double3" 96.557112403677465 -2.8818399150500587 -22.349155382603158 ;
+	setAttr ".lr" -type "double3" 96.557112403677451 -2.8818399150500587 -22.349155382603126 ;
 	setAttr ".rst" -type "double3" 1.3529188729967592 -0.61969564651887876 1.5416630489735579 ;
-	setAttr ".rsrr" -type "double3" 99.134312129799682 -44.07559704393109 -28.399795171402562 ;
+	setAttr ".rsrr" -type "double3" 99.134312129799696 -44.07559704393109 -28.399795171402562 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode orientConstraint -n "Max__lWristJG1_orientConstraint1" -p "Max__lWristJG1";
@@ -23261,7 +23274,7 @@ createNode orientConstraint -n "Max__lWristJG1_orientConstraint1" -p "Max__lWris
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 84.09553042746299 -2.8817943216494186e-07 3.1738601122164962e-07 ;
+	setAttr ".lr" -type "double3" 10.547639317206558 -1.7347514972948257e-06 -3.0244002476509424e-07 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -23321,7 +23334,7 @@ createNode parentConstraint -n "Max__lWristJFK_parentConstraint1" -p "Max__lWris
 	setAttr ".tg[0].tot" -type "double3" 8.8817841970012523e-16 0 0 ;
 	setAttr ".tg[0].tor" -type "double3" 7.1762226863965804e-15 -6.3611093629270348e-14 
 		1.5902773407317587e-14 ;
-	setAttr ".lr" -type "double3" 84.095530591899802 8.0917044075966358e-14 -1.1761656406369654e-13 ;
+	setAttr ".lr" -type "double3" 10.547638301767154 2.9021344477621089e-14 -1.2408603064644112e-13 ;
 	setAttr ".rst" -type "double3" 9.2822677548905563 18.844179517214879 0.60514866751541097 ;
 	setAttr ".rsrr" -type "double3" -4.7708320221952854e-15 6.6394078975550915e-14 -1.8884543421189634e-14 ;
 	setAttr -l on ".int" 2;
@@ -23363,9 +23376,9 @@ createNode parentConstraint -n "Max__lWristJFKG2_parentConstraint1" -p "Max__lWr
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.3317279179279766 0 -4.5519144009631418e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 6.0190080762659788 18.2768261214195 29.43839599991043 ;
-	setAttr ".lr" -type "double3" 12.177988705059549 -142.62302469918944 -114.08236867432316 ;
+	setAttr ".lr" -type "double3" -64.884447823405964 -67.164178542240307 -21.059981942849571 ;
 	setAttr ".rst" -type "double3" 0 3.5527136788005009e-15 0 ;
-	setAttr ".rsrr" -type "double3" 7.9513867036587919e-16 2.9320738469741797e-15 3.354491265606053e-15 ;
+	setAttr ".rsrr" -type "double3" 7.9513867036587919e-16 2.9320738469741801e-15 3.354491265606053e-15 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lElbowJFKG2" -p "Max__MainC";
@@ -23419,7 +23432,7 @@ createNode parentConstraint -n "Max__lElbowJFK_parentConstraint1" -p "Max__lElbo
 	setAttr ".tg[0].tot" -type "double3" 8.8817841970012523e-16 -3.5527136788005009e-15 
 		0 ;
 	setAttr ".tg[0].tor" -type "double3" -2.385416011097638e-15 0 -2.5842006786891074e-14 ;
-	setAttr ".lr" -type "double3" -2.0355549961366507e-13 -107.69229808103381 1.2722218725854067e-13 ;
+	setAttr ".lr" -type "double3" -5.8522206138928706e-13 -97.884173643474711 5.3433318648587084e-13 ;
 	setAttr ".rst" -type "double3" 6.5270933518983751 20.377238803594576 -0.47149154752502437 ;
 	setAttr ".rsrr" -type "double3" 3.1805546814635176e-15 2.7829853462805768e-15 2.2388123187489288e-14 ;
 	setAttr -l on ".int" 2;
@@ -23462,7 +23475,7 @@ createNode parentConstraint -n "Max__lElbowJFKG2_parentConstraint1" -p "Max__lEl
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.5426486778406603 7.1054273576010019e-15 4.4408920985006262e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 1.028023180171449e-13 1.6962470638996405 27.960715440011409 ;
-	setAttr ".lr" -type "double3" -15.516769950152977 -30.772083715343751 -53.032372324092499 ;
+	setAttr ".lr" -type "double3" 11.749059322322411 12.872931094811021 -54.465295461139561 ;
 	setAttr ".rst" -type "double3" 0 -3.5527136788005009e-15 0 ;
 	setAttr ".rsrr" -type "double3" -1.0177774980683254e-13 5.4665783587653963e-16 -2.6214728038625082e-15 ;
 	setAttr -l on ".int" 2;
@@ -23512,9 +23525,9 @@ createNode parentConstraint -n "Max__lWristJIKProxy_parentConstraint1" -p "Max__
 		6.2172489379008766e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 5.5859453456648236e-15 -6.3611093629270335e-14 
 		2.8802097332003114e-14 ;
-	setAttr ".lr" -type "double3" 2.1414165318663643 -9.1505411014447056 2.9898781402624834 ;
+	setAttr ".lr" -type "double3" -3.6289170530886796 4.0767273338231353 -5.1483616151659497 ;
 	setAttr ".rst" -type "double3" 9.2822677548905563 18.844179517214883 0.60514866751541097 ;
-	setAttr ".rsrr" -type "double3" -4.7708320221952862e-15 6.8183140983874145e-14 -1.883484725429176e-14 ;
+	setAttr ".rsrr" -type "double3" -4.7708320221952862e-15 6.8183140983874158e-14 -1.883484725429176e-14 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode pointConstraint -n "Max__lWristJIKProxyG1_pointConstraint1" -p "Max__lWristJIKProxyG1";
@@ -23552,8 +23565,8 @@ createNode parentConstraint -n "Max__lWristJIKProxyG2_parentConstraint1" -p "Max
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 2.6645352591003757e-15 0 -1.2212453270876722e-15 ;
-	setAttr ".tg[0].tor" -type "double3" 6.0190080762659806 18.276826121419507 29.43839599991043 ;
-	setAttr ".lr" -type "double3" 3.6104112062542617 8.6367345239518851 -3.0051920009940551 ;
+	setAttr ".tg[0].tor" -type "double3" 6.0190080762659806 18.276826121419511 29.43839599991043 ;
+	setAttr ".lr" -type "double3" -0.65183979574761575 -4.427046879976511 5.9357295595643329 ;
 	setAttr ".rst" -type "double3" -8.8817841970012523e-16 0 -5.5511151231257827e-17 ;
 	setAttr ".rsrr" -type "double3" 1.5405811738338915e-15 2.5220804700667736e-15 6.3851809437681897e-15 ;
 	setAttr -l on ".int" 2;
@@ -23912,9 +23925,9 @@ createNode parentConstraint -n "Max__lPalmCG_parentConstraint1" -p "Max__lPalmCG
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.67393012166297739 0.031888859229844968 0.10751861428631315 ;
-	setAttr ".tg[0].tor" -type "double3" -1.9974653103669427e-17 3.1805546814635176e-15 
+	setAttr ".tg[0].tor" -type "double3" -1.997465310366943e-17 3.1805546814635176e-15 
 		-3.1805546814635176e-15 ;
-	setAttr ".lr" -type "double3" -108.95671106497636 -24.021022834361613 105.95016167354838 ;
+	setAttr ".lr" -type "double3" -66.687458002551466 -103.84402162280817 -13.125266693502295 ;
 	setAttr ".rst" -type "double3" 9.8217146290610113 18.511359683365768 0.86007412483595602 ;
 	setAttr ".rsrr" -type "double3" 8.1562803617257228e-16 -12.869722718328671 -34.556866647492669 ;
 	setAttr -l on ".int" 2;
@@ -24053,8 +24066,8 @@ createNode parentConstraint -n "Max__lBallJFK_parentConstraint1" -p "Max__lBallJ
 	setAttr ".tg[0].tot" -type "double3" 8.8817841970012523e-16 2.1266815727793351e-16 
 		-8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -2.9022561468354588e-14 1.2722218725854067e-14 
-		-3.3402626440594717e-13 ;
-	setAttr ".lr" -type "double3" 2.9817700138720461e-14 -1.9878466759156064e-16 3.492149647913145e-13 ;
+		-3.3402626440594722e-13 ;
+	setAttr ".lr" -type "double3" 3.0612838809086449e-14 3.2401900817409483e-14 3.5557607415424159e-13 ;
 	setAttr ".rst" -type "double3" 2.5287076184204933 1.3322676295501878e-15 -1.3322676295501878e-15 ;
 	setAttr ".rsrr" -type "double3" 2.8227422797988676e-14 -1.1728295387896801e-14 3.3016890882770686e-13 ;
 	setAttr -l on ".int" 2;
@@ -24077,7 +24090,7 @@ createNode parentConstraint -n "Max__lAnkleJFK_parentConstraint1" -p "Max__lAnkl
 	setAttr ".tg[0].tot" -type "double3" 2.2204460492503131e-16 -2.2204460492503131e-16 
 		0 ;
 	setAttr ".tg[0].tor" -type "double3" -4.680727683401841 3.750692311842581 38.623143655302727 ;
-	setAttr ".lr" -type "double3" -9.5416640443905487e-15 -4.7708320221952752e-15 -1.1131941385122306e-14 ;
+	setAttr ".lr" -type "double3" -3.1805546814635128e-15 4.4527765540489216e-14 6.3611093629270296e-15 ;
 	setAttr ".rst" -type "double3" 3.0380025865850766 1.9713678917065127 -0.34617546771961472 ;
 	setAttr ".rsrr" -type "double3" 6.3611093629270335e-15 1.5902773407317594e-15 -2.0673605429512861e-14 ;
 	setAttr -l on ".int" 2;
@@ -24120,7 +24133,7 @@ createNode parentConstraint -n "Max__lAnkleJFKG2_parentConstraint1" -p "Max__lAn
 	setAttr ".tg[0].tot" -type "double3" 1.7763568394002505e-15 -2.2204460492503131e-16 
 		-4.4408920985006262e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -15.884618201375602 64.417780293290676 76.513914331178924 ;
-	setAttr ".lr" -type "double3" -2.5444437451708122e-14 -4.4527765540489241e-14 -2.8624992133171641e-14 ;
+	setAttr ".lr" -type "double3" -2.5444437451708122e-14 -4.4527765540489247e-14 15.609707607570352 ;
 	setAttr ".rst" -type "double3" 4.4408920985006262e-16 -1.7763568394002505e-15 -4.9960036108132044e-16 ;
 	setAttr ".rsrr" -type "double3" -9.5416640443905503e-15 3.1805546814635168e-15 3.1805546814635164e-15 ;
 	setAttr -l on ".int" 2;
@@ -24166,7 +24179,7 @@ createNode parentConstraint -n "Max__lKneeJFK_parentConstraint1" -p "Max__lKneeJ
 	setAttr ".tg[0].tot" -type "double3" 1.7763568394002505e-15 0 0 ;
 	setAttr ".tg[0].tor" -type "double3" -0.48863187335376279 -0.00023262277373284893 
 		-0.054553221324483793 ;
-	setAttr ".lr" -type "double3" -4.1347210859025721e-14 4.7708320221952761e-14 -3.1805546814635345e-15 ;
+	setAttr ".lr" -type "double3" -6.9972202992197388e-14 6.6791648310733881e-14 -4.0784494193983484e-29 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.7048623434841748 0.086774991465607687 ;
 	setAttr ".rsrr" -type "double3" 1.272221872585407e-14 2.544443745170814e-14 3.1805546814635203e-15 ;
 	setAttr -l on ".int" 2;
@@ -24208,8 +24221,8 @@ createNode parentConstraint -n "Max__lKneeJFKG2_parentConstraint1" -p "Max__lKne
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -1.7763568394002505e-15 4.4408920985006262e-16 
 		0 ;
-	setAttr ".tg[0].tor" -type "double3" -15.884618201375568 64.417780293290662 68.027984460238059 ;
-	setAttr ".lr" -type "double3" 3.1805546814635176e-15 1.2722218725854067e-14 6.3611093629270335e-15 ;
+	setAttr ".tg[0].tor" -type "double3" -15.884618201375568 64.417780293290662 68.027984460238073 ;
+	setAttr ".lr" -type "double3" 7.0622500768802538e-31 6.3611093629270335e-15 15.60970760757038 ;
 	setAttr ".rst" -type "double3" 0 1.7763568394002505e-15 2.7755575615628914e-16 ;
 	setAttr ".rsrr" -type "double3" 1.2722218725854067e-14 9.5416640443905503e-15 1.0593375115320381e-30 ;
 	setAttr -l on ".int" 2;
@@ -24272,7 +24285,7 @@ createNode parentConstraint -n "Max__lLegLengthEndLctr_parentConstraint1" -p "Ma
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.13598430877274081 1.9713678917065116 -1.5778400181178256 ;
 	setAttr ".tg[0].tor" -type "double3" 0 -16.576490391858542 0 ;
-	setAttr ".lr" -type "double3" -133.21987178237029 19.136138183484952 15.867206841718504 ;
+	setAttr ".lr" -type "double3" 53.246470698577092 -36.970006508984319 165.52380766199505 ;
 	setAttr ".rst" -type "double3" 1.6114701570345538 -12.390591837158647 -0.026241673542068078 ;
 	setAttr ".rsrr" -type "double3" 0 3.1805546814635168e-15 0 ;
 	setAttr -l on ".int" 2;
@@ -24302,7 +24315,7 @@ createNode aimConstraint -n "Max__lLegLengthOriginLctr_aimConstraint1" -p "Max__
 createNode transform -n "Max__lAnkleIKtoFKLctrG" -p "Max__MainC";
 	rename -uid "6164B3A4-40DE-BC81-F562-D0993C1D19EF";
 	setAttr ".t" -type "double3" 3.0380025865850766 1.9713678917065129 -0.34617546771961449 ;
-	setAttr ".r" -type "double3" 0 19.554683677027121 0 ;
+	setAttr ".r" -type "double3" 0 19.554683677027125 0 ;
 createNode transform -n "Max__lAnkleIKtoFKLctr" -p "Max__lAnkleIKtoFKLctrG";
 	rename -uid "6FDAC021-42EC-C603-CBFC-A188458C7401";
 	setAttr ".v" no;
@@ -24328,7 +24341,7 @@ createNode parentConstraint -n "Max__lAnkleIKtoFKLctr_parentConstraint1" -p "Max
 	setAttr ".tg[0].tot" -type "double3" -4.4408920985006262e-16 -4.9960036108132044e-16 
 		4.4408920985006262e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 0 94.047858528586048 89.999999999999986 ;
-	setAttr ".lr" -type "double3" 1.5902773407317578e-14 -3.180554681463516e-15 4.4139062980501569e-31 ;
+	setAttr ".lr" -type "double3" -5.3423543884776441 -0.68905410264260625 14.688450628416694 ;
 	setAttr ".rst" -type "double3" 4.4408920985006262e-16 -2.2204460492503131e-16 -2.2204460492503131e-16 ;
 	setAttr ".rsrr" -type "double3" 1.2722218725854067e-14 1.4124500153760508e-30 1.2722218725854067e-14 ;
 	setAttr -l on ".int" 2;
@@ -24430,7 +24443,7 @@ createNode ikHandle -n "Max__lBallIKHandle" -p "Max__lFootBallPivot";
 	rename -uid "6E9FA704-4724-BCBC-298A-908D4A15E891";
 	setAttr ".r" -type "double3" 83.691595931851438 -38.606695488678156 -86.05400665464343 ;
 	setAttr ".rp" -type "double3" -2.2204460492503131e-16 -8.8817841970012523e-16 1.3322676295501878e-15 ;
-	setAttr ".rpt" -type "double3" -1.17669829523651e-15 5.0503139892738483e-16 -2.0462833214402577e-15 ;
+	setAttr ".rpt" -type "double3" -1.1766982952365098e-15 5.0503139892738483e-16 -2.0462833214402577e-15 ;
 	setAttr ".sp" -type "double3" -2.2204460492503131e-16 -8.8817841970012523e-16 1.3322676295501878e-15 ;
 	setAttr ".pv" -type "double3" -0.28529512438254989 0 0.95843971745934331 ;
 	setAttr ".roc" yes;
@@ -24524,7 +24537,7 @@ createNode parentConstraint -n "Max__lToeIKCG_parentConstraint1" -p "Max__lToeIK
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.013950318406374951 -0.99559458419961044 
 		4.4106526810816229 ;
-	setAttr ".lr" -type "double3" 0 1.1002365832845311 0 ;
+	setAttr ".lr" -type "double3" 45.601080196082066 -1.1437558732298805 2.9096373250611163 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lShoulderIKLockLctr" -p "Max__MainC";
@@ -24680,7 +24693,7 @@ createNode parentConstraint -n "Max__lAnkleIKLockLctr_parentConstraint1" -p "Max
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -0.13598430877273948 1.9713678917065143 -1.5778400181178256 ;
 	setAttr ".tg[0].tor" -type "double3" 54.935163902617425 38.671420701486447 -109.33705692579241 ;
-	setAttr ".lr" -type "double3" -8.8514951011690943 -23.954811894783855 69.067117877834505 ;
+	setAttr ".lr" -type "double3" 6.668320055455915 9.6063326386980226 -29.969986812828747 ;
 	setAttr ".rst" -type "double3" 9.742819072042014 0.13760436788679212 -2.576473726814601 ;
 	setAttr ".rsrr" -type "double3" 2.2263882770244621e-14 -6.1794688172702238e-31 3.1805546814635168e-15 ;
 	setAttr -l on ".int" 2;
@@ -24765,7 +24778,7 @@ createNode aimConstraint -n "Max__lHipIKLockLctr_aimConstraint1" -p "Max__lHipIK
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" 24.574439299057715 -46.100450017429914 -54.212222915664476 ;
+	setAttr ".rsrr" -type "double3" 24.574439299057715 -46.100450017429914 -54.212222915664483 ;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lAnkleFKtoIKLctrG" -p "Max__MainC";
 	rename -uid "852B18C0-4B71-8835-95D7-39B76FE9A92B";
@@ -24818,7 +24831,7 @@ createNode parentConstraint -n "Max__lAnkleFKtoIKLctrG_parentConstraint1" -p "Ma
 	setAttr ".tg[0].tot" -type "double3" -9.2911924820526792e-09 -5.81750193184849e-07 
 		9.5522886045529276e-08 ;
 	setAttr ".tg[0].tor" -type "double3" 0 90.332729420278511 89.999999999999986 ;
-	setAttr ".lr" -type "double3" 2.3887035496051833e-14 15.839554568719594 -1.2956553753998885e-14 ;
+	setAttr ".lr" -type "double3" 3.7151499287503001e-14 15.839554568719615 15.609707607570389 ;
 	setAttr ".rst" -type "double3" 3.0380023390066024 1.9713679009977045 -0.3461760027549477 ;
 	setAttr ".rsrr" -type "double3" 1.4353822946534081e-14 15.839554568719594 1.0847924475976756e-14 ;
 	setAttr -l on ".int" 2;
@@ -24910,7 +24923,7 @@ createNode parentConstraint -n "Max__rLegSwitchCG_parentConstraint1" -p "Max__rL
 		6.5527416071110258e-31 ;
 	setAttr ".tg[0].tor" -type "double3" -1.0885505456198272e-12 -81.76870975856616 
 		-128.776488325407 ;
-	setAttr ".lr" -type "double3" -13.239499533362501 -178.79390131996232 11.163972415086812 ;
+	setAttr ".lr" -type "double3" -1.1774791471593888 181.04498482802916 -5.7189902673713968 ;
 	setAttr ".rst" -type "double3" -3.0380025865850833 1.9713678917065098 -0.34617546771960739 ;
 	setAttr ".rsrr" -type "double3" 1.1195552478751578e-12 166.72900130686256 0 ;
 	setAttr -l on ".int" 2;
@@ -25042,10 +25055,10 @@ createNode parentConstraint -n "Max__rFootIKCG_parentConstraint1" -p "Max__rFoot
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -3.0380025865850833 0 -0.34617546771960711 ;
-	setAttr ".tg[0].tor" -type "double3" 0 -19.554683677027121 0 ;
+	setAttr ".tg[0].tor" -type "double3" 0 -19.554683677027125 0 ;
 	setAttr ".lr" -type "double3" 0 -19.554683677027121 0 ;
 	setAttr ".rst" -type "double3" -3.0380025865850833 0 -0.34617546771960711 ;
-	setAttr ".rsrr" -type "double3" 0 -19.554683677027121 0 ;
+	setAttr ".rsrr" -type "double3" 0 -19.554683677027125 0 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rAnkleIKtoFKLctr" -p "Max__rFootIKCG";
@@ -25077,7 +25090,7 @@ createNode parentConstraint -n "Max__rAnkleIKtoFKLctr_parentConstraint1" -p "Max
 	setAttr ".tg[0].tot" -type "double3" -5.6062179688720111e-16 -2.2204460492503131e-16 
 		-2.1817855544314734e-17 ;
 	setAttr ".tg[0].tor" -type "double3" 0 -4.0478585285859854 0 ;
-	setAttr ".lr" -type "double3" 0 1.9083328088781101e-14 0 ;
+	setAttr ".lr" -type "double3" 5.3423543884776707 0.68905410264263811 14.688450628416671 ;
 	setAttr ".rst" -type "double3" -4.4408920985006262e-16 -2.2204460492503131e-16 1.1102230246251565e-16 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -25181,7 +25194,7 @@ createNode transform -n "Max__rKneeIKConnectorCX" -p "Max__rKneeIKC";
 	setAttr -k off ".rx";
 	setAttr -k off ".ry";
 	setAttr -k off ".rz";
-	setAttr ".s" -type "double3" 0.99999999999999989 1 -3.4298700226744394 ;
+	setAttr ".s" -type "double3" 0.99999999999999989 1 -5.1169970255273816 ;
 	setAttr -k off ".sz";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
@@ -25442,9 +25455,9 @@ createNode parentConstraint -n "Max__rBallFKCG_parentConstraint1" -p "Max__rBall
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -1.9713678917065116 -1.5750264891479 0.16541588040120025 ;
 	setAttr ".tg[0].tor" -type "double3" 0 1.0696652434174354 89.999999999999574 ;
-	setAttr ".lr" -type "double3" -179.9999999999996 -73.423509608141458 -1.1055891563525662e-13 ;
+	setAttr ".lr" -type "double3" -179.9999999999996 -73.423509608141543 -15.609707607570485 ;
 	setAttr ".rst" -type "double3" -3.6184854132888242 1.1102230246251565e-16 1.1272934131558934 ;
-	setAttr ".rsrr" -type "double3" -179.9999999999996 -73.423509608141444 -1.0295370525213473e-13 ;
+	setAttr ".rsrr" -type "double3" -179.99999999999963 -73.423509608141458 -1.0295370525213473e-13 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rAnkleFKCG" -p "Max__MainC";
@@ -25524,7 +25537,7 @@ createNode parentConstraint -n "Max__rAnkleFKCG_parentConstraint1" -p "Max__rAnk
 	setAttr ".tg[0].tot" -type "double3" -6.7818700888752375 -0.0041230476036103747 
 		1.7581270024491502e-05 ;
 	setAttr ".tg[0].tor" -type "double3" 8.6686882574015911 -6.5642943743175106 1.9285197998389496 ;
-	setAttr ".lr" -type "double3" -89.999999999999972 -90 -15.506825148441107 ;
+	setAttr ".lr" -type "double3" -85.730341744899505 -106.16909109563608 -14.921320342065696 ;
 	setAttr ".rst" -type "double3" -3.0380025865850837 1.9713678917065112 -0.34617546771960694 ;
 	setAttr ".rsrr" -type "double3" -90 -89.999999999999986 -15.506825148441125 ;
 	setAttr -l on ".int" 2;
@@ -25598,7 +25611,7 @@ createNode parentConstraint -n "Max__rKneeFKCG_parentConstraint1" -p "Max__rKnee
 	setAttr ".tg[0].tot" -type "double3" -5.7472016792470697 -4.3262580913413686e-15 
 		-5.3319109566328688e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 0.49397035034463083 -0.072660019300503198 -8.4310658248999566 ;
-	setAttr ".lr" -type "double3" -89.00512895524048 -83.629527607910518 -24.336575063370592 ;
+	setAttr ".lr" -type "double3" -82.117742033020917 -100.63932767048007 -23.11885710511222 ;
 	setAttr ".rst" -type "double3" -2.3550604463258353 8.7048623434841748 0.086774991465612905 ;
 	setAttr ".rsrr" -type "double3" -89.00512895524048 -83.629527607910518 -24.336575063370592 ;
 	setAttr -l on ".int" 2;
@@ -25668,10 +25681,10 @@ createNode parentConstraint -n "Max__rHipFKCG_parentConstraint1" -p "Max__rHipFK
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -1.4265324295505242 -0.80000000000000415 3.4402179155335892e-16 ;
-	setAttr ".tg[0].tor" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151723 ;
-	setAttr ".lr" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151723 ;
+	setAttr ".tg[0].tor" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151727 ;
+	setAttr ".lr" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151727 ;
 	setAttr ".rst" -type "double3" -1.4265324295505233 14.361959728865157 -0.31993379417754686 ;
-	setAttr ".rsrr" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151723 ;
+	setAttr ".rsrr" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151727 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode parentConstraint -n "Max__rHipFKCG_parentConstraint2" -p "Max__rHipFKCG";
@@ -25692,12 +25705,12 @@ createNode parentConstraint -n "Max__rHipFKCG_parentConstraint2" -p "Max__rHipFK
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
 	setAttr ".tg[0].tot" -type "double3" -1.4265324295505242 -0.80000000000000415 3.4402179155335892e-16 ;
-	setAttr ".tg[0].tor" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151723 ;
+	setAttr ".tg[0].tor" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151727 ;
 	setAttr ".tg[1].tot" -type "double3" -1.4265324295505242 14.361959728865155 -0.31993379417754653 ;
-	setAttr ".tg[1].tor" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151723 ;
-	setAttr ".lr" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151723 ;
+	setAttr ".tg[1].tor" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151727 ;
+	setAttr ".lr" -type "double3" -91.158939316852766 -96.918112941618844 -24.891639306050944 ;
 	setAttr ".rst" -type "double3" -1.4265324295505233 14.361959728865155 -0.31993379417754686 ;
-	setAttr ".rsrr" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151723 ;
+	setAttr ".rsrr" -type "double3" -98.214801864330269 -79.8447788990253 -23.605837088151727 ;
 	setAttr -l on ".int";
 	setAttr -k on ".w0";
 	setAttr -k on ".w1";
@@ -25725,7 +25738,7 @@ createNode orientConstraint -n "Max__rHipFKtoIKOrientLctr_orientConstraint1" -p 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 7.2090318741051114 -20.254562488891523 53.439272373289029 ;
+	setAttr ".lr" -type "double3" 7.2090318741051114 -20.254562488891526 53.439272373289029 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -25860,7 +25873,7 @@ createNode parentConstraint -n "Max__rArmSwitchCG_parentConstraint1" -p "Max__rA
 	setAttr ".tg[0].tot" -type "double3" -1.3322676295501878e-15 -3.5527136788005009e-15 
 		-2.2204460492503131e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 179.99999999999997 1.5902773407317584e-15 1.2258048756651561e-14 ;
-	setAttr ".lr" -type "double3" 52.50819795478683 142.90066918344135 72.893294295284221 ;
+	setAttr ".lr" -type "double3" -9.5007220365739098 173.18306059179613 60.992788454146648 ;
 	setAttr ".rst" -type "double3" 0 3.5527136788005009e-15 0 ;
 	setAttr ".rsrr" -type "double3" -6.443461485763323e-14 12.86972271832866 34.55686664749269 ;
 	setAttr -l on ".int" 2;
@@ -25965,7 +25978,7 @@ createNode transform -n "Max__rElbowIKConnectorCX" -p "Max__rElbowIKC";
 	setAttr -k off ".rx";
 	setAttr -k off ".ry";
 	setAttr -k off ".rz";
-	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 -9.7474822431928665 ;
+	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 -11.465379797090151 ;
 	setAttr -k off ".sz";
 	setAttr -l on -k off ".sx";
 	setAttr -l on -k off ".sy";
@@ -26252,7 +26265,7 @@ createNode parentConstraint -n "Max__rWristIKCG_parentConstraint1" -p "Max__rWri
 	setAttr ".tg[1].tot" -type "double3" -9.2822677548905563 3.6822197883497099 0.92508246169294939 ;
 	setAttr ".tg[1].tor" -type "double3" 0 12.869722718328658 34.55686664749269 ;
 	setAttr ".tg[2].tot" -type "double3" -9.2822677548905563 -4.2007266020664682 0.94976618248691469 ;
-	setAttr ".tg[2].tor" -type "double3" 0.32446198380422381 12.651478478048793 34.62853343624306 ;
+	setAttr ".tg[2].tor" -type "double3" 0.32446198380422381 12.651478478048793 34.628533436243067 ;
 	setAttr ".tg[3].tot" -type "double3" -9.2822677548905563 -5.956568092819059 0.83516825058812838 ;
 	setAttr ".tg[3].tor" -type "double3" 0 12.869722718328658 34.55686664749269 ;
 	setAttr ".lr" -type "double3" 0 12.869722718328656 34.556866647492683 ;
@@ -26369,7 +26382,7 @@ createNode parentConstraint -n "Max__rWristFKCG_parentConstraint1" -p "Max__rWri
 	setAttr ".tg[0].tot" -type "double3" -3.331727917927966 -1.3237628340950537e-16 
 		1.5367512115341611e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -5.5281566333684671 5.538502705594011 -5.7292469850825052 ;
-	setAttr ".lr" -type "double3" -23.542846368783195 25.775550472529659 -119.26907273450377 ;
+	setAttr ".lr" -type "double3" -9.3292067432807126 -2.2469148352418897 -131.39544801085034 ;
 	setAttr ".rst" -type "double3" -9.2822677548905528 18.844179517214872 0.60514866751540108 ;
 	setAttr ".rsrr" -type "double3" 179.99999999999997 12.86972271832866 34.556866647492697 ;
 	setAttr -l on ".int" 2;
@@ -26477,9 +26490,9 @@ createNode parentConstraint -n "Max__rElbowFKCG_parentConstraint1" -p "Max__rElb
 	setAttr ".tg[0].tot" -type "double3" -3.5426486778406545 -6.5299411086297166e-17 
 		-2.4201226705893224e-18 ;
 	setAttr ".tg[0].tor" -type "double3" 2.8902471212951593 -17.369196107743214 -0.86348610584651864 ;
-	setAttr ".lr" -type "double3" 25.31760299191609 124.48828062301352 -84.420073417738834 ;
+	setAttr ".lr" -type "double3" -15.430254600447215 72.63434207631893 -140.60876667490538 ;
 	setAttr ".rst" -type "double3" -6.5270933518983734 20.377238803594569 -0.47149154752502614 ;
-	setAttr ".rsrr" -type "double3" -176.24568161039301 18.853391683874861 29.092837142117361 ;
+	setAttr ".rsrr" -type "double3" -176.24568161039304 18.853391683874861 29.092837142117361 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rShoulderFKCG2" -p "Max__MainC";
@@ -26569,7 +26582,7 @@ createNode parentConstraint -n "Max__rShoulderFKCG_parentConstraint1" -p "Max__r
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.8278722534607015 7.7709957675888919e-17 
 		5.2709819987611221e-14 ;
-	setAttr ".tg[0].tor" -type "double3" 2.7758725319944406 -5.2128270471240663 -5.3276950067124815 ;
+	setAttr ".tg[0].tor" -type "double3" 2.7758725319944411 -5.2128270471240663 -5.3276950067124815 ;
 	setAttr ".lr" -type "double3" -179.20450599891348 1.4981947905905135 27.971116660077843 ;
 	setAttr ".rst" -type "double3" -3.3993517924155388 22.038266545141717 -0.56411569934740557 ;
 	setAttr ".rsrr" -type "double3" -179.20450599891348 1.4981947905905135 27.971116660077843 ;
@@ -26632,6 +26645,7 @@ createNode parentConstraint -n "Max__rShoulderFKCG2_parentConstraint1" -p "Max__
 		5.2791104820926193e-14 ;
 	setAttr ".tg[1].tor" -type "double3" 179.99999999999952 -4.2077988619935089 22.759408104179585 ;
 	setAttr ".tg[2].tot" -type "double3" -3.3993517924155392 22.03826654514172 -0.56411569934740569 ;
+	setAttr ".lr" -type "double3" 9.9040134234346944 -0.13032028473715568 -4.2068982874234351 ;
 	setAttr ".rst" -type "double3" -4.4408920985006262e-16 0 -1.1102230246251565e-16 ;
 	setAttr ".rsrr" -type "double3" -2.2860236773019018e-15 1.2689980606894201e-31 6.361109362927032e-15 ;
 	setAttr -l on ".int" 2;
@@ -26716,7 +26730,7 @@ createNode parentConstraint -n "Max__rClavicleCG2_parentConstraint1" -p "Max__rC
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -2.4651903288156619e-32 -3.5527136788005009e-15 
 		0 ;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380955 -0.13032028473715557 -4.2068982874234351 ;
 	setAttr ".rst" -type "double3" 2.1862606951770233e-16 23.038439457712752 -0.372779416874916 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659826 0 0 ;
 	setAttr -l on ".int" 2;
@@ -26771,7 +26785,7 @@ createNode parentConstraint -n "Max__rArmIKFKG_parentConstraint1" -p "Max__rArmI
 	setAttr ".tg[0].tot" -type "double3" 1.7763568394002505e-15 0 -5.5511151231257827e-17 ;
 	setAttr ".tg[0].tor" -type "double3" 3.5781240166464568e-15 -7.9513867036587939e-16 
 		-7.0444316577727124e-15 ;
-	setAttr ".lr" -type "double3" 178.36966818182947 -3.8796460103319932 22.814629925846123 ;
+	setAttr ".lr" -type "double3" -172.47438508984931 -7.7750164695808905 17.686910748698104 ;
 	setAttr ".rst" -type "double3" -0.79869387681793991 23.132263946848905 -0.372779416874916 ;
 	setAttr ".rsrr" -type "double3" 178.36966818182944 -3.8796460103319852 22.81462992584612 ;
 	setAttr -l on ".int" 2;
@@ -26801,7 +26815,7 @@ createNode parentConstraint -n "Max__rShoulderJFK_parentConstraint1" -p "Max__rS
 	setAttr ".tg[0].tot" -type "double3" -8.8817841970012523e-16 0 -3.3306690738754696e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 8.3489560388417319e-15 -2.3854160110976376e-15 
 		1.987846675914698e-15 ;
-	setAttr ".lr" -type "double3" 13.297308655792554 -39.178780246894114 -56.72905813644023 ;
+	setAttr ".lr" -type "double3" 13.297308655793154 -97.255988308207222 -46.001479998029367 ;
 	setAttr ".rst" -type "double3" -2.8278722534607086 3.5527136788005009e-15 6.8278716014447127e-15 ;
 	setAttr ".rsrr" -type "double3" -8.1998675381481294e-15 1.1430118386509511e-15 -3.6278201835443235e-15 ;
 	setAttr -l on ".int" 2;
@@ -26809,14 +26823,14 @@ createNode parentConstraint -n "Max__rShoulderJFK_parentConstraint1" -p "Max__rS
 createNode joint -n "Max__rShoulderJIK" -p "Max__rArmIKFKG";
 	rename -uid "D23A8008-40E7-68F4-4631-A1B80C263FC0";
 	setAttr ".v" no;
-	setAttr ".r" -type "double3" 0.18059479829014405 1.7328635271616495 0.71503367226325321 ;
+	setAttr ".r" -type "double3" -8.7112686637753729 11.95992136438902 -3.2790662940820607 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 2.7758725319957587 -5.2128270471248728 -5.3276950067126805 ;
 createNode joint -n "Max__rElbowJIK" -p "Max__rShoulderJIK";
 	rename -uid "69FF96C4-4D54-E8BB-CDE4-978842CD9D70";
 	setAttr ".t" -type "double3" -3.5426486778406518 -3.5527136788005009e-15 -1.2212453270876722e-15 ;
-	setAttr ".r" -type "double3" 9.162769665938073e-14 -3.6817233788391186 0.00013920468746779943 ;
+	setAttr ".r" -type "double3" 6.6784411586332014e-14 -27.338971390953859 -0.0087251753288903125 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 2.8902471212951393 -17.369196107743214 -0.86348610584651608 ;
@@ -26826,7 +26840,7 @@ createNode joint -n "Max__rWristJIK" -p "Max__rElbowJIK";
 	setAttr ".t" -type "double3" -3.3317279179279726 3.5527136788005009e-15 8.8817841970012523e-16 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -5.5281566333684511 5.5385027055939817 -5.7292469850824723 ;
+	setAttr ".jo" -type "double3" -5.5281566333684511 5.5385027055939817 -5.7292469850824732 ;
 createNode parentConstraint -n "Max__rWristJIK_parentConstraint1" -p "Max__rWristJIK";
 	rename -uid "BB5804D3-4995-F84A-CB39-F5BC33393DB9";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Max__rWristIKCW0" -dv 1 -min 0 -at "double";
@@ -26845,7 +26859,7 @@ createNode parentConstraint -n "Max__rWristJIK_parentConstraint1" -p "Max__rWris
 	setAttr ".tg[0].tot" -type "double3" 8.1020335329640147e-08 -8.364729353615985e-09 
 		4.1309085041518756e-09 ;
 	setAttr ".tg[0].tor" -type "double3" 179.99991157711364 2.0174241843010675e-05 -7.6177332318921797e-05 ;
-	setAttr ".lr" -type "double3" 2.236465613567816 -9.2512767069255446 2.6320711357501128 ;
+	setAttr ".lr" -type "double3" -1.1850324955548661 7.0965093321767485 -0.21686120341936058 ;
 	setAttr ".rst" -type "double3" -3.3317279179279722 3.5527136788005009e-15 1.9984014443252818e-15 ;
 	setAttr ".rsrr" -type "double3" 1.0436195048552164e-14 -2.484808344893373e-16 4.9696166897867449e-16 ;
 	setAttr -l on ".int" 2;
@@ -26904,6 +26918,7 @@ createNode parentConstraint -n "Max__rLegIKFKG_parentConstraint1" -p "Max__rLegI
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 -1.7763568394002505e-15 0 ;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr ".rst" -type "double3" 0 15.161959728865158 -0.31993379417754686 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -26932,7 +26947,6 @@ createNode parentConstraint -n "Max__rHipJFK_parentConstraint1" -p "Max__rHipJFK
 		4.4408920985006262e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -6.3611093629270335e-15 -1.5902773407317587e-14 
 		1.033680271475643e-14 ;
-	setAttr ".lr" -type "double3" -1.7655625192200634e-30 1.5902773407317584e-14 -1.2722218725854067e-14 ;
 	setAttr ".rst" -type "double3" -1.4265324295505233 -0.79999999999999538 -5.5511151231257827e-17 ;
 	setAttr ".rsrr" -type "double3" -1.7655625192200634e-30 1.5902773407317584e-14 -1.2722218725854067e-14 ;
 	setAttr -l on ".int" 2;
@@ -26940,14 +26954,14 @@ createNode parentConstraint -n "Max__rHipJFK_parentConstraint1" -p "Max__rHipJFK
 createNode joint -n "Max__rHipJIK" -p "Max__rLegIKFKG";
 	rename -uid "22CAB3B9-4ED9-7AF2-4FE0-FFAAF61935B9";
 	setAttr ".v" no;
-	setAttr ".r" -type "double3" 7.2090318741051238 -20.254562488891516 53.439272373288993 ;
+	setAttr ".r" -type "double3" 16.367101966369127 -2.1990617187797925 21.771428681599172 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -114.60506299713342 4.0580080018087443 80.678865584889152 ;
 createNode joint -n "Max__rKneeJIK" -p "Max__rHipJIK";
 	rename -uid "F1BCEB41-4B34-AD0D-0455-DBB498FD05DD";
 	setAttr ".t" -type "double3" -5.7472016792470786 -2.6645352591003757e-15 -4.4408920985006262e-15 ;
-	setAttr ".r" -type "double3" 3.3970854182088588e-15 2.1740632576940723e-15 -115.93916032995462 ;
+	setAttr ".r" -type "double3" -9.9419104558201556e-15 2.0491940267264619e-11 -14.08645130995968 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 0 -8.4859298709408844 ;
@@ -26955,14 +26969,14 @@ createNode joint -n "Max__rKneeJIK" -p "Max__rHipJIK";
 createNode joint -n "Max__rAnkleJIK" -p "Max__rKneeJIK";
 	rename -uid "5594D52D-4C04-9AE6-5E01-80AE6DEAEF80";
 	setAttr ".t" -type "double3" -6.7818731630111708 -1.3322676295501878e-15 -8.8817841970012523e-16 ;
-	setAttr ".r" -type "double3" -1.6038363319428715 -6.4698790909430519 49.1154739018871 ;
+	setAttr ".r" -type "double3" 7.6263602476134231 12.700984869718136 -2.513514961914507 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" -1.7627159790268505 -7.3013534463309018 39.989347556151529 ;
 createNode joint -n "Max__rBallJIK" -p "Max__rAnkleJIK";
 	rename -uid "EB115540-430D-6267-94AB-BBBF0C989597";
 	setAttr ".t" -type "double3" -2.5287076184204915 -1.6358442378461291e-15 7.2164496600635175e-16 ;
-	setAttr ".r" -type "double3" 5.201490830506663e-07 -1.5362344546709018e-22 -1.3936322051836092e-22 ;
+	setAttr ".r" -type "double3" 9.9199467168324191e-05 9.9846757011925292e-05 -0.00029646392725539395 ;
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
 	setAttr ".jo" -type "double3" 0 -4.9257985427127426 51.223511674592302 ;
@@ -27034,7 +27048,7 @@ createNode parentConstraint -n "Max__rWristJG2_parentConstraint1" -p "Max__rWris
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 8.8817841970012523e-16 0 0 ;
 	setAttr ".tg[0].tor" -type "double3" -5.5281566333684431 5.5385027055940075 -5.7292469850824981 ;
-	setAttr ".lr" -type "double3" -23.542847516254152 25.775553315129368 -119.26907329869931 ;
+	setAttr ".lr" -type "double3" -9.3292077830552813 -2.2469100984085739 -131.39544707612677 ;
 	setAttr ".rst" -type "double3" -6.5270933518983707 20.377238803594569 -0.47149154752502653 ;
 	setAttr ".rsrr" -type "double3" 179.99999999999997 12.869722718328662 34.556866647492683 ;
 	setAttr -l on ".int" 2;
@@ -27139,8 +27153,8 @@ createNode parentConstraint -n "Max__rThumbJ3_parentConstraint1" -p "Max__rThumb
 	setAttr ".tg[0].tot" -type "double3" -2.5757174171303632e-14 3.4638958368304884e-14 
 		-6.3948846218409017e-14 ;
 	setAttr ".tg[0].tor" -type "double3" 42.467254821434778 -3.8268181301328196e-13 
-		-179.9999999999996 ;
-	setAttr ".lr" -type "double3" 1.272221872585405e-14 2.7960608112095409e-13 -6.863136795293481e-15 ;
+		-179.99999999999963 ;
+	setAttr ".lr" -type "double3" 1.2722218725854067e-14 2.6242679247223283e-13 -1.8812764488963256e-16 ;
 	setAttr ".rst" -type "double3" 0.80825719410272434 1.7763568394002505e-14 7.1054273576010019e-15 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629276709e-15 2.7960608112095429e-13 -2.6130751131237493e-13 ;
 	setAttr -l on ".int" 2;
@@ -27163,8 +27177,8 @@ createNode parentConstraint -n "Max__rThumbJ2_parentConstraint1" -p "Max__rThumb
 	setAttr ".tg[0].tot" -type "double3" -2.3092638912203256e-14 2.2204460492503131e-14 
 		-4.6185277824406512e-14 ;
 	setAttr ".tg[0].tor" -type "double3" 42.467254821434778 -3.8268181301328196e-13 
-		-179.9999999999996 ;
-	setAttr ".lr" -type "double3" 9.9891901892715502 -29.022870724371437 -37.314301499219361 ;
+		-179.99999999999963 ;
+	setAttr ".lr" -type "double3" 9.9891901892715573 -29.022870724371458 -37.31430149921939 ;
 	setAttr ".rst" -type "double3" 0.72306888144585102 -3.5527136788005009e-15 5.3290705182007514e-15 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629276709e-15 2.7960608112095429e-13 -2.6130751131237493e-13 ;
 	setAttr -l on ".int" 2;
@@ -27187,8 +27201,8 @@ createNode parentConstraint -n "Max__rThumbJ1_parentConstraint1" -p "Max__rThumb
 	setAttr ".tg[0].tot" -type "double3" -7.9936057773011271e-15 1.1546319456101628e-14 
 		-2.1316282072803006e-14 ;
 	setAttr ".tg[0].tor" -type "double3" 42.467254821434771 -3.9200336449037853e-13 
-		-179.9999999999996 ;
-	setAttr ".lr" -type "double3" -1.2722218725854739e-14 2.7352770260586251e-13 -2.798888119687896e-13 ;
+		-179.99999999999963 ;
+	setAttr ".lr" -type "double3" -3.1805546814635868e-14 2.5444437451708134e-13 -3.1169435878342485e-13 ;
 	setAttr ".rst" -type "double3" -0.38518103117240088 0.096446218420243923 -0.47646210307154524 ;
 	setAttr ".rsrr" -type "double3" -1.2722218725854739e-14 2.7352770260586251e-13 -2.798888119687896e-13 ;
 	setAttr -l on ".int" 2;
@@ -27260,7 +27274,7 @@ createNode parentConstraint -n "Max__rFinger1J3_parentConstraint1" -p "Max__rFin
 	setAttr ".tg[0].tot" -type "double3" -7.6145686978001947e-15 2.4868995751603507e-14 
 		2.4424906541753444e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 180 0 0 ;
-	setAttr ".lr" -type "double3" -4.3277586594286929e-15 -6.4810303070265185e-15 67.466655394178801 ;
+	setAttr ".lr" -type "double3" -4.3277586594286945e-15 -6.4810303070265192e-15 67.466655394178801 ;
 	setAttr ".rst" -type "double3" -0.49112151969503021 1.7763568394002505e-14 2.2204460492503131e-16 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -27507,7 +27521,7 @@ createNode parentConstraint -n "Max__rThumbJ2CG_parentConstraint1" -p "Max__rThu
 		2.664535259100376e-14 ;
 	setAttr ".tg[0].tor" -type "double3" 1.5902773407317584e-15 1.5902773407317588e-15 
 		-1.9083328088781104e-14 ;
-	setAttr ".lr" -type "double3" 99.134312129798843 -44.075597043930721 -28.399795171401305 ;
+	setAttr ".lr" -type "double3" 99.134312129798843 -44.075597043930721 -28.399795171401298 ;
 	setAttr ".rst" -type "double3" -0.84213212081545596 0.34351663975873276 -0.97943378804890091 ;
 	setAttr ".rsrr" -type "double3" 99.134312129798843 -44.075597043930721 -28.399795171401305 ;
 	setAttr -l on ".int" 2;
@@ -27601,7 +27615,7 @@ createNode parentConstraint -n "Max__rThumbJ3CG_parentConstraint1" -p "Max__rThu
 		3.1974423109204508e-14 ;
 	setAttr ".tg[0].tor" -type "double3" 1.5902773407317584e-15 1.5902773407317588e-15 
 		-1.9083328088781104e-14 ;
-	setAttr ".lr" -type "double3" 96.550996469257839 1.486029406670339 -21.84741231535147 ;
+	setAttr ".lr" -type "double3" 96.550996469257839 1.4860294066703326 -21.84741231535147 ;
 	setAttr ".rst" -type "double3" -1.3529188729967483 0.61969564651882647 -1.5416630489735696 ;
 	setAttr ".rsrr" -type "double3" 99.134312129798843 -44.075597043930721 -28.399795171401305 ;
 	setAttr -l on ".int" 2;
@@ -27624,7 +27638,7 @@ createNode orientConstraint -n "Max__rWristJG1_orientConstraint1" -p "Max__rWris
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 70.489829630924987 6.8935605133584801 13.727633783230877 ;
+	setAttr ".lr" -type "double3" 0.16185911922382387 6.8935588244997987 13.727632726060175 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -27683,7 +27697,7 @@ createNode parentConstraint -n "Max__rWristJFK_parentConstraint1" -p "Max__rWris
 	setAttr ".tg[0].tot" -type "double3" -4.4408920985006262e-16 0 8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 7.9352595043360027e-15 -4.1347210859025721e-14 
 		4.0883040889823186e-14 ;
-	setAttr ".lr" -type "double3" 70.489829419610956 6.8935634561264409 13.727634427530552 ;
+	setAttr ".lr" -type "double3" 0.16185921875405618 6.8935634561264401 13.727634427530477 ;
 	setAttr ".rst" -type "double3" -9.2822677548905546 18.844179517214876 0.60514866751540353 ;
 	setAttr ".rsrr" -type "double3" -8.7465253740246814e-15 3.8166656177562189e-14 -3.8166656177562201e-14 ;
 	setAttr -l on ".int" 2;
@@ -27725,7 +27739,7 @@ createNode parentConstraint -n "Max__rWristJFKG2_parentConstraint1" -p "Max__rWr
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -3.33172791792797 7.1054273576010019e-15 2.8310687127941492e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -173.98099192373419 18.276826121419546 29.438395999910384 ;
-	setAttr ".lr" -type "double3" 3.9214465855773453 -224.79639203392975 99.74786196397838 ;
+	setAttr ".lr" -type "double3" -1.8015430474592797 -193.96172434726705 81.705716277307673 ;
 	setAttr ".rst" -type "double3" 3.5527136788005009e-15 0 -5.5511151231257827e-16 ;
 	setAttr ".rsrr" -type "double3" -4.7708320221952752e-15 -1.3241718894150476e-31 
 		-3.1805546814635168e-15 ;
@@ -27782,7 +27796,7 @@ createNode parentConstraint -n "Max__rElbowJFK_parentConstraint1" -p "Max__rElbo
 	setAttr ".tg[0].tot" -type "double3" 8.8817841970012523e-16 0 -2.2204460492503131e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -2.7034714792439897e-14 6.3611093629270335e-15 
 		1.7890620083232284e-15 ;
-	setAttr ".lr" -type "double3" -5.0888874903416268e-14 -99.025121444394088 2.5444437451708134e-14 ;
+	setAttr ".lr" -type "double3" 3.113417591215145e-13 -80.599840696655363 -2.8905803116672346e-13 ;
 	setAttr ".rst" -type "double3" -6.5270933518983716 20.377238803594572 -0.47149154752502648 ;
 	setAttr ".rsrr" -type "double3" 2.5444437451708128e-14 -3.1805546814635168e-15 3.1805546814635152e-15 ;
 	setAttr -l on ".int" 2;
@@ -27826,7 +27840,7 @@ createNode parentConstraint -n "Max__rElbowJFKG2_parentConstraint1" -p "Max__rEl
 	setAttr ".tg[0].tot" -type "double3" -3.5426486778406523 -3.5527136788005009e-15 
 		-1.1102230246251565e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -179.99999999999994 1.6962470638996368 27.960715440011402 ;
-	setAttr ".lr" -type "double3" -8.5282714094475267 39.35276364213545 49.607260441850627 ;
+	setAttr ".lr" -type "double3" -84.022265425868795 66.426418434196265 -26.992022658359083 ;
 	setAttr ".rst" -type "double3" -1.7763568394002505e-15 0 -5.5511151231257827e-17 ;
 	setAttr ".rsrr" -type "double3" -4.8702243559910109e-15 7.951386703658788e-16 -1.2722218725854067e-14 ;
 	setAttr -l on ".int" 2;
@@ -27876,7 +27890,7 @@ createNode parentConstraint -n "Max__rWristJIKProxy_parentConstraint1" -p "Max__
 		1.3322676295501878e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 179.99999999999997 -3.1805546814635174e-14 
 		2.616753604203947e-14 ;
-	setAttr ".lr" -type "double3" 2.2104701744302191 -9.1428443363367933 2.9895103732711972 ;
+	setAttr ".lr" -type "double3" -1.1758757927454526 7.0994776899617884 -0.070512205696038305 ;
 	setAttr ".rst" -type "double3" -9.2822677548905563 18.844179517214872 0.60514866751540441 ;
 	setAttr ".rsrr" -type "double3" -5.5659706925611607e-15 3.4986101496098675e-14 -2.5444437451708128e-14 ;
 	setAttr -l on ".int" 2;
@@ -27918,7 +27932,7 @@ createNode parentConstraint -n "Max__rWristJIKProxyG2_parentConstraint1" -p "Max
 	setAttr ".tg[0].tot" -type "double3" -8.8817841970012523e-16 3.5527136788005009e-15 
 		6.106226635438361e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -173.98099192373419 18.276826121419557 29.43839599991038 ;
-	setAttr ".lr" -type "double3" 3.5489028457732701 -8.669258331313344 3.0185567209317568 ;
+	setAttr ".lr" -type "double3" -3.1493430249036813 6.4607648387953418 -0.57859256439204121 ;
 	setAttr ".rst" -type "double3" 0 0 -4.9960036108132044e-16 ;
 	setAttr ".rsrr" -type "double3" -3.0314661807699147e-15 -2.3854160110976376e-15 
 		6.3105066604935869e-32 ;
@@ -27940,7 +27954,7 @@ createNode transform -n "Max__rPalmCG" -p "Max__MainC";
 	setAttr ".rp" -type "double3" 8.8817841970012523e-16 -3.5527136788005009e-15 -6.6613381477509412e-16 ;
 	setAttr ".rpt" -type "double3" -2.0680731975999214e-15 7.0538993575528989e-15 1.1177052974087318e-15 ;
 	setAttr ".sp" -type "double3" 8.8817841970012523e-16 -3.5527136788005009e-15 -6.6613381477509392e-16 ;
-	setAttr ".spt" -type "double3" 0 0 -1.97215226305253e-31 ;
+	setAttr ".spt" -type "double3" 0 0 -1.9721522630525304e-31 ;
 createNode transform -n "Max__rPalmC" -p "Max__rPalmCG";
 	rename -uid "06A4406D-4FEB-E43F-4D64-7C8BCF19B8FB";
 	addAttr -ci true -sn "RRARigName" -ln "RRARigName" -dt "string";
@@ -28281,7 +28295,7 @@ createNode parentConstraint -n "Max__rPalmCG_parentConstraint1" -p "Max__rPalmCG
 	setAttr ".tg[0].tot" -type "double3" -0.67393012166298005 -0.031888859229827204 
 		-0.10751861428631559 ;
 	setAttr ".tg[0].tor" -type "double3" 2.3892634648785307e-15 0 2.7163847122610088e-15 ;
-	setAttr ".lr" -type "double3" 52.508197954786887 37.099330816558634 -107.10670570471578 ;
+	setAttr ".lr" -type "double3" -9.5007220365739204 6.8169394082038623 -119.00721154585335 ;
 	setAttr ".rst" -type "double3" -9.8217146290609953 18.51135968336575 0.86007412483595402 ;
 	setAttr ".rsrr" -type "double3" 179.99999999999997 12.86972271832866 34.55686664749269 ;
 	setAttr -l on ".int" 2;
@@ -28366,7 +28380,7 @@ createNode aimConstraint -n "Max__rArmLengthOriginLctr_aimConstraint1" -p "Max__
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" 37.690351244958492 -9.9079568357261909 -151.50056959365443 ;
+	setAttr ".rsrr" -type "double3" 37.690351244958492 -9.9079568357261927 -151.50056959365443 ;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rAnkleJFKG2" -p "Max__MainC";
 	rename -uid "B6E3E501-4358-742E-3030-C38DE326E096";
@@ -28420,10 +28434,10 @@ createNode parentConstraint -n "Max__rBallJFK_parentConstraint1" -p "Max__rBallJ
 	setAttr ".tg[0].tot" -type "double3" 1.7763568394002505e-15 1.7722346439827883e-15 
 		-8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 6.9972202992197363e-14 1.6697912077683461e-14 
-		8.0779286623945522e-13 ;
-	setAttr ".lr" -type "double3" -7.0767341662563179e-14 -8.7465253740251768e-15 -8.1906737472720232e-13 ;
+		8.0779286623945532e-13 ;
+	setAttr ".lr" -type "double3" -7.275518833847793e-14 1.7890620083226876e-15 -8.5081080133321506e-13 ;
 	setAttr ".rst" -type "double3" -2.5287076184204915 -2.2204460492503131e-15 8.8817841970012523e-16 ;
-	setAttr ".rsrr" -type "double3" -6.9972202992197262e-14 -1.5703988739726612e-14 
+	setAttr ".rsrr" -type "double3" -6.9972202992197262e-14 -1.5703988739726616e-14 
 		-8.1271868940599977e-13 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -28444,7 +28458,7 @@ createNode parentConstraint -n "Max__rAnkleJFK_parentConstraint1" -p "Max__rAnkl
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0 -1.2212453270876722e-15 -4.4408920985006262e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -4.6807276834021927 3.7506923118425548 38.623143655302798 ;
-	setAttr ".lr" -type "double3" -1.5902773407317578e-14 -2.5444437451708128e-14 3.5311250384401255e-30 ;
+	setAttr ".lr" -type "double3" -2.5444437451708134e-14 -6.3611093629270335e-15 1.4124500153760508e-30 ;
 	setAttr ".rst" -type "double3" -3.0380025865850833 1.9713678917065094 -0.34617546771960583 ;
 	setAttr ".rsrr" -type "double3" -6.3611093629270335e-15 6.3611093629270335e-15 6.3611093629270335e-15 ;
 	setAttr -l on ".int" 2;
@@ -28487,7 +28501,7 @@ createNode parentConstraint -n "Max__rAnkleJFKG2_parentConstraint1" -p "Max__rAn
 	setAttr ".tg[0].tot" -type "double3" 1.7763568394002505e-15 7.7715611723760958e-16 
 		8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 164.11538179862436 64.417780293290647 76.513914331178839 ;
-	setAttr ".lr" -type "double3" 6.3611093629270335e-15 4.1347210859025721e-14 2.2952312749860827e-30 ;
+	setAttr ".lr" -type "double3" 6.3611093629270351e-15 4.1347210859025721e-14 15.609707607570373 ;
 	setAttr ".rst" -type "double3" -4.4408920985006262e-16 1.7763568394002505e-15 -2.9143354396410359e-16 ;
 	setAttr ".rsrr" -type "double3" -5.2966875576601903e-31 -3.1805546814635168e-15 
 		1.9083328088781101e-14 ;
@@ -28534,7 +28548,7 @@ createNode parentConstraint -n "Max__rKneeJFK_parentConstraint1" -p "Max__rKneeJ
 	setAttr ".tg[0].tot" -type "double3" 0 3.3306690738754696e-16 0 ;
 	setAttr ".tg[0].tor" -type "double3" -0.48863187335374675 -0.00023262277374000521 
 		-0.05455322132449851 ;
-	setAttr ".lr" -type "double3" -1.9083328088781101e-14 -9.5416640443905535e-15 -1.2722218725854065e-14 ;
+	setAttr ".lr" -type "double3" -1.9083328088781104e-14 3.1805546814635152e-15 -1.272221872585407e-14 ;
 	setAttr ".rst" -type "double3" -2.3550604463258349 8.7048623434841712 0.086774991465613488 ;
 	setAttr ".rsrr" -type "double3" 9.5416640443905519e-15 3.1805546814635164e-15 1.272221872585407e-14 ;
 	setAttr -l on ".int" 2;
@@ -28576,7 +28590,7 @@ createNode parentConstraint -n "Max__rKneeJFKG2_parentConstraint1" -p "Max__rKne
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 3.5527136788005009e-15 0 8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" 164.11538179862438 64.417780293290647 68.027984460237974 ;
-	setAttr ".lr" -type "double3" 9.5416640443905503e-15 -5.2966875576601903e-31 6.3611093629270335e-15 ;
+	setAttr ".lr" -type "double3" 9.5416640443905503e-15 -5.2966875576601903e-31 15.609707607570373 ;
 	setAttr ".rst" -type "double3" -2.2204460492503131e-16 3.5527136788005009e-15 -6.106226635438361e-16 ;
 	setAttr ".rsrr" -type "double3" 9.5416640443905503e-15 -5.2966875576601903e-31 6.3611093629270335e-15 ;
 	setAttr -l on ".int" 2;
@@ -28639,7 +28653,7 @@ createNode parentConstraint -n "Max__rLegLengthEndLctr_parentConstraint1" -p "Ma
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.022325464945851969 1.9713678917065085 -1.5835316317085109 ;
 	setAttr ".tg[0].tor" -type "double3" 0 20.694556300968078 0 ;
-	setAttr ".lr" -type "double3" 172.73819988767659 -11.325768300266933 -9.6903898732977733 ;
+	setAttr ".lr" -type "double3" -158.53018086884819 -15.613613097121123 0.45094452862528289 ;
 	setAttr ".rst" -type "double3" -1.61147015703456 -12.390591837158651 -0.026241673542060306 ;
 	setAttr ".rsrr" -type "double3" 0 -3.1805546814635168e-15 0 ;
 	setAttr -l on ".int" 2;
@@ -28752,7 +28766,7 @@ createNode transform -n "Max__rFootBallPivot" -p "Max__rFootHeelPivot";
 createNode locator -n "Max__rFootBallPivotShape" -p "Max__rFootBallPivot";
 	rename -uid "0198608F-4A03-A069-AD68-17A43607CD24";
 	setAttr -k off ".v";
-	setAttr ".lp" -type "double3" -3.3566748125234494e-16 -1.9614375010422802e-31 2.416732963793333e-17 ;
+	setAttr ".lp" -type "double3" -3.3566748125234494e-16 -1.9614375010422802e-31 2.4167329637933327e-17 ;
 createNode ikHandle -n "Max__rBallIKHandle" -p "Max__rFootBallPivot";
 	rename -uid "2069A4F3-4542-A667-406E-43B966815C36";
 	setAttr ".t" -type "double3" 8.8817841970012523e-16 2.2204460492503131e-16 4.4408920985006262e-16 ;
@@ -28818,7 +28832,7 @@ createNode transform -n "Max__rFootToePivot" -p "Max__rFootHeelPivot";
 createNode locator -n "Max__rFootToePivotShape" -p "Max__rFootToePivot";
 	rename -uid "B7BCC388-4D84-551C-3F3E-BDA773A7F11F";
 	setAttr -k off ".v";
-	setAttr ".lp" -type "double3" -3.3566748125234494e-16 -1.9614375010422802e-31 2.416732963793333e-17 ;
+	setAttr ".lp" -type "double3" -3.3566748125234494e-16 -1.9614375010422802e-31 2.4167329637933327e-17 ;
 createNode ikHandle -n "Max__rToeIKHandle" -p "Max__rFootToePivot";
 	rename -uid "88D2F710-4B65-3E21-F2BC-9880AB78D988";
 	setAttr ".t" -type "double3" 0.14878411970950145 1.4862373383717805e-14 2.0665084418282911 ;
@@ -28842,7 +28856,7 @@ createNode parentConstraint -n "Max__rToeIKCG_parentConstraint1" -p "Max__rToeIK
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -8.8817841970012523e-16 -1.9713678917065089 
 		-1.1102230246251565e-16 ;
-	setAttr ".lr" -type "double3" 32.361796572581675 -4.8051629657191501 9.9040081360823251 ;
+	setAttr ".lr" -type "double3" -1.6243617582493861 -5.3962375765219193 -6.0736569175814275 ;
 	setAttr ".rst" -type "double3" -8.8817841970012523e-16 4.4408920985006262e-16 0 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -28921,7 +28935,7 @@ createNode aimConstraint -n "Max__rElbowIKLockLctr_aimConstraint1" -p "Max__rElb
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" -69.253951924918709 29.99796463714944 -137.58790011090716 ;
+	setAttr ".rsrr" -type "double3" -69.253951924918709 29.99796463714944 -137.58790011090719 ;
 	setAttr -l on -k on ".w0";
 createNode pointConstraint -n "Max__rShoulderIKLockLctr_pointConstraint1" -p "Max__rShoulderIKLockLctr";
 	rename -uid "441CC35A-4536-9C73-E606-6CB1A99809A2";
@@ -28998,8 +29012,8 @@ createNode parentConstraint -n "Max__rAnkleIKLockLctr_parentConstraint1" -p "Max
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 0.022325464945851969 1.9713678917065094 -1.5835316317085115 ;
-	setAttr ".tg[0].tor" -type "double3" 44.043494106833869 39.926552412956816 -73.875114978900058 ;
-	setAttr ".lr" -type "double3" -26.10086152791591 13.443865397527151 16.828850508763178 ;
+	setAttr ".tg[0].tor" -type "double3" 44.043494106833876 39.926552412956816 -73.875114978900058 ;
+	setAttr ".lr" -type "double3" -13.839607318129136 12.82843742015053 -11.168046429491531 ;
 	setAttr ".rst" -type "double3" 9.7428190720420158 -2.4660176682742243 0.7588864781947261 ;
 	setAttr ".rsrr" -type "double3" 7.9513867036587951e-15 1.272221872585407e-14 8.3489560388417351e-15 ;
 	setAttr -l on ".int" 2;
@@ -29135,8 +29149,8 @@ createNode parentConstraint -n "Max__rAnkleFKtoIKLctrG_parentConstraint1" -p "Ma
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 9.2911907056958398e-09 5.81750193184849e-07 
 		-9.5522886045529276e-08 ;
-	setAttr ".tg[0].tor" -type "double3" 0 89.493174851558891 89.999999999999986 ;
-	setAttr ".lr" -type "double3" -179.99999999999997 15.000000000000002 -4.9817483006291036e-15 ;
+	setAttr ".tg[0].tor" -type "double3" 0 89.493174851558905 89.999999999999986 ;
+	setAttr ".lr" -type "double3" -179.99999999999994 15.000000000000002 -15.60970760757036 ;
 	setAttr ".rst" -type "double3" -3.0380023390066091 1.9713679009977019 -0.34617600275494026 ;
 	setAttr ".rsrr" -type "double3" -180 15.000000000000012 1.1367941305864403e-14 ;
 	setAttr -l on ".int" 2;
@@ -29257,12 +29271,12 @@ createNode nurbsSurface -n "Max__Spine_ribbonShapeOrig" -p "Max__Spine_ribbon";
 		8 0 0 0 0.33333333333333331 0.66666666666666663 1 1 1
 		
 		12
-		-0.50000000000000011 -1.5000000000000004 -0
-		-0.50000000000000011 -1.1666666666666667 -0
-		-0.50000000000000011 -0.50000000000000033 -0
-		-0.50000000000000011 0.49999999999999989 -0
-		-0.50000000000000011 1.1666666666666665 -0
-		-0.50000000000000011 1.5000000000000004 -0
+		-0.50000000000000011 -1.5000000000000004 0
+		-0.50000000000000011 -1.1666666666666667 0
+		-0.50000000000000011 -0.50000000000000033 0
+		-0.50000000000000011 0.49999999999999989 0
+		-0.50000000000000011 1.1666666666666665 0
+		-0.50000000000000011 1.5000000000000004 0
 		0.49999999999999983 -1.5 0
 		0.49999999999999983 -1.166666666666667 0
 		0.49999999999999983 -0.50000000000000011 0
@@ -29307,12 +29321,12 @@ createNode nurbsSurface -n "Max__Spine_ribbonBlendShapeOrig" -p "Max__Spine_ribb
 		8 0 0 0 0.33333333333333331 0.66666666666666663 1 1 1
 		
 		12
-		-0.50000000000000011 -1.5000000000000004 -0
-		-0.50000000000000011 -1.1666666666666667 -0
-		-0.50000000000000011 -0.50000000000000033 -0
-		-0.50000000000000011 0.49999999999999989 -0
-		-0.50000000000000011 1.1666666666666665 -0
-		-0.50000000000000011 1.5000000000000004 -0
+		-0.50000000000000011 -1.5000000000000004 0
+		-0.50000000000000011 -1.1666666666666667 0
+		-0.50000000000000011 -0.50000000000000033 0
+		-0.50000000000000011 0.49999999999999989 0
+		-0.50000000000000011 1.1666666666666665 0
+		-0.50000000000000011 1.5000000000000004 0
 		0.49999999999999983 -1.5 0
 		0.49999999999999983 -1.166666666666667 0
 		0.49999999999999983 -0.50000000000000011 0
@@ -29366,7 +29380,7 @@ createNode orientConstraint -n "Max__Spine01CurveLctr_orientConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.36014535165058692 0 0 ;
+	setAttr ".lr" -type "double3" 2.7100581943368569 -0.074888182403281031 -11.233697867811971 ;
 	setAttr ".o" -type "double3" -0.024263142946011305 0 0 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -29389,6 +29403,7 @@ createNode orientConstraint -n "Max__Spine01CurveLctrG_orientConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -29437,7 +29452,7 @@ createNode orientConstraint -n "Max__Spine02CurveLctr_orientConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.37716981017174267 0 0 ;
+	setAttr ".lr" -type "double3" 7.0426851288026802 -0.103131084720189 -15.56202563197844 ;
 	setAttr ".o" -type "double3" -0.00723868442485556 0 0 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -29460,6 +29475,7 @@ createNode orientConstraint -n "Max__Spine02CurveLctrG_orientConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -29509,7 +29525,7 @@ createNode orientConstraint -n "Max__Spine03CurveLctr_orientConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.37271218813624535 0 0 ;
+	setAttr ".lr" -type "double3" 8.3863446112608759 -0.11168624954000579 -16.89008080763621 ;
 	setAttr ".o" -type "double3" -0.011696306460352954 0 0 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -29532,6 +29548,7 @@ createNode orientConstraint -n "Max__Spine03CurveLctrG_orientConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -29576,7 +29593,7 @@ createNode nurbsCurve -n "Max__NeckLengthCXShapeOrig" -p "Max__NeckLengthCX";
 		2.0889276553517026e-16 23.297602421289401 -0.35178532366871179
 		1.9411256319132535e-16 23.691146180794679 -0.31990540435558656
 		1.5675876859593313e-16 24.157743284187021 -0.28210763054109272
-		1.094870864697412e-16 24.54898930255948 -0.2504138450444674
+		1.0948708646974119e-16 24.54898930255948 -0.2504138450444674
 		7.9068786666800322e-17 24.800747610033934 -0.23001958307272588
 		;
 createNode transform -n "Max__Neck_hairSystemFollicles" -p "Max__ExtraNodes";
@@ -29659,12 +29676,12 @@ createNode nurbsSurface -n "Max__Neck_ribbonShapeOrig" -p "Max__Neck_ribbon";
 		8 0 0 0 0.33333333333333331 0.66666666666666663 1 1 1
 		
 		12
-		-0.50000000000000011 -1.5000000000000004 -0
-		-0.50000000000000011 -1.1666666666666667 -0
-		-0.50000000000000011 -0.50000000000000033 -0
-		-0.50000000000000011 0.49999999999999989 -0
-		-0.50000000000000011 1.1666666666666665 -0
-		-0.50000000000000011 1.5000000000000004 -0
+		-0.50000000000000011 -1.5000000000000004 0
+		-0.50000000000000011 -1.1666666666666667 0
+		-0.50000000000000011 -0.50000000000000033 0
+		-0.50000000000000011 0.49999999999999989 0
+		-0.50000000000000011 1.1666666666666665 0
+		-0.50000000000000011 1.5000000000000004 0
 		0.49999999999999983 -1.5 0
 		0.49999999999999983 -1.166666666666667 0
 		0.49999999999999983 -0.50000000000000011 0
@@ -29709,12 +29726,12 @@ createNode nurbsSurface -n "Max__Neck_ribbonBlendShapeOrig" -p "Max__Neck_ribbon
 		8 0 0 0 0.33333333333333331 0.66666666666666663 1 1 1
 		
 		12
-		-0.50000000000000011 -1.5000000000000004 -0
-		-0.50000000000000011 -1.1666666666666667 -0
-		-0.50000000000000011 -0.50000000000000033 -0
-		-0.50000000000000011 0.49999999999999989 -0
-		-0.50000000000000011 1.1666666666666665 -0
-		-0.50000000000000011 1.5000000000000004 -0
+		-0.50000000000000011 -1.5000000000000004 0
+		-0.50000000000000011 -1.1666666666666667 0
+		-0.50000000000000011 -0.50000000000000033 0
+		-0.50000000000000011 0.49999999999999989 0
+		-0.50000000000000011 1.1666666666666665 0
+		-0.50000000000000011 1.5000000000000004 0
 		0.49999999999999983 -1.5 0
 		0.49999999999999983 -1.166666666666667 0
 		0.49999999999999983 -0.50000000000000011 0
@@ -29768,7 +29785,7 @@ createNode orientConstraint -n "Max__Neck01CurveLctr_orientConstraint1" -p "Max_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.174178224693053 0 0 ;
+	setAttr ".lr" -type "double3" 4.1741782246931098 -1.6831648062200992e-13 -1.0211681407758619e-12 ;
 	setAttr ".o" -type "double3" 0.45708572060785241 0 0 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -29792,7 +29809,7 @@ createNode orientConstraint -n "Max__Neck01CurveLctrG_orientConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380955 -0.13032028473715557 -4.2068982874234351 ;
 	setAttr ".o" -type "double3" 0.38440849459659826 0 0 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -29843,7 +29860,7 @@ createNode orientConstraint -n "Max__Neck02CurveLctr_orientConstraint1" -p "Max_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.4497958939854474 0 0 ;
+	setAttr ".lr" -type "double3" 4.4497958939851836 -6.7370715202953386e-14 -1.0544178169119087e-13 ;
 	setAttr ".o" -type "double3" 0.18146805131550317 0 0 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -29867,7 +29884,7 @@ createNode orientConstraint -n "Max__Neck02CurveLctrG_orientConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380955 -0.13032028473715557 -4.2068982874234351 ;
 	setAttr ".o" -type "double3" 0.38440849459659826 0 0 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -29918,7 +29935,7 @@ createNode orientConstraint -n "Max__Neck03CurveLctr_orientConstraint1" -p "Max_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.1867122988843706 0 0 ;
+	setAttr ".lr" -type "double3" 4.1867122988842391 -1.0530974008904689e-14 -1.1460082539055659e-13 ;
 	setAttr ".o" -type "double3" 0.44455164641653627 0 0 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -29942,7 +29959,7 @@ createNode orientConstraint -n "Max__Neck03CurveLctrG_orientConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.38440849459659826 0 0 ;
+	setAttr ".lr" -type "double3" 9.5196049288380955 -0.13032028473715557 -4.2068982874234351 ;
 	setAttr ".o" -type "double3" 0.38440849459659826 0 0 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -30024,7 +30041,7 @@ createNode nurbsCurve -n "Max__SpineSplineTopShapeOrig" -p "Max__SpineSplineTop"
 		6 0.5 0.5 0.5 1 1 1
 		4
 		0 19.100199593288952 -0.3463566055262311
-		-0 20.412946232838376 -0.35516420943039495
+		0 20.412946232838376 -0.35516420943039495
 		0 21.725692815954162 -0.36397181295592917
 		0 23.038439457712755 -0.37277941687491517
 		;
@@ -30054,7 +30071,7 @@ createNode nurbsCurve -n "curveShape1Orig" -p "Max__NeckSplineBtm";
 		6 0 0 0 0.5 0.5 0.5
 		4
 		0 23.038439457712759 -0.37277941687491523
-		-0 23.33215748876901 -0.34898611078195491
+		0 23.33215748876901 -0.34898611078195491
 		0 23.625875503460946 -0.32519280601462275
 		0 23.919593533873339 -0.30139949997381982
 		;
@@ -30084,7 +30101,7 @@ createNode nurbsCurve -n "Max__NeckSplineTopShapeOrig" -p "Max__NeckSplineTop";
 		6 0.5 0.5 0.5 1 1 1
 		4
 		0 23.919593533873343 -0.30139949997381971
-		-0 24.213311564285668 -0.27760619393302249
+		0 24.213311564285668 -0.27760619393302249
 		0 24.507029578977711 -0.25381288916568223
 		0 24.80074761003393 -0.23001958307272433
 		;
@@ -30212,7 +30229,7 @@ createNode parentConstraint -n "Max__lLowerArmMidClstr_parentConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -146.0179137910707 -19.155110770253255 99.168819832824312 ;
+	setAttr ".lr" -type "double3" 144.78923434644267 -77.703207362196139 131.75800887739723 ;
 	setAttr ".rst" -type "double3" 0.0075291275626989673 0.039972698221017566 0.040774162483638285 ;
 	setAttr ".rsrr" -type "double3" 3.2613816010201884 -20.321759890912727 -27.673957257332315 ;
 	setAttr -l on ".int" 2;
@@ -30243,7 +30260,7 @@ createNode parentConstraint -n "Max__lUpperArmMidClstr_parentConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 3.3985203987014589 -35.529450625453222 -86.162250463827775 ;
+	setAttr ".lr" -type "double3" 5.0074864488855999 15.356034127584335 -83.252557709746881 ;
 	setAttr ".rst" -type "double3" 0.030311257087895171 0.03839388194495541 -0.1727559170702494 ;
 	setAttr ".rsrr" -type "double3" 0.76939044201852602 1.4665097505861964 -28.954331529101161 ;
 	setAttr -l on ".int" 2;
@@ -30978,7 +30995,7 @@ createNode parentConstraint -n "Max__rLowerArmMidClstr_parentConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 18.023222044797876 22.099586717864486 -111.53846169278494 ;
+	setAttr ".lr" -type "double3" -6.5835532263093475 -7.3518896858941796 -125.26152678018757 ;
 	setAttr ".rst" -type "double3" -0.0075291275626705456 0.039972698221042435 0.040774162483626641 ;
 	setAttr ".rsrr" -type "double3" -176.73861839897984 20.321759890912666 27.673957257331818 ;
 	setAttr -l on ".int" 2;
@@ -31009,7 +31026,7 @@ createNode parentConstraint -n "Max__rUpperArmMidClstr_parentConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -164.51942270585909 39.315411388776305 86.071154934346325 ;
+	setAttr ".lr" -type "double3" -100.42593910495663 85.404042360079472 136.45752058150501 ;
 	setAttr ".rst" -type "double3" -0.030311257087890731 0.038393881944966068 -0.17275591707020921 ;
 	setAttr ".rsrr" -type "double3" -179.23060955798141 -1.4665097505866622 28.954331529099889 ;
 	setAttr -l on ".int" 2;
@@ -31710,9 +31727,9 @@ createNode parentConstraint -n "Max__lWristTwistLctr_parentConstraint1" -p "Max_
 		1.9984014443252818e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -1.5902773407317584e-15 -1.1927080055488187e-14 
 		-1.033680271475643e-14 ;
-	setAttr ".lr" -type "double3" 78.567373794094735 5.5385027055940288 -5.7292469850825043 ;
+	setAttr ".lr" -type "double3" 5.0194827000431701 5.5385009789109176 -5.7292468171814885 ;
 	setAttr ".rst" -type "double3" 3.331727917927974 -7.1054273576010019e-15 -1.2212453270876722e-15 ;
-	setAttr ".rsrr" -type "double3" -5.5281566333682566 5.5385027055940457 -5.7292469850824652 ;
+	setAttr ".rsrr" -type "double3" -5.5281566333682566 5.5385027055940457 -5.7292469850824661 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode parentConstraint -n "Max__lWristAimLctr_parentConstraint1" -p "Max__lWristAimLctr";
@@ -31730,7 +31747,7 @@ createNode parentConstraint -n "Max__lWristAimLctr_parentConstraint1" -p "Max__l
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -5.3016013826240576 -160.84488922973816 -80.831180167173713 ;
+	setAttr ".lr" -type "double3" -37.720506959888262 -102.29679263779799 -48.241991122576145 ;
 	setAttr ".rst" -type "double3" 6.5270933518983751 20.37723880359458 -0.47149154752502509 ;
 	setAttr ".rsrr" -type "double3" 3.7543183896068371 -18.853391683874868 -29.092837142117361 ;
 	setAttr -l on ".int" 2;
@@ -31759,7 +31776,7 @@ createNode parentConstraint -n "Max__lElbowTwist75Lctr_parentConstraint1" -p "Ma
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 170.17115085940321 -59.249200447220332 105.89331987467875 ;
+	setAttr ".lr" -type "double3" 16.183296612255283 -62.127108301407041 -99.709369388519917 ;
 	setAttr ".rst" -type "double3" 6.5270933518983751 20.37723880359458 -0.47149154752502509 ;
 	setAttr ".rsrr" -type "double3" 3.7543183896068291 -18.853391683874872 -29.092837142117336 ;
 	setAttr -l on ".int" 2;
@@ -31789,7 +31806,7 @@ createNode parentConstraint -n "Max__lElbowTwist50Lctr_parentConstraint1" -p "Ma
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 172.7909636773928 -45.930019029744933 102.61764818000398 ;
+	setAttr ".lr" -type "double3" 27.395074356637124 -73.549529482746024 -111.74950155309462 ;
 	setAttr ".rst" -type "double3" 6.5270933518983751 20.37723880359458 -0.47149154752502509 ;
 	setAttr ".rsrr" -type "double3" 3.7543183896068291 -18.853391683874872 -29.092837142117336 ;
 	setAttr -l on ".int" 2;
@@ -31819,7 +31836,7 @@ createNode parentConstraint -n "Max__lElbowTwist25Lctr_parentConstraint1" -p "Ma
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 174.05622997493728 -32.55406346343733 100.63126507293744 ;
+	setAttr ".lr" -type "double3" 71.956699586630776 -82.12340296902849 -157.11699994894192 ;
 	setAttr ".rst" -type "double3" 6.5270933518983751 20.37723880359458 -0.47149154752502509 ;
 	setAttr ".rsrr" -type "double3" 3.7543183896068291 -18.853391683874872 -29.092837142117336 ;
 	setAttr -l on ".int" 2;
@@ -31890,9 +31907,9 @@ createNode parentConstraint -n "Max__rForearmTwistLctrG_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -15.149824067263365 22.099586717874157 -111.53846169278671 ;
+	setAttr ".lr" -type "double3" -4.5926133707338046 -7.351889685885741 -125.2615267801874 ;
 	setAttr ".rst" -type "double3" -6.5270933518983743 20.377238803594572 -0.4714915475250257 ;
-	setAttr ".rsrr" -type "double3" -176.24568161039301 18.853391683874861 29.092837142117361 ;
+	setAttr ".rsrr" -type "double3" -176.24568161039304 18.853391683874861 29.092837142117361 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rWristAimLctr" -p "Max__rForearmTwistLctrG";
@@ -31926,7 +31943,7 @@ createNode parentConstraint -n "Max__rWristTwistLctr_parentConstraint1" -p "Max_
 		8.8817841970012523e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -2.5444437451708134e-14 7.9513867036587899e-16 
 		-1.6996089079070666e-14 ;
-	setAttr ".lr" -type "double3" 66.346090984452658 13.566800615074465 7.5284901487867586 ;
+	setAttr ".lr" -type "double3" -3.9818796235146565 13.566798854792943 7.5284891974932329 ;
 	setAttr ".rst" -type "double3" -3.3317279179279686 1.4210854715202004e-14 2.886579864025407e-15 ;
 	setAttr ".rsrr" -type "double3" -5.5281566333684404 5.5385027055940137 -5.7292469850824901 ;
 	setAttr -l on ".int" 2;
@@ -31946,7 +31963,7 @@ createNode parentConstraint -n "Max__rWristAimLctr_parentConstraint1" -p "Max__r
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.7890620083232277e-14 -1.3287512624317304e-14 1.5505204072134644e-14 ;
+	setAttr ".lr" -type "double3" 1.8486974086006675e-14 -1.2840247122236528e-14 1.6240707342223085e-13 ;
 	setAttr ".rst" -type "double3" 8.8817841970012523e-16 0 -3.8857805861880479e-16 ;
 	setAttr ".rsrr" -type "double3" 7.3177605757109821e-15 -3.1308585145656493e-15 -4.9696166897867647e-17 ;
 	setAttr -l on ".int" 2;
@@ -31975,7 +31992,7 @@ createNode parentConstraint -n "Max__rElbowTwist75Lctr_parentConstraint1" -p "Ma
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -3.8824185647942792e-15 37.132997377514869 2.9069201384908944e-15 ;
+	setAttr ".lr" -type "double3" 1.7755680418398139e-14 30.224138495659911 4.7675289328690831e-14 ;
 	setAttr ".rst" -type "double3" 8.8817841970012523e-16 0 -3.8857805861880479e-16 ;
 	setAttr ".rsrr" -type "double3" 3.658880287855491e-15 -1.5654292572828246e-15 -2.4848083448933774e-17 ;
 	setAttr -l on ".int" 2;
@@ -32005,7 +32022,7 @@ createNode parentConstraint -n "Max__rElbowTwist50Lctr_parentConstraint1" -p "Ma
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -7.9770115149943363e-15 24.755331585009905 6.3753731879438848e-15 ;
+	setAttr ".lr" -type "double3" 2.5214243067510275e-14 20.149425663773268 8.8246771486636614e-14 ;
 	setAttr ".rst" -type "double3" 8.8817841970012523e-16 0 -3.8857805861880479e-16 ;
 	setAttr ".rsrr" -type "double3" 3.658880287855491e-15 -1.5654292572828246e-15 -2.4848083448933774e-17 ;
 	setAttr -l on ".int" 2;
@@ -32035,7 +32052,7 @@ createNode parentConstraint -n "Max__rElbowTwist25Lctr_parentConstraint1" -p "Ma
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -1.2544985892670325e-14 12.377665792504951 1.0498626105531137e-14 ;
+	setAttr ".lr" -type "double3" 2.5117573247330098e-14 10.074712831886631 1.2560650165288532e-13 ;
 	setAttr ".rst" -type "double3" 8.8817841970012523e-16 0 -3.8857805861880479e-16 ;
 	setAttr ".rsrr" -type "double3" 3.658880287855491e-15 -1.5654292572828246e-15 -2.4848083448933774e-17 ;
 	setAttr -l on ".int" 2;
@@ -32153,7 +32170,7 @@ createNode parentConstraint -n "Max__lLowerLegMidClstr_parentConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 85.695620098925076 7.7493751917256297 -99.294031213228081 ;
+	setAttr ".lr" -type "double3" 88.344499535080999 30.590988088356145 -91.813759238402483 ;
 	setAttr ".rst" -type "double3" 0.13722781902073811 0.01089924467004888 0.059717933208123297 ;
 	setAttr ".rsrr" -type "double3" 65.491155015182144 6.4780746855255353 -83.645819268609046 ;
 	setAttr -l on ".int" 2;
@@ -32184,7 +32201,7 @@ createNode parentConstraint -n "Max__lUpperLegMidClstr_parentConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -63.631521089342996 -63.465448658600636 58.367190789820988 ;
+	setAttr ".lr" -type "double3" 85.024708774277883 -36.65898768722036 -86.475476443108619 ;
 	setAttr ".rst" -type "double3" -0.1143702258614121 -0.019490453332879909 -0.050095800622040512 ;
 	setAttr ".rsrr" -type "double3" 65.181863062971175 -5.0558740943521396 -78.347070238728335 ;
 	setAttr -l on ".int" 2;
@@ -32393,7 +32410,7 @@ createNode nurbsCurve -n "Max__lLowerLegCurve1CbShape" -p "Max__lLowerLegCurve1C
 		-1.6270518526303899e-17 0.26571773245366853 1.9611860232064613
 		-2.3009987966741679e-17 1.9480585590649909e-17 2.0712499117517962
 		-1.6270518526303899e-17 -0.26571773245366859 1.9611860232064613
-		-2.304926231879868e-33 -0.3757816209990037 1.6954682907527927
+		-2.3049262318798677e-33 -0.3757816209990037 1.6954682907527927
 		1.6270518526303899e-17 -0.26571773245366853 1.4297505582991241
 		2.3009987966741679e-17 -5.1245206975475828e-17 1.319686669753789
 		1.6270518526303899e-17 0.26571773245366864 1.4297505582991241
@@ -32414,7 +32431,7 @@ createNode nurbsCurve -n "Max__lLowerLegCurve1CcShape" -p "Max__lLowerLegCurve1C
 		-1.6270518526303899e-17 0.26571773245366853 -1.4297505582991241
 		-2.3009987966741679e-17 1.9480585590649909e-17 -1.319686669753789
 		-1.6270518526303899e-17 -0.26571773245366859 -1.4297505582991241
-		-2.304926231879868e-33 -0.3757816209990037 -1.6954682907527927
+		-2.3049262318798677e-33 -0.3757816209990037 -1.6954682907527927
 		1.6270518526303899e-17 -0.26571773245366853 -1.9611860232064613
 		2.3009987966741679e-17 -5.1245206975475828e-17 -2.0712499117517962
 		1.6270518526303899e-17 0.26571773245366864 -1.9611860232064613
@@ -32469,7 +32486,7 @@ createNode nurbsCurve -n "Max__lLowerLegCurve2CbShape" -p "Max__lLowerLegCurve2C
 		-1.6270518526303899e-17 0.26571773245366853 1.9611860232064613
 		-2.3009987966741679e-17 1.9480585590649909e-17 2.0712499117517962
 		-1.6270518526303899e-17 -0.26571773245366859 1.9611860232064613
-		-2.304926231879868e-33 -0.3757816209990037 1.6954682907527927
+		-2.3049262318798677e-33 -0.3757816209990037 1.6954682907527927
 		1.6270518526303899e-17 -0.26571773245366853 1.4297505582991241
 		2.3009987966741679e-17 -5.1245206975475828e-17 1.319686669753789
 		1.6270518526303899e-17 0.26571773245366864 1.4297505582991241
@@ -32490,7 +32507,7 @@ createNode nurbsCurve -n "Max__lLowerLegCurve2CcShape" -p "Max__lLowerLegCurve2C
 		-1.6270518526303899e-17 0.26571773245366853 -1.4297505582991241
 		-2.3009987966741679e-17 1.9480585590649909e-17 -1.319686669753789
 		-1.6270518526303899e-17 -0.26571773245366859 -1.4297505582991241
-		-2.304926231879868e-33 -0.3757816209990037 -1.6954682907527927
+		-2.3049262318798677e-33 -0.3757816209990037 -1.6954682907527927
 		1.6270518526303899e-17 -0.26571773245366853 -1.9611860232064613
 		2.3009987966741679e-17 -5.1245206975475828e-17 -2.0712499117517962
 		1.6270518526303899e-17 0.26571773245366864 -1.9611860232064613
@@ -32545,7 +32562,7 @@ createNode nurbsCurve -n "Max__lLowerLegCurve3CbShape" -p "Max__lLowerLegCurve3C
 		-1.6270518526303899e-17 0.26571773245366853 1.9611860232064613
 		-2.3009987966741679e-17 1.9480585590649909e-17 2.0712499117517962
 		-1.6270518526303899e-17 -0.26571773245366859 1.9611860232064613
-		-2.304926231879868e-33 -0.3757816209990037 1.6954682907527927
+		-2.3049262318798677e-33 -0.3757816209990037 1.6954682907527927
 		1.6270518526303899e-17 -0.26571773245366853 1.4297505582991241
 		2.3009987966741679e-17 -5.1245206975475828e-17 1.319686669753789
 		1.6270518526303899e-17 0.26571773245366864 1.4297505582991241
@@ -32566,7 +32583,7 @@ createNode nurbsCurve -n "Max__lLowerLegCurve3CcShape" -p "Max__lLowerLegCurve3C
 		-1.6270518526303899e-17 0.26571773245366853 -1.4297505582991241
 		-2.3009987966741679e-17 1.9480585590649909e-17 -1.319686669753789
 		-1.6270518526303899e-17 -0.26571773245366859 -1.4297505582991241
-		-2.304926231879868e-33 -0.3757816209990037 -1.6954682907527927
+		-2.3049262318798677e-33 -0.3757816209990037 -1.6954682907527927
 		1.6270518526303899e-17 -0.26571773245366853 -1.9611860232064613
 		2.3009987966741679e-17 -5.1245206975475828e-17 -2.0712499117517962
 		1.6270518526303899e-17 0.26571773245366864 -1.9611860232064613
@@ -32617,7 +32634,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve1CbShape" -p "Max__lUpperLegCurve1C
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
 		1.3788218851777477e-17 0.22517870232261861 1.2116217174891493
-		1.19399916193971e-33 0.31845077478222106 1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 1.6619791221343865
 		-1.9499486101152091e-17 1.6508544398903123e-17 1.755251194593989
 		-1.3788218851777477e-17 -0.22517870232261858 1.6619791221343865
@@ -32625,7 +32642,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve1CbShape" -p "Max__lUpperLegCurve1C
 		1.3788218851777477e-17 -0.22517870232261855 1.2116217174891493
 		1.9499486101152091e-17 -4.3427019719143828e-17 1.1183496450295467
 		1.3788218851777477e-17 0.22517870232261861 1.2116217174891493
-		1.19399916193971e-33 0.31845077478222106 1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 1.6619791221343865
 		;
 createNode nurbsCurve -n "Max__lUpperLegCurve1CcShape" -p "Max__lUpperLegCurve1C";
@@ -32638,7 +32655,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve1CcShape" -p "Max__lUpperLegCurve1C
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
 		1.3788218851777477e-17 0.22517870232261861 -1.6619791221343865
-		1.19399916193971e-33 0.31845077478222106 -1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 -1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 -1.2116217174891493
 		-1.9499486101152091e-17 1.6508544398903123e-17 -1.1183496450295467
 		-1.3788218851777477e-17 -0.22517870232261858 -1.2116217174891493
@@ -32646,7 +32663,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve1CcShape" -p "Max__lUpperLegCurve1C
 		1.3788218851777477e-17 -0.22517870232261855 -1.6619791221343865
 		1.9499486101152091e-17 -4.3427019719143828e-17 -1.755251194593989
 		1.3788218851777477e-17 0.22517870232261861 -1.6619791221343865
-		1.19399916193971e-33 0.31845077478222106 -1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 -1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 -1.2116217174891493
 		;
 createNode transform -n "Max__lUpperLegCurve2CG" -p "Max__extraCurveNodesG";
@@ -32693,7 +32710,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve2CbShape" -p "Max__lUpperLegCurve2C
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
 		1.3788218851777477e-17 0.22517870232261861 1.2116217174891493
-		1.19399916193971e-33 0.31845077478222106 1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 1.6619791221343865
 		-1.9499486101152091e-17 1.6508544398903123e-17 1.755251194593989
 		-1.3788218851777477e-17 -0.22517870232261858 1.6619791221343865
@@ -32701,7 +32718,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve2CbShape" -p "Max__lUpperLegCurve2C
 		1.3788218851777477e-17 -0.22517870232261855 1.2116217174891493
 		1.9499486101152091e-17 -4.3427019719143828e-17 1.1183496450295467
 		1.3788218851777477e-17 0.22517870232261861 1.2116217174891493
-		1.19399916193971e-33 0.31845077478222106 1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 1.6619791221343865
 		;
 createNode nurbsCurve -n "Max__lUpperLegCurve2CcShape" -p "Max__lUpperLegCurve2C";
@@ -32714,7 +32731,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve2CcShape" -p "Max__lUpperLegCurve2C
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
 		1.3788218851777477e-17 0.22517870232261861 -1.6619791221343865
-		1.19399916193971e-33 0.31845077478222106 -1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 -1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 -1.2116217174891493
 		-1.9499486101152091e-17 1.6508544398903123e-17 -1.1183496450295467
 		-1.3788218851777477e-17 -0.22517870232261858 -1.2116217174891493
@@ -32722,7 +32739,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve2CcShape" -p "Max__lUpperLegCurve2C
 		1.3788218851777477e-17 -0.22517870232261855 -1.6619791221343865
 		1.9499486101152091e-17 -4.3427019719143828e-17 -1.755251194593989
 		1.3788218851777477e-17 0.22517870232261861 -1.6619791221343865
-		1.19399916193971e-33 0.31845077478222106 -1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 -1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 -1.2116217174891493
 		;
 createNode transform -n "Max__lUpperLegCurve3CG" -p "Max__extraCurveNodesG";
@@ -32769,7 +32786,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve3CbShape" -p "Max__lUpperLegCurve3C
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
 		1.3788218851777477e-17 0.22517870232261861 1.2116217174891493
-		1.19399916193971e-33 0.31845077478222106 1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 1.6619791221343865
 		-1.9499486101152091e-17 1.6508544398903123e-17 1.755251194593989
 		-1.3788218851777477e-17 -0.22517870232261858 1.6619791221343865
@@ -32777,7 +32794,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve3CbShape" -p "Max__lUpperLegCurve3C
 		1.3788218851777477e-17 -0.22517870232261855 1.2116217174891493
 		1.9499486101152091e-17 -4.3427019719143828e-17 1.1183496450295467
 		1.3788218851777477e-17 0.22517870232261861 1.2116217174891493
-		1.19399916193971e-33 0.31845077478222106 1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 1.6619791221343865
 		;
 createNode nurbsCurve -n "Max__lUpperLegCurve3CcShape" -p "Max__lUpperLegCurve3C";
@@ -32790,7 +32807,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve3CcShape" -p "Max__lUpperLegCurve3C
 		13 -2 -1 0 1 2 3 4 5 6 7 8 9 10
 		11
 		1.3788218851777477e-17 0.22517870232261861 -1.6619791221343865
-		1.19399916193971e-33 0.31845077478222106 -1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 -1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 -1.2116217174891493
 		-1.9499486101152091e-17 1.6508544398903123e-17 -1.1183496450295467
 		-1.3788218851777477e-17 -0.22517870232261858 -1.2116217174891493
@@ -32798,7 +32815,7 @@ createNode nurbsCurve -n "Max__lUpperLegCurve3CcShape" -p "Max__lUpperLegCurve3C
 		1.3788218851777477e-17 -0.22517870232261855 -1.6619791221343865
 		1.9499486101152091e-17 -4.3427019719143828e-17 -1.755251194593989
 		1.3788218851777477e-17 0.22517870232261861 -1.6619791221343865
-		1.19399916193971e-33 0.31845077478222106 -1.4368004198117679
+		1.1939991619397098e-33 0.31845077478222106 -1.4368004198117679
 		-1.3788218851777477e-17 0.22517870232261855 -1.2116217174891493
 		;
 createNode transform -n "Max__rLowerLegCurve" -p "Max__extraCurveNodesG";
@@ -32913,7 +32930,7 @@ createNode parentConstraint -n "Max__rLowerLegMidClstr_parentConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -91.051608289128453 -18.574135309564944 88.824318909450582 ;
+	setAttr ".lr" -type "double3" -96.196588743782641 20.165844788249903 89.938607405319473 ;
 	setAttr ".rst" -type "double3" -0.13722781902074743 0.010899244670028452 0.059717933208133359 ;
 	setAttr ".rsrr" -type "double3" -114.5088449848179 -6.478074685525657 83.64581926860906 ;
 	setAttr -l on ".int" 2;
@@ -32944,7 +32961,7 @@ createNode parentConstraint -n "Max__rUpperLegMidClstr_parentConstraint1" -p "Ma
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.980149641010982 -18.574111920945164 88.824317192680482 ;
+	setAttr ".lr" -type "double3" -100.49230564377754 20.165867841399788 89.93860285705469 ;
 	setAttr ".rst" -type "double3" 0.11437022586139989 -0.019490453332931423 -0.050095800622027967 ;
 	setAttr ".rsrr" -type "double3" -114.81813693702883 5.0558740943524647 78.347070238728307 ;
 	setAttr -l on ".int" 2;
@@ -33153,7 +33170,7 @@ createNode nurbsCurve -n "Max__rLowerLegCurve1CbShape" -p "Max__rLowerLegCurve1C
 		1.6270518526303899e-17 -0.26571773245366853 -1.9611860232064613
 		2.3009987966741679e-17 -1.9480585590649909e-17 -2.0712499117517962
 		1.6270518526303899e-17 0.26571773245366859 -1.9611860232064613
-		2.304926231879868e-33 0.3757816209990037 -1.6954682907527927
+		2.3049262318798677e-33 0.3757816209990037 -1.6954682907527927
 		-1.6270518526303899e-17 0.26571773245366853 -1.4297505582991241
 		-2.3009987966741679e-17 5.1245206975475828e-17 -1.319686669753789
 		-1.6270518526303899e-17 -0.26571773245366864 -1.4297505582991241
@@ -33174,7 +33191,7 @@ createNode nurbsCurve -n "Max__rLowerLegCurve1CcShape" -p "Max__rLowerLegCurve1C
 		1.6270518526303899e-17 -0.26571773245366853 1.4297505582991241
 		2.3009987966741679e-17 -1.9480585590649909e-17 1.319686669753789
 		1.6270518526303899e-17 0.26571773245366859 1.4297505582991241
-		2.304926231879868e-33 0.3757816209990037 1.6954682907527927
+		2.3049262318798677e-33 0.3757816209990037 1.6954682907527927
 		-1.6270518526303899e-17 0.26571773245366853 1.9611860232064613
 		-2.3009987966741679e-17 5.1245206975475828e-17 2.0712499117517962
 		-1.6270518526303899e-17 -0.26571773245366864 1.9611860232064613
@@ -33229,7 +33246,7 @@ createNode nurbsCurve -n "Max__rLowerLegCurve2CbShape" -p "Max__rLowerLegCurve2C
 		1.6270518526303899e-17 -0.26571773245366853 -1.9611860232064613
 		2.3009987966741679e-17 -1.9480585590649909e-17 -2.0712499117517962
 		1.6270518526303899e-17 0.26571773245366859 -1.9611860232064613
-		2.304926231879868e-33 0.3757816209990037 -1.6954682907527927
+		2.3049262318798677e-33 0.3757816209990037 -1.6954682907527927
 		-1.6270518526303899e-17 0.26571773245366853 -1.4297505582991241
 		-2.3009987966741679e-17 5.1245206975475828e-17 -1.319686669753789
 		-1.6270518526303899e-17 -0.26571773245366864 -1.4297505582991241
@@ -33250,7 +33267,7 @@ createNode nurbsCurve -n "Max__rLowerLegCurve2CcShape" -p "Max__rLowerLegCurve2C
 		1.6270518526303899e-17 -0.26571773245366853 1.4297505582991241
 		2.3009987966741679e-17 -1.9480585590649909e-17 1.319686669753789
 		1.6270518526303899e-17 0.26571773245366859 1.4297505582991241
-		2.304926231879868e-33 0.3757816209990037 1.6954682907527927
+		2.3049262318798677e-33 0.3757816209990037 1.6954682907527927
 		-1.6270518526303899e-17 0.26571773245366853 1.9611860232064613
 		-2.3009987966741679e-17 5.1245206975475828e-17 2.0712499117517962
 		-1.6270518526303899e-17 -0.26571773245366864 1.9611860232064613
@@ -33305,7 +33322,7 @@ createNode nurbsCurve -n "Max__rLowerLegCurve3CbShape" -p "Max__rLowerLegCurve3C
 		1.6270518526303899e-17 -0.26571773245366853 -1.9611860232064613
 		2.3009987966741679e-17 -1.9480585590649909e-17 -2.0712499117517962
 		1.6270518526303899e-17 0.26571773245366859 -1.9611860232064613
-		2.304926231879868e-33 0.3757816209990037 -1.6954682907527927
+		2.3049262318798677e-33 0.3757816209990037 -1.6954682907527927
 		-1.6270518526303899e-17 0.26571773245366853 -1.4297505582991241
 		-2.3009987966741679e-17 5.1245206975475828e-17 -1.319686669753789
 		-1.6270518526303899e-17 -0.26571773245366864 -1.4297505582991241
@@ -33326,7 +33343,7 @@ createNode nurbsCurve -n "Max__rLowerLegCurve3CcShape" -p "Max__rLowerLegCurve3C
 		1.6270518526303899e-17 -0.26571773245366853 1.4297505582991241
 		2.3009987966741679e-17 -1.9480585590649909e-17 1.319686669753789
 		1.6270518526303899e-17 0.26571773245366859 1.4297505582991241
-		2.304926231879868e-33 0.3757816209990037 1.6954682907527927
+		2.3049262318798677e-33 0.3757816209990037 1.6954682907527927
 		-1.6270518526303899e-17 0.26571773245366853 1.9611860232064613
 		-2.3009987966741679e-17 5.1245206975475828e-17 2.0712499117517962
 		-1.6270518526303899e-17 -0.26571773245366864 1.9611860232064613
@@ -33638,7 +33655,7 @@ createNode parentConstraint -n "Max__lAnkleTwistLctr_parentConstraint1" -p "Max_
 	setAttr ".tg[0].tot" -type "double3" 3.758399031994486e-07 4.5300822071325797e-07 
 		-3.4236738777337905e-08 ;
 	setAttr ".tg[0].tor" -type "double3" 5.9954643748453931 2.7799008363991073e-07 -38.776483386862495 ;
-	setAttr ".lr" -type "double3" 14.493666325542106 7.5611079115200592 9.4473757762613051 ;
+	setAttr ".lr" -type "double3" 5.9604457659097694 5.3166058829290268 -14.780290176647249 ;
 	setAttr ".rst" -type "double3" 6.7818731630111468 5.8961363258447363e-07 4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" 9.2172368174996802 -6.7874062774510211 0.90928589842671104 ;
 	setAttr -l on ".int" 2;
@@ -33658,7 +33675,7 @@ createNode parentConstraint -n "Max__lAnkleAimLctr_parentConstraint1" -p "Max__l
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 78.448786774493129 7.7493751917158749 -99.294031213224827 ;
+	setAttr ".lr" -type "double3" 85.364276594636678 30.590988088352837 -91.81375923840119 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.7048623434841765 0.086774991465607798 ;
 	setAttr ".rsrr" -type "double3" 65.407221695821463 3.6602196227720301 -84.208603639150937 ;
 	setAttr -l on ".int" 2;
@@ -33687,7 +33704,7 @@ createNode parentConstraint -n "Max__lKneeTwist75Lctr_parentConstraint1" -p "Max
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 74.978476638151633 -40.044633722145754 -87.919677258836316 ;
+	setAttr ".lr" -type "double3" 86.007656474012805 2.1972596469984649 -89.604105293489312 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.7048623434841765 0.086774991465607604 ;
 	setAttr ".rsrr" -type "double3" 65.460543312247452 -0.19898744973016838 -82.444148532076497 ;
 	setAttr -l on ".int" 2;
@@ -33717,7 +33734,7 @@ createNode parentConstraint -n "Max__lKneeTwist50Lctr_parentConstraint1" -p "Max
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 77.436577368946061 -24.193271937175037 -92.497062605197314 ;
+	setAttr ".lr" -type "double3" 85.926336468225273 11.664101080224711 -90.275712210069912 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.7048623434841765 0.086774991465607604 ;
 	setAttr ".rsrr" -type "double3" 65.460543312247452 -0.19898744973016838 -82.444148532076497 ;
 	setAttr -l on ".int" 2;
@@ -33747,7 +33764,7 @@ createNode parentConstraint -n "Max__lKneeTwist25Lctr_parentConstraint1" -p "Max
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" 78.434806826616907 -8.2362099522154999 -96.036254362474423 ;
+	setAttr ".lr" -type "double3" 85.722538132947534 21.12927267721312 -90.995199066958151 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.7048623434841765 0.086774991465607604 ;
 	setAttr ".rsrr" -type "double3" 65.460543312247452 -0.19898744973016838 -82.444148532076497 ;
 	setAttr -l on ".int" 2;
@@ -33778,7 +33795,7 @@ createNode aimConstraint -n "Max__rKneeTwistLctr_aimConstraint1" -p "Max__rKneeT
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" -96.552267106371119 5.4601620606867458 147.0203521642342 ;
+	setAttr ".rsrr" -type "double3" -96.552267106371133 5.4601620606867458 147.0203521642342 ;
 	setAttr -l on -k on ".w0";
 createNode pointConstraint -n "Max__rKneeTwistLctr_pointConstraint1" -p "Max__rKneeTwistLctr";
 	rename -uid "10532C9C-4F5A-1E98-DC32-0DAB8FEF9E46";
@@ -33830,7 +33847,7 @@ createNode parentConstraint -n "Max__rAnkleTwistLctr_parentConstraint1" -p "Max_
 	setAttr ".tg[0].tot" -type "double3" -3.7583990275535939e-07 -4.5300822093530257e-07 
 		3.4236738777337905e-08 ;
 	setAttr ".tg[0].tor" -type "double3" 5.9954643748456391 2.7799032377178923e-07 -38.776483386862552 ;
-	setAttr ".lr" -type "double3" 5.8570835677174999 -12.052568493545353 4.2141939417245604 ;
+	setAttr ".lr" -type "double3" 8.5914309635354726 9.3955950477945738 -20.046673641888081 ;
 	setAttr ".rst" -type "double3" -6.7818731630111442 -5.8961363169629522e-07 4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" 9.2172368174996322 -6.7874062774512947 0.90928589842663132 ;
 	setAttr -l on ".int" 2;
@@ -33850,7 +33867,7 @@ createNode parentConstraint -n "Max__rAnkleAimLctr_parentConstraint1" -p "Max__r
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.980150187856538 -18.574135309563356 88.824318909452586 ;
+	setAttr ".lr" -type "double3" -100.49230407581427 20.165844788247199 89.938607405318322 ;
 	setAttr ".rst" -type "double3" -2.3550604463258349 8.7048623434841712 0.086774991465613016 ;
 	setAttr ".rsrr" -type "double3" -114.59277830417854 -3.6602196227720141 84.208603639150894 ;
 	setAttr -l on ".int" 2;
@@ -33879,7 +33896,7 @@ createNode parentConstraint -n "Max__rKneeTwist75Lctr_parentConstraint1" -p "Max
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -93.913224785353975 -15.399444927563305 88.59532914161214 ;
+	setAttr ".lr" -type "double3" -100.72586382487938 23.293714555752569 89.307996844547716 ;
 	setAttr ".rst" -type "double3" -2.3550604463258349 8.7048623434841712 0.086774991465612822 ;
 	setAttr ".rsrr" -type "double3" -114.53945668775256 0.19898744973017479 82.444148532076454 ;
 	setAttr -l on ".int" 2;
@@ -33909,7 +33926,7 @@ createNode parentConstraint -n "Max__rKneeTwist50Lctr_parentConstraint1" -p "Max
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -93.933940158235416 -16.457703100343611 88.67080857674749 ;
+	setAttr ".lr" -type "double3" -100.64330229251698 22.251359494969627 89.521284497480593 ;
 	setAttr ".rst" -type "double3" -2.3550604463258349 8.7048623434841712 0.086774991465612822 ;
 	setAttr ".rsrr" -type "double3" -114.53945668775256 0.19898744973017479 82.444148532076454 ;
 	setAttr -l on ".int" 2;
@@ -33939,7 +33956,7 @@ createNode parentConstraint -n "Max__rKneeTwist25Lctr_parentConstraint1" -p "Max
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -93.956234537927756 -17.515933960452255 88.747116285508852 ;
+	setAttr ".lr" -type "double3" -100.5654997981986 21.208730280115184 89.731419746988479 ;
 	setAttr ".rst" -type "double3" -2.3550604463258349 8.7048623434841712 0.086774991465612822 ;
 	setAttr ".rsrr" -type "double3" -114.53945668775256 0.19898744973017479 82.444148532076454 ;
 	setAttr -l on ".int" 2;
@@ -33970,7 +33987,7 @@ createNode orientConstraint -n "Max__lArmUpLctr_orientConstraint1" -p "Max__lArm
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -2.2211228991899894 -45.145000828998526 1.1876073884075271 ;
+	setAttr ".lr" -type "double3" -2.0214474716874196 -40.24283992922291 0.99412747551250891 ;
 	setAttr ".o" -type "double3" 1.3951921156039617 -8.6899306725657013 -0.31572219625781522 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
@@ -34019,7 +34036,7 @@ createNode parentConstraint -n "Max__lArmUpLctrG_parentConstraint1" -p "Max__lAr
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 4.5719619169557504 0.33439005330519223 -6.9405017186954927 ;
 	setAttr ".tg[0].tor" -type "double3" 2.8902471212950003 -17.369196107743225 -0.863486105846482 ;
-	setAttr ".lr" -type "double3" 8.2978538103265436 -52.786321702308065 -89.200416558022809 ;
+	setAttr ".lr" -type "double3" 7.4910346417020506 -1.8824166348348461 -85.568344283233188 ;
 	setAttr ".rst" -type "double3" 7.7980153710287841 20.189985216908486 -7.3773991544037063 ;
 	setAttr ".rsrr" -type "double3" 3.754318389606826 -18.853391683874882 -29.092837142117329 ;
 	setAttr -l on ".int" 2;
@@ -34060,7 +34077,7 @@ createNode parentConstraint -n "Max__lElbowCurveLctr_parentConstraint1" -p "Max_
 	setAttr ".tg[0].tot" -type "double3" -3.3317279179279677 0 2.2204460492503131e-16 ;
 	setAttr ".tg[0].tor" -type "double3" -5.5659706925611543e-15 -4.7708320221952752e-15 
 		-9.8260506832292813e-15 ;
-	setAttr ".lr" -type "double3" -108.95671106497636 -24.021022834361613 105.95016167354838 ;
+	setAttr ".lr" -type "double3" -66.687458002551466 -103.84402162280817 -13.125266693502295 ;
 	setAttr ".rst" -type "double3" 6.6073070243295664 20.686540755626908 -0.13694369617939628 ;
 	setAttr ".rsrr" -type "double3" 0 -12.869722718328655 -34.556866647492654 ;
 	setAttr -l on ".int" 2;
@@ -34099,7 +34116,7 @@ createNode parentConstraint -n "Max__lLowerArmTopClstrG_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 163.24266637312968 -72.378373074080741 113.43701537133971 ;
+	setAttr ".lr" -type "double3" 11.755491414386265 -50.241140445018559 -94.409780677403532 ;
 	setAttr ".rst" -type "double3" 6.5270933518983751 20.37723880359458 -0.47149154752502509 ;
 	setAttr ".rsrr" -type "double3" 3.754318389606822 -18.853391683874879 -29.092837142117311 ;
 	setAttr -l on ".int" 2;
@@ -34131,7 +34148,7 @@ createNode transform -n "Max__lLowerArmBtmClstr" -p "Max__lLowerArmBtmClstrG";
 	rename -uid "67C4479C-4E05-931A-76D2-F08EDBECACDD";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0.79942016790174519 -20.994668877263411 0.46325736855086153 ;
-	setAttr ".r" -type "double3" 6.0190080762659717 18.276826121419486 29.438395999910448 ;
+	setAttr ".r" -type "double3" 6.0190080762659726 18.276826121419486 29.438395999910448 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 	setAttr ".rp" -type "double3" 9.0526698875558722 18.971934457979483 0.51542864943176403 ;
 	setAttr ".rpt" -type "double3" -10.129734049124574 2.0227344192839274 -0.97868601798262655 ;
@@ -34162,7 +34179,7 @@ createNode aimConstraint -n "Max__lLowerArmBtmClstrG_aimConstraint1" -p "Max__lL
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" 5.5462706459734924e-14 -12.869722718328669 -34.556866647492676 ;
+	setAttr ".rsrr" -type "double3" 5.5462706459734924e-14 -12.869722718328671 -34.556866647492676 ;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lLowerArmTopGuideClstrG" -p "Max__curveNodesG";
 	rename -uid "3CA31712-46B2-262D-5F7E-8A8AF0796960";
@@ -34199,7 +34216,7 @@ createNode parentConstraint -n "Max__lLowerArmTopGuideClstrG_parentConstraint1" 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 163.24266637312968 -72.378373074080741 113.43701537133971 ;
+	setAttr ".lr" -type "double3" 11.755491414386265 -50.241140445018559 -94.409780677403532 ;
 	setAttr ".rst" -type "double3" 6.5270933518983751 20.37723880359458 -0.47149154752502509 ;
 	setAttr ".rsrr" -type "double3" 3.754318389606822 -18.853391683874879 -29.092837142117311 ;
 	setAttr -l on ".int" 2;
@@ -34231,7 +34248,7 @@ createNode transform -n "Max__lLowerArmBtmGuideClstr" -p "Max__lLowerArmBtmGuide
 	rename -uid "537A7108-4C30-111D-3BB5-74B93A2D4275";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 0.79942016790174519 -20.994668877263411 0.46325736855086153 ;
-	setAttr ".r" -type "double3" 6.0190080762659717 18.276826121419486 29.438395999910448 ;
+	setAttr ".r" -type "double3" 6.0190080762659726 18.276826121419486 29.438395999910448 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 	setAttr ".rp" -type "double3" 8.8230720143597718 19.099689402005549 0.42570862905765822 ;
 	setAttr ".rpt" -type "double3" -10.177780176683408 1.8949794752578661 -0.88896599760852069 ;
@@ -34262,7 +34279,7 @@ createNode aimConstraint -n "Max__lLowerArmBtmGuideClstrG_aimConstraint1" -p "Ma
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" 5.5462706459734924e-14 -12.869722718328669 -34.556866647492676 ;
+	setAttr ".rsrr" -type "double3" 5.5462706459734924e-14 -12.869722718328671 -34.556866647492676 ;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lShoulderCurveLctr" -p "Max__curveNodesG";
 	rename -uid "A654E9C3-49F1-9256-59C9-F1AE713F8EE8";
@@ -34288,8 +34305,8 @@ createNode parentConstraint -n "Max__lShoulderCurveLctr_parentConstraint1" -p "M
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -3.5426486778406527 0 -1.1102230246251565e-15 ;
 	setAttr ".tg[0].tor" -type "double3" 1.5902773407317584e-15 -6.3611093629270351e-15 
-		3.9955718185885437e-14 ;
-	setAttr ".lr" -type "double3" -5.3016013826240576 -160.84488922973816 -80.831180167173713 ;
+		3.9955718185885444e-14 ;
+	setAttr ".lr" -type "double3" -37.720506959888262 -102.29679263779799 -48.241991122576145 ;
 	setAttr ".rst" -type "double3" 3.5974978998030944 22.007351041967873 -1.6162903210980852 ;
 	setAttr ".rsrr" -type "double3" 3.7543183896068371 -18.853391683874868 -29.092837142117361 ;
 	setAttr -l on ".int" 2;
@@ -34319,7 +34336,7 @@ createNode parentConstraint -n "Max__lElbowTopCurveLctr_parentConstraint1" -p "M
 	setAttr ".tg[0].tot" -type "double3" 6.3705209313013569 7.1054273576010019e-15 1.3877787807814457e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -1.9878466759146985e-16 7.9513867036587919e-16 
 		2.8078334297295109e-15 ;
-	setAttr ".lr" -type "double3" -1.6303318181705999 3.879646010332126 -22.814629925846152 ;
+	setAttr ".lr" -type "double3" 7.6236503690034363 7.5331630643668683 -26.0876497443817 ;
 	setAttr ".rst" -type "double3" 6.6573551604717549 20.66774903185021 -0.80381437289766311 ;
 	setAttr ".rsrr" -type "double3" -1.6303318181705999 3.879646010332126 -22.814629925846152 ;
 	setAttr -l on ".int" 2;
@@ -34351,7 +34368,7 @@ createNode transform -n "Max__lUpperArmTopClstr" -p "Max__lUpperArmTopClstrG";
 	rename -uid "D616C6E2-409B-8950-737C-C1A76F9BA55F";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 7.3465170655013452 -21.051036765731109 0.66449194103252684 ;
-	setAttr ".r" -type "double3" 0 1.696247063899627 27.96071544001143 ;
+	setAttr ".r" -type "double3" 0 1.6962470638996272 27.96071544001143 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1 1.0000000000000002 ;
 	setAttr ".rp" -type "double3" 3.6599969228445928 21.899847566428726 -0.556397020014891 ;
 	setAttr ".rpt" -type "double3" -10.711293264657769 -0.84881080069762582 -0.10809492101767043 ;
@@ -34381,7 +34398,7 @@ createNode aimConstraint -n "Max__lUpperArmTopClstrG_aimConstraint1" -p "Max__lU
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" 3.9003960012161034 3.8796460103321153 -22.814629925846081 ;
+	setAttr ".rsrr" -type "double3" 3.9003960012161034 3.8796460103321153 -22.814629925846084 ;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lUpperArmBtmClstrG" -p "Max__curveNodesG";
 	rename -uid "042CB00A-4F81-E866-4F25-B9B5A050D50F";
@@ -34389,7 +34406,7 @@ createNode transform -n "Max__lUpperArmBtmClstr" -p "Max__lUpperArmBtmClstrG";
 	rename -uid "14967A07-47A7-1116-26CC-48A75068627A";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 3.8038683876606809 -21.051036765731105 0.66449194103252363 ;
-	setAttr ".r" -type "double3" 0 1.6962470638996421 27.96071544001142 ;
+	setAttr ".r" -type "double3" 0 1.6962470638996423 27.96071544001142 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 	setAttr ".rp" -type "double3" 6.2664482214693269 20.515657782307581 -0.47921022685753889 ;
 	setAttr ".rpt" -type "double3" -10.365537332818173 0.53537898342352142 -0.18528171417502109 ;
@@ -34416,7 +34433,7 @@ createNode parentConstraint -n "Max__lUpperArmBtmClstrG_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 163.24266637312968 -72.378373074080741 113.43701537133971 ;
+	setAttr ".lr" -type "double3" 11.755491414386265 -50.241140445018559 -94.409780677403532 ;
 	setAttr ".rst" -type "double3" 6.5270933518983751 20.37723880359458 -0.47149154752502509 ;
 	setAttr ".rsrr" -type "double3" 3.754318389606822 -18.853391683874879 -29.092837142117311 ;
 	setAttr -l on ".int" 2;
@@ -34448,7 +34465,7 @@ createNode transform -n "Max__lUpperArmTopGuideClstr" -p "Max__lUpperArmTopGuide
 	rename -uid "67CFCA47-4DCD-ED83-1239-5CAA42CE1A51";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 7.3465170655013452 -21.051036765731109 0.66449194103252684 ;
-	setAttr ".r" -type "double3" 0 1.696247063899627 27.96071544001143 ;
+	setAttr ".r" -type "double3" 0 1.6962470638996272 27.96071544001143 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1 1.0000000000000002 ;
 	setAttr ".rp" -type "double3" 3.9206420598837033 21.761428584205355 -0.54867834048662856 ;
 	setAttr ".rpt" -type "double3" -10.676717670521791 -0.71039181847426314 -0.11581360054593243 ;
@@ -34478,7 +34495,7 @@ createNode aimConstraint -n "Max__lUpperArmTopGuideClstrG_aimConstraint1" -p "Ma
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" 3.9003960012161034 3.8796460103321153 -22.814629925846081 ;
+	setAttr ".rsrr" -type "double3" 3.9003960012161034 3.8796460103321153 -22.814629925846084 ;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lUpperArmBtmGuideClstrG" -p "Max__curveNodesG";
 	rename -uid "E9F37311-437C-7D48-F289-E19B1C4ED937";
@@ -34486,7 +34503,7 @@ createNode transform -n "Max__lUpperArmBtmGuideClstr" -p "Max__lUpperArmBtmGuide
 	rename -uid "48305359-40AF-E9DB-B35F-A29B17251669";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" 3.8038683876606809 -21.051036765731105 0.66449194103252363 ;
-	setAttr ".r" -type "double3" 0 1.6962470638996421 27.96071544001142 ;
+	setAttr ".r" -type "double3" 0 1.6962470638996423 27.96071544001142 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1.0000000000000002 1.0000000000000002 ;
 	setAttr ".rp" -type "double3" 6.0058030844302142 20.654076764530952 -0.48692890638580139 ;
 	setAttr ".rpt" -type "double3" -10.400112926954151 0.39696000120015917 -0.17756303464675888 ;
@@ -34514,7 +34531,7 @@ createNode parentConstraint -n "Max__lUpperArmBtmGuideClstrG_parentConstraint1" 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 163.24266637312968 -72.378373074080741 113.43701537133971 ;
+	setAttr ".lr" -type "double3" 11.755491414386265 -50.241140445018559 -94.409780677403532 ;
 	setAttr ".rst" -type "double3" 6.5270933518983751 20.37723880359458 -0.47149154752502509 ;
 	setAttr ".rsrr" -type "double3" 3.754318389606822 -18.853391683874879 -29.092837142117311 ;
 	setAttr -l on ".int" 2;
@@ -34633,7 +34650,7 @@ createNode orientConstraint -n "Max__lElbowCurveCG_orientConstraint1" -p "Max__l
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -16.75733362687032 -107.62162692591926 -66.562984628660317 ;
+	setAttr ".lr" -type "double3" 11.75549141438626 -50.241140445018566 -94.409780677403504 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -34664,7 +34681,7 @@ createNode parentConstraint -n "Max__lLowerArmCurveJ1_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -165.65975758684723 -19.155110770259267 99.168819832824852 ;
+	setAttr ".lr" -type "double3" 143.53436369327443 -77.703207362200757 131.7580088774134 ;
 	setAttr ".rst" -type "double3" 7.2178526345297023 20.005753502867954 -0.19053531390986778 ;
 	setAttr ".rsrr" -type "double3" 1.881366862042718 -20.316189296337448 -27.679410629578172 ;
 	setAttr -l on ".int" 2;
@@ -34693,7 +34710,7 @@ createNode parentConstraint -n "Max__lLowerArmCurveJ2_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -146.01791379107073 -19.155110770253266 99.168819832824397 ;
+	setAttr ".lr" -type "double3" 144.78923434644241 -77.703207362196054 131.75800887739754 ;
 	setAttr ".rst" -type "double3" 7.9117873535332031 19.64358309087342 0.10115513506849418 ;
 	setAttr ".rsrr" -type "double3" 0.49919878837798587 -20.316544039878195 -27.6790633675637 ;
 	setAttr -l on ".int" 2;
@@ -34722,7 +34739,7 @@ createNode parentConstraint -n "Max__lLowerArmCurveJ3_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -126.37607190264322 -19.155110770251984 99.168819832825065 ;
+	setAttr ".lr" -type "double3" 146.04410499959454 -77.70320736219476 131.75800887739777 ;
 	setAttr ".rst" -type "double3" 8.6019277093654054 19.268827725139133 0.37877314602054041 ;
 	setAttr ".rsrr" -type "double3" -0.17699413168448416 -18.125275681387528 -29.783350630283341 ;
 	setAttr -l on ".int" 2;
@@ -34751,7 +34768,7 @@ createNode parentConstraint -n "Max__lElbowCurveJ_parentConstraint1" -p "Max__lE
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 163.24266637312968 -72.378373074080741 113.43701537133971 ;
+	setAttr ".lr" -type "double3" 11.755491414386265 -50.241140445018559 -94.409780677403532 ;
 	setAttr ".rst" -type "double3" 6.5270933518983751 20.37723880359458 -0.47149154752502509 ;
 	setAttr ".rsrr" -type "double3" 3.754318389606822 -18.853391683874879 -29.092837142117311 ;
 	setAttr -l on ".int" 2;
@@ -34780,7 +34797,7 @@ createNode parentConstraint -n "Max__lUpperArmCurveJ1_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 3.3985203986965207 -35.529450625448348 -86.162250463819291 ;
+	setAttr ".lr" -type "double3" 5.007486448887378 15.356034127586492 -83.252557709740131 ;
 	setAttr ".rst" -type "double3" 4.2043971717522455 21.660372894070218 -0.62262193709061864 ;
 	setAttr ".rsrr" -type "double3" 0.84590383551024872 3.3896286408534269 -27.071072398933296 ;
 	setAttr -l on ".int" 2;
@@ -34809,7 +34826,7 @@ createNode parentConstraint -n "Max__lUpperArmCurveJ2_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 3.3985203987016015 -35.529450625453045 -86.162250463828059 ;
+	setAttr ".lr" -type "double3" 5.0074864488855342 15.356034127584424 -83.252557709747109 ;
 	setAttr ".rst" -type "double3" 4.9891190409712189 21.239395553026785 -0.66178694318166975 ;
 	setAttr ".rsrr" -type "double3" 0.77009860247245909 1.4021063532594946 -28.972589711153109 ;
 	setAttr -l on ".int" 2;
@@ -34838,7 +34855,7 @@ createNode parentConstraint -n "Max__lUpperArmCurveJ3_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 3.398520398703718 -35.529450625461102 -86.162250463831711 ;
+	setAttr ".lr" -type "double3" 5.0074864488847277 15.356034127577423 -83.252557709750164 ;
 	setAttr ".rst" -type "double3" 5.7665109695025549 20.804215950984307 -0.64433046466458732 ;
 	setAttr ".rsrr" -type "double3" 0.91494615570306614 -4.8645882493022654 -29.392967253353557 ;
 	setAttr -l on ".int" 2;
@@ -34917,7 +34934,7 @@ createNode parentConstraint -n "Max__rElbowCurveLctr_parentConstraint1" -p "Max_
 	setAttr ".tg[0].tot" -type "double3" 3.3317279179279815 7.1054273576010019e-15 1.5543122344752192e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -3.2596838031220151e-14 3.1805546814635176e-15 
 		-2.3685815964438277e-14 ;
-	setAttr ".lr" -type "double3" 52.508197954786887 37.099330816558634 -107.10670570471578 ;
+	setAttr ".lr" -type "double3" -9.5007220365739204 6.8169394082038623 -119.00721154585335 ;
 	setAttr ".rst" -type "double3" -6.6073070243295557 20.686540755626908 -0.1369436961794025 ;
 	setAttr ".rsrr" -type "double3" 180 12.86972271832866 34.556866647492676 ;
 	setAttr -l on ".int" 2;
@@ -34929,7 +34946,7 @@ createNode transform -n "Max__rLowerArmTopClstr" -p "Max__rLowerArmTopClstrG";
 	rename -uid "96CAE21E-4C2C-9890-2AB7-10B8F9035D30";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -4.1311480858297118 20.994668877263404 -0.46325736855092581 ;
-	setAttr ".r" -type "double3" -173.98099192373422 18.276826121419568 29.438395999910373 ;
+	setAttr ".r" -type "double3" -173.98099192373425 18.276826121419568 29.438395999910373 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999989 1 ;
 	setAttr ".rp" -type "double3" -6.756691219233053 20.249483862829969 -0.38177152944138809 ;
 	setAttr ".rpt" -type "double3" 10.610195311395819 -41.244152740093369 0.84502889799232006 ;
@@ -34956,9 +34973,9 @@ createNode parentConstraint -n "Max__rLowerArmTopClstrG_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -39.420902561872559 67.584483800379388 -142.95383591958489 ;
+	setAttr ".lr" -type "double3" -5.4214726816914185 32.80645216751946 -128.7940268108382 ;
 	setAttr ".rst" -type "double3" -6.5270933518983743 20.377238803594572 -0.4714915475250257 ;
-	setAttr ".rsrr" -type "double3" -176.24568161039301 18.853391683874857 29.092837142117361 ;
+	setAttr ".rsrr" -type "double3" -176.24568161039304 18.853391683874857 29.092837142117361 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rLowerArmBtmClstrG" -p "Max__curveNodesG";
@@ -34988,7 +35005,7 @@ createNode transform -n "Max__rLowerArmBtmClstr" -p "Max__rLowerArmBtmClstrG";
 	rename -uid "BA30B538-4729-EEF0-3B06-0FB635A3026F";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.79942016790173787 20.994668877263404 -0.46325736855093241 ;
-	setAttr ".r" -type "double3" -173.98099192373422 18.276826121419571 29.438395999910373 ;
+	setAttr ".r" -type "double3" -173.98099192373425 18.276826121419571 29.438395999910373 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1 1 ;
 	setAttr ".rp" -type "double3" -9.0526698875558704 18.971934457979476 0.51542864943176192 ;
 	setAttr ".rpt" -type "double3" 10.129734049124576 -39.966603335242908 -0.052171280880830562 ;
@@ -35027,7 +35044,7 @@ createNode transform -n "Max__rLowerArmTopGuideClstr" -p "Max__rLowerArmTopGuide
 	rename -uid "F8093551-4122-A43B-A27C-B1AA41E27D59";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -4.1311480858297118 20.994668877263404 -0.46325736855092581 ;
-	setAttr ".r" -type "double3" -173.98099192373422 18.276826121419568 29.438395999910373 ;
+	setAttr ".r" -type "double3" -173.98099192373425 18.276826121419568 29.438395999910373 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999989 1 ;
 	setAttr ".rp" -type "double3" -6.9862890924291499 20.121728918803907 -0.29205150906728505 ;
 	setAttr ".rpt" -type "double3" 10.562149183836995 -41.116397796067304 0.75530887761821686 ;
@@ -35055,9 +35072,9 @@ createNode parentConstraint -n "Max__rLowerArmTopGuideClstrG_parentConstraint1" 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -39.420902561872559 67.584483800379388 -142.95383591958489 ;
+	setAttr ".lr" -type "double3" -5.4214726816914185 32.80645216751946 -128.7940268108382 ;
 	setAttr ".rst" -type "double3" -6.5270933518983743 20.377238803594572 -0.4714915475250257 ;
-	setAttr ".rsrr" -type "double3" -176.24568161039301 18.853391683874857 29.092837142117361 ;
+	setAttr ".rsrr" -type "double3" -176.24568161039304 18.853391683874857 29.092837142117361 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rLowerArmBtmGuideClstrG" -p "Max__curveNodesG";
@@ -35087,7 +35104,7 @@ createNode transform -n "Max__rLowerArmBtmGuideClstr" -p "Max__rLowerArmBtmGuide
 	rename -uid "91C0C20C-4949-8E94-268A-9FB39795C0E7";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -0.79942016790173787 20.994668877263404 -0.46325736855093241 ;
-	setAttr ".r" -type "double3" -173.98099192373422 18.276826121419571 29.438395999910373 ;
+	setAttr ".r" -type "double3" -173.98099192373425 18.276826121419571 29.438395999910373 ;
 	setAttr ".s" -type "double3" 1.0000000000000002 1 1 ;
 	setAttr ".rp" -type "double3" -8.8230720143597861 19.099689402005531 0.42570862905766116 ;
 	setAttr ".rpt" -type "double3" 10.177780176683394 -40.094358279268945 0.037548739493273753 ;
@@ -35143,9 +35160,9 @@ createNode parentConstraint -n "Max__rShoulderCurveLctr_parentConstraint1" -p "M
 	setAttr ".tg[0].tot" -type "double3" 3.5426486778406501 1.0658141036401503e-14 1.4432899320127035e-15 ;
 	setAttr ".tg[0].tor" -type "double3" -3.5781240166464568e-15 9.5416640443905503e-15 
 		3.975693351829396e-15 ;
-	setAttr ".lr" -type "double3" -15.149824067263365 22.099586717874157 -111.53846169278671 ;
+	setAttr ".lr" -type "double3" -4.5926133707338046 -7.351889685885741 -125.2615267801874 ;
 	setAttr ".rst" -type "double3" -3.59749789980309 22.007351041967855 -1.6162903210980852 ;
-	setAttr ".rsrr" -type "double3" -176.24568161039301 18.853391683874861 29.092837142117361 ;
+	setAttr ".rsrr" -type "double3" -176.24568161039304 18.853391683874861 29.092837142117361 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rElbowTopCurveLctr" -p "Max__curveNodesG";
@@ -35173,7 +35190,7 @@ createNode parentConstraint -n "Max__rElbowTopCurveLctr_parentConstraint1" -p "M
 	setAttr ".tg[0].tot" -type "double3" 0.71477642437995037 0 5.2735593669694936e-14 ;
 	setAttr ".tg[0].tor" -type "double3" 7.9513867036587919e-16 -7.9513867036587919e-16 
 		-7.2556403670886469e-15 ;
-	setAttr ".lr" -type "double3" 178.36966818183066 -3.8796460103310602 22.814629925846177 ;
+	setAttr ".lr" -type "double3" -172.47438508984851 -7.7750164695797963 17.686910748698363 ;
 	setAttr ".rst" -type "double3" -0.14134842435932937 23.408784058433241 -0.3244170257972131 ;
 	setAttr ".rsrr" -type "double3" 178.36966818183066 -3.8796460103310602 22.814629925846177 ;
 	setAttr -l on ".int" 2;
@@ -35204,7 +35221,7 @@ createNode transform -n "Max__rUpperArmTopClstr" -p "Max__rUpperArmTopClstrG";
 	rename -uid "EF582ACA-4E39-8A94-F0C2-0A989E919F23";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -7.3465170655013212 21.051036765731091 -0.66449194103254428 ;
-	setAttr ".r" -type "double3" -179.99999999999994 1.6962470638996479 27.960715440011391 ;
+	setAttr ".r" -type "double3" -179.99999999999994 1.6962470638996481 27.960715440011391 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999956 ;
 	setAttr ".rp" -type "double3" -3.6599969228445968 21.899847566428708 -0.55639702001489133 ;
 	setAttr ".rpt" -type "double3" 10.711293264657751 -42.950884332159823 1.2208889610474332 ;
@@ -35242,7 +35259,7 @@ createNode transform -n "Max__rUpperArmBtmClstr" -p "Max__rUpperArmBtmClstrG";
 	rename -uid "A5D39507-4EA9-58FC-5931-268E73D2568C";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -3.8038683876606716 21.051036765731094 -0.66449194103253606 ;
-	setAttr ".r" -type "double3" -179.99999999999994 1.6962470638996308 27.960715440011413 ;
+	setAttr ".r" -type "double3" -179.99999999999994 1.696247063899631 27.960715440011413 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
 	setAttr ".rp" -type "double3" -6.2664482214693269 20.515657782307574 -0.47921022685753933 ;
 	setAttr ".rpt" -type "double3" 10.365537332818183 -41.566694548038733 1.1437021678900787 ;
@@ -35269,9 +35286,9 @@ createNode parentConstraint -n "Max__rUpperArmBtmClstrG_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -39.420902561872559 67.584483800379388 -142.95383591958489 ;
+	setAttr ".lr" -type "double3" -5.4214726816914185 32.80645216751946 -128.7940268108382 ;
 	setAttr ".rst" -type "double3" -6.5270933518983743 20.377238803594572 -0.4714915475250257 ;
-	setAttr ".rsrr" -type "double3" -176.24568161039301 18.853391683874857 29.092837142117361 ;
+	setAttr ".rsrr" -type "double3" -176.24568161039304 18.853391683874857 29.092837142117361 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rUpperArmTopGuideClstrG" -p "Max__curveNodesG";
@@ -35301,7 +35318,7 @@ createNode transform -n "Max__rUpperArmTopGuideClstr" -p "Max__rUpperArmTopGuide
 	rename -uid "727FD55C-4BEB-C0B3-535B-FCAA93A42BAB";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -7.3465170655013212 21.051036765731091 -0.66449194103254428 ;
-	setAttr ".r" -type "double3" -179.99999999999994 1.6962470638996479 27.960715440011391 ;
+	setAttr ".r" -type "double3" -179.99999999999994 1.6962470638996481 27.960715440011391 ;
 	setAttr ".s" -type "double3" 1 0.99999999999999978 0.99999999999999956 ;
 	setAttr ".rp" -type "double3" -3.9206420598837077 21.761428584205355 -0.548678340486629 ;
 	setAttr ".rpt" -type "double3" 10.676717670521786 -42.812465349936474 1.2131702815191709 ;
@@ -35333,7 +35350,7 @@ createNode aimConstraint -n "Max__rUpperArmTopGuideClstrG_aimConstraint1" -p "Ma
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" -0.78307636061690455 -3.8796460103310522 22.814629925846091 ;
+	setAttr ".rsrr" -type "double3" -0.78307636061690467 -3.8796460103310522 22.814629925846091 ;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rUpperArmBtmGuideClstrG" -p "Max__curveNodesG";
 	rename -uid "BF3B529B-402E-C441-E616-C082BBB1C8ED";
@@ -35341,7 +35358,7 @@ createNode transform -n "Max__rUpperArmBtmGuideClstr" -p "Max__rUpperArmBtmGuide
 	rename -uid "768C1660-48FC-DE6C-BD16-1F8D0B13D7AB";
 	setAttr ".v" no;
 	setAttr ".t" -type "double3" -3.8038683876606716 21.051036765731094 -0.66449194103253606 ;
-	setAttr ".r" -type "double3" -179.99999999999994 1.6962470638996308 27.960715440011413 ;
+	setAttr ".r" -type "double3" -179.99999999999994 1.696247063899631 27.960715440011413 ;
 	setAttr ".s" -type "double3" 1 1.0000000000000002 1 ;
 	setAttr ".rp" -type "double3" -6.0058030844302088 20.654076764530942 -0.48692890638580205 ;
 	setAttr ".rpt" -type "double3" 10.400112926954153 -41.705113530262089 1.1514208474183421 ;
@@ -35369,9 +35386,9 @@ createNode parentConstraint -n "Max__rUpperArmBtmGuideClstrG_parentConstraint1" 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -39.420902561872559 67.584483800379388 -142.95383591958489 ;
+	setAttr ".lr" -type "double3" -5.4214726816914185 32.80645216751946 -128.7940268108382 ;
 	setAttr ".rst" -type "double3" -6.5270933518983743 20.377238803594572 -0.4714915475250257 ;
-	setAttr ".rsrr" -type "double3" -176.24568161039301 18.853391683874857 29.092837142117361 ;
+	setAttr ".rsrr" -type "double3" -176.24568161039304 18.853391683874857 29.092837142117361 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rElbowCurveCG" -p "Max__curveNodesG";
@@ -35488,11 +35505,11 @@ createNode orientConstraint -n "Max__rElbowCurveCG_orientConstraint1" -p "Max__r
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -39.420902561872552 67.58448380037936 -142.95383591958489 ;
+	setAttr ".lr" -type "double3" -5.4214726816914185 32.80645216751946 -128.7940268108382 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" -176.24568161039301 18.853391683874857 29.092837142117361 ;
+	setAttr ".rsrr" -type "double3" -176.24568161039304 18.853391683874857 29.092837142117361 ;
 	setAttr -l on ".int";
 	setAttr -l on -k on ".w0";
 createNode joint -n "Max__rLowerArmCurveJ1" -p "Max__curveNodesG";
@@ -35519,9 +35536,9 @@ createNode parentConstraint -n "Max__rLowerArmCurveJ1_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.43669898876678 22.099586717869457 -111.53846169278708 ;
+	setAttr ".lr" -type "double3" -5.5880832985214823 -7.351889685889831 -125.26152678018823 ;
 	setAttr ".rst" -type "double3" -7.2178526345297005 20.005753502867954 -0.19053531390987324 ;
-	setAttr ".rsrr" -type "double3" -178.11863313795703 20.316189296337416 27.679410629578349 ;
+	setAttr ".rsrr" -type "double3" -178.11863313795703 20.316189296337416 27.679410629578353 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode joint -n "Max__rLowerArmCurveJ2" -p "Max__curveNodesG";
@@ -35548,7 +35565,7 @@ createNode parentConstraint -n "Max__rLowerArmCurveJ2_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 18.023222044797883 22.099586717864163 -111.53846169278489 ;
+	setAttr ".lr" -type "double3" -6.5835532263093839 -7.3518896858941964 -125.26152678018727 ;
 	setAttr ".rst" -type "double3" -7.9117873535332022 19.643583090873424 0.10115513506848839 ;
 	setAttr ".rsrr" -type "double3" -179.50080121162216 20.316544039878277 27.679063367562772 ;
 	setAttr -l on ".int" 2;
@@ -35577,7 +35594,7 @@ createNode parentConstraint -n "Max__rLowerArmCurveJ3_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 34.609743193479993 22.099586717864206 -111.53846169278363 ;
+	setAttr ".lr" -type "double3" -7.579023034887979 -7.3518896858939451 -125.26152678018644 ;
 	setAttr ".rst" -type "double3" -8.6019277093654143 19.268827725139154 0.37877314602053791 ;
 	setAttr ".rsrr" -type "double3" 179.82300586831522 18.125275681387635 29.783350630281838 ;
 	setAttr -l on ".int" 2;
@@ -35606,9 +35623,9 @@ createNode parentConstraint -n "Max__rElbowCurveJ_parentConstraint1" -p "Max__rE
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -39.420902561872559 67.584483800379388 -142.95383591958489 ;
+	setAttr ".lr" -type "double3" -5.4214726816914185 32.80645216751946 -128.7940268108382 ;
 	setAttr ".rst" -type "double3" -6.5270933518983743 20.377238803594572 -0.4714915475250257 ;
-	setAttr ".rsrr" -type "double3" -176.24568161039301 18.853391683874857 29.092837142117361 ;
+	setAttr ".rsrr" -type "double3" -176.24568161039304 18.853391683874857 29.092837142117361 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode joint -n "Max__rUpperArmCurveJ1" -p "Max__curveNodesG";
@@ -35635,7 +35652,7 @@ createNode parentConstraint -n "Max__rUpperArmCurveJ1_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -164.51942270586486 39.315411388770819 86.07115493433723 ;
+	setAttr ".lr" -type "double3" -100.42593910507011 85.404042360081945 136.45752058139115 ;
 	setAttr ".rst" -type "double3" -4.2043971717522428 21.660372894070235 -0.6226219370905739 ;
 	setAttr ".rsrr" -type "double3" -179.15409616448977 -3.3896286408536254 27.07107239893449 ;
 	setAttr -l on ".int" 2;
@@ -35664,7 +35681,7 @@ createNode parentConstraint -n "Max__rUpperArmCurveJ2_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -164.5194227058588 39.315411388775907 86.071154934346822 ;
+	setAttr ".lr" -type "double3" -100.4259391049596 85.404042360079075 136.45752058150191 ;
 	setAttr ".rst" -type "double3" -4.9891190409712074 21.23939555302681 -0.66178694318163112 ;
 	setAttr ".rsrr" -type "double3" -179.2299013975275 -1.4021063532600302 28.972589711152512 ;
 	setAttr -l on ".int" 2;
@@ -35693,7 +35710,7 @@ createNode parentConstraint -n "Max__rUpperArmCurveJ3_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -164.51942270585545 39.31541138878368 86.071154934352066 ;
+	setAttr ".lr" -type "double3" -100.42593910485122 85.404042360079274 136.45752058161037 ;
 	setAttr ".rst" -type "double3" -5.7665109695025469 20.80421595098435 -0.6443304646645569 ;
 	setAttr ".rsrr" -type "double3" -179.08505384429702 4.8645882493018053 29.39296725335203 ;
 	setAttr -l on ".int" 2;
@@ -35771,7 +35788,7 @@ createNode parentConstraint -n "Max__lKneeCurveLctr_parentConstraint1" -p "Max__
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -5.2871146024003046 4.2473783271841432 -1.3321597158721943e-09 ;
 	setAttr ".tg[0].tor" -type "double3" 5.9954643748453771 2.7799010146715287e-07 -38.776483386862481 ;
-	setAttr ".lr" -type "double3" 92.947623272492919 -4.1367213367417468e-06 -90.000000560691817 ;
+	setAttr ".lr" -type "double3" 95.682387432763974 45.589417463936364 -85.922592927193705 ;
 	setAttr ".rst" -type "double3" 3.0380025865850762 8.7532410547176838 -0.34617546771961283 ;
 	setAttr ".rsrr" -type "double3" 74.493174851558905 -1.0189405314986961e-07 -90.000000258642785 ;
 	setAttr -l on ".int" 2;
@@ -35810,9 +35827,9 @@ createNode parentConstraint -n "Max__lLowerLegTopClstrG_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 69.437107919401456 -55.604225730056029 -80.51572842989718 ;
+	setAttr ".lr" -type "double3" 85.978213304885401 -7.2698795546029489 -88.941037323357307 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.7048623434841765 0.086774991465607396 ;
-	setAttr ".rsrr" -type "double3" 65.394937076436108 -4.0580057373229419 -80.678866624500188 ;
+	setAttr ".rsrr" -type "double3" 65.394937076436108 -4.0580057373229419 -80.678866624500202 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lLowerLegBtmClstrG" -p "Max__curveNodesG";
@@ -35910,9 +35927,9 @@ createNode parentConstraint -n "Max__lLowerLegTopGuideClstrG_parentConstraint1" 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 69.437107919401456 -55.604225730056029 -80.51572842989718 ;
+	setAttr ".lr" -type "double3" 85.978213304885401 -7.2698795546029489 -88.941037323357307 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.7048623434841765 0.086774991465607396 ;
-	setAttr ".rsrr" -type "double3" 65.394937076436108 -4.0580057373229419 -80.678866624500188 ;
+	setAttr ".rsrr" -type "double3" 65.394937076436108 -4.0580057373229419 -80.678866624500202 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lLowerLegBtmGuideClstrG" -p "Max__curveNodesG";
@@ -36001,7 +36018,7 @@ createNode parentConstraint -n "Max__lHipCurveLctr_parentConstraint1" -p "Max__l
 		-2.3333830299954172e-05 ;
 	setAttr ".tg[0].tor" -type "double3" 0.48863187335376279 -0.00023262277377578646 
 		0.054558202599110282 ;
-	setAttr ".lr" -type "double3" 78.938869263321152 7.695875288113764 -99.283236961467509 ;
+	setAttr ".lr" -type "double3" 85.855374923410452 30.536589472413063 -91.808908978063911 ;
 	setAttr ".rst" -type "double3" 1.7740344466480842 14.411152574823276 0.44869725571962449 ;
 	setAttr ".rsrr" -type "double3" 65.897282767985914 3.6105133817945925 -84.18606514948425 ;
 	setAttr -l on ".int" 2;
@@ -36028,6 +36045,7 @@ createNode parentConstraint -n "Max__lKneeTopCurveLctr_parentConstraint1" -p "Ma
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 1.4265324295505233 -6.547201679247074 0 ;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr ".rst" -type "double3" 1.4265324295505233 8.614758049618084 -0.31993379417754686 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -36121,9 +36139,9 @@ createNode parentConstraint -n "Max__lUpperLegBtmClstrG_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 69.437107919401456 -55.604225730056029 -80.51572842989718 ;
+	setAttr ".lr" -type "double3" 85.978213304885401 -7.2698795546029489 -88.941037323357307 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.7048623434841765 0.086774991465607396 ;
-	setAttr ".rsrr" -type "double3" 65.394937076436108 -4.0580057373229419 -80.678866624500188 ;
+	setAttr ".rsrr" -type "double3" 65.394937076436108 -4.0580057373229419 -80.678866624500202 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lUpperLegTopGuideClstrG" -p "Max__curveNodesG";
@@ -36219,9 +36237,9 @@ createNode parentConstraint -n "Max__lUpperLegBtmGuideClstrG_parentConstraint1" 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 69.437107919401456 -55.604225730056029 -80.51572842989718 ;
+	setAttr ".lr" -type "double3" 85.978213304885401 -7.2698795546029489 -88.941037323357307 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.7048623434841765 0.086774991465607396 ;
-	setAttr ".rsrr" -type "double3" 65.394937076436108 -4.0580057373229419 -80.678866624500188 ;
+	setAttr ".rsrr" -type "double3" 65.394937076436108 -4.0580057373229419 -80.678866624500202 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__lKneeCurveCG" -p "Max__curveNodesG";
@@ -36338,11 +36356,11 @@ createNode orientConstraint -n "Max__lKneeCurveCG_orientConstraint1" -p "Max__lK
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 69.437107919401441 -55.604225730056029 -80.51572842989718 ;
+	setAttr ".lr" -type "double3" 85.978213304885386 -7.2698795546029471 -88.941037323357293 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
-	setAttr ".rsrr" -type "double3" 65.394937076436122 -4.0580057373229321 -80.678866624500188 ;
+	setAttr ".rsrr" -type "double3" 65.394937076436136 -4.0580057373229321 -80.678866624500202 ;
 	setAttr -l on ".int";
 	setAttr -l on -k on ".w0";
 createNode joint -n "Max__lLowerLegCurveJ1" -p "Max__curveNodesG";
@@ -36369,7 +36387,7 @@ createNode parentConstraint -n "Max__lLowerLegCurveJ1_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 82.072203436709017 7.7493751917191114 -99.2940312132271 ;
+	setAttr ".lr" -type "double3" 86.854388064858639 30.590988088350823 -91.813759238402284 ;
 	setAttr ".rst" -type "double3" 2.6050944983915123 7.0258250956867432 0.081269889904371964 ;
 	setAttr ".rsrr" -type "double3" 67.819077783828973 3.6222628566172235 -82.32566502814025 ;
 	setAttr -l on ".int" 2;
@@ -36398,7 +36416,7 @@ createNode parentConstraint -n "Max__lLowerLegCurveJ2_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 85.695620098925062 7.7493751917256049 -99.294031213228081 ;
+	setAttr ".lr" -type "double3" 88.344499535080999 30.590988088356145 -91.813759238402483 ;
 	setAttr ".rst" -type "double3" 2.8107991144196949 5.3479949851939459 -0.079844496019054426 ;
 	setAttr ".rsrr" -type "double3" 70.100068028940484 6.476651499634861 -83.642514734850309 ;
 	setAttr -l on ".int" 2;
@@ -36427,7 +36445,7 @@ createNode parentConstraint -n "Max__lLowerLegCurveJ3_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 89.319036522722797 7.7493751917267657 -99.294031213227257 ;
+	setAttr ".lr" -type "double3" 89.834611124513003 30.590988088359634 -91.813759238402028 ;
 	setAttr ".rst" -type "double3" 2.9710651274651378 3.6658498256387846 -0.2608020204518936 ;
 	setAttr ".rsrr" -type "double3" 72.182947205008517 5.12787889602048 -85.808432942401978 ;
 	setAttr -l on ".int" 2;
@@ -36456,9 +36474,9 @@ createNode parentConstraint -n "Max__lKneeCurveJ_parentConstraint1" -p "Max__lKn
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 69.437107919401456 -55.604225730056029 -80.51572842989718 ;
+	setAttr ".lr" -type "double3" 85.978213304885401 -7.2698795546029489 -88.941037323357307 ;
 	setAttr ".rst" -type "double3" 2.3550604463258322 8.7048623434841765 0.086774991465607396 ;
-	setAttr ".rsrr" -type "double3" 65.394937076436108 -4.0580057373229419 -80.678866624500188 ;
+	setAttr ".rsrr" -type "double3" 65.394937076436108 -4.0580057373229419 -80.678866624500202 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode joint -n "Max__lUpperLegCurveJ1" -p "Max__curveNodesG";
@@ -36485,7 +36503,7 @@ createNode parentConstraint -n "Max__lUpperLegCurveJ1_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -63.631521089336779 -63.465448658604821 58.367190789814046 ;
+	setAttr ".lr" -type "double3" 85.024708774276746 -36.658987687217163 -86.475476443106629 ;
 	setAttr ".rst" -type "double3" 1.5388458602828159 12.929304276911234 -0.27073887013016379 ;
 	setAttr ".rsrr" -type "double3" 65.463966615878874 -3.5675887783160407 -81.81675624434159 ;
 	setAttr -l on ".int" 2;
@@ -36514,7 +36532,7 @@ createNode parentConstraint -n "Max__lUpperLegCurveJ2_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -63.631521089343124 -63.465448658600685 58.36719078982113 ;
+	setAttr ".lr" -type "double3" 85.024708774277912 -36.658987687220453 -86.475476443108704 ;
 	setAttr ".rst" -type "double3" 1.7953782084067924 11.517700133122283 -0.15837395557066877 ;
 	setAttr ".rsrr" -type "double3" 65.183162543172401 -5.0509275743117845 -78.358690873510341 ;
 	setAttr -l on ".int" 2;
@@ -36543,7 +36561,7 @@ createNode parentConstraint -n "Max__lUpperLegCurveJ3_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -63.631521089339692 -63.465448658604593 58.367190789817364 ;
+	setAttr ".lr" -type "double3" 85.024708774278579 -36.658987687218087 -86.475476443109685 ;
 	setAttr ".rst" -type "double3" 2.0893399151076819 10.114571006255812 -0.029614444831213622 ;
 	setAttr ".rsrr" -type "double3" 65.183295090103499 -5.0504218963414926 -78.359877209677137 ;
 	setAttr -l on ".int" 2;
@@ -36620,9 +36638,9 @@ createNode parentConstraint -n "Max__rKneeCurveLctr_parentConstraint1" -p "Max__
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" 5.2871146024003028 -4.2473783271841477 1.3321326264303934e-09 ;
 	setAttr ".tg[0].tor" -type "double3" 5.9954643748456355 2.7799031500703111e-07 -38.776483386862523 ;
-	setAttr ".lr" -type "double3" -90.996805287435592 -13.236508075054985 100.88022981736135 ;
+	setAttr ".lr" -type "double3" -91.19062036705904 -1.1772783868311656 84.259531916513737 ;
 	setAttr ".rst" -type "double3" -3.0380025865850842 8.7532410547176802 -0.34617546771960572 ;
-	setAttr ".rsrr" -type "double3" -105.50682514844117 1.0189412312207262e-07 90.000000258642999 ;
+	setAttr ".rsrr" -type "double3" -105.50682514844118 1.0189412312207262e-07 90.000000258642999 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__rLowerLegTopClstrG" -p "Max__curveNodesG";
@@ -36659,7 +36677,7 @@ createNode parentConstraint -n "Max__rLowerLegTopClstrG_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.894049649706702 -14.341161556123316 88.520613890349438 ;
+	setAttr ".lr" -type "double3" -100.81334869037026 24.335776680969825 89.091341742653356 ;
 	setAttr ".rst" -type "double3" -2.3550604463258349 8.7048623434841712 0.086774991465612614 ;
 	setAttr ".rsrr" -type "double3" -114.60506292356391 4.0580057373229428 80.678866624500159 ;
 	setAttr -l on ".int" 2;
@@ -36758,7 +36776,7 @@ createNode parentConstraint -n "Max__rLowerLegTopGuideClstrG_parentConstraint1" 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.894049649706702 -14.341161556123316 88.520613890349438 ;
+	setAttr ".lr" -type "double3" -100.81334869037026 24.335776680969825 89.091341742653356 ;
 	setAttr ".rst" -type "double3" -2.3550604463258349 8.7048623434841712 0.086774991465612614 ;
 	setAttr ".rsrr" -type "double3" -114.60506292356391 4.0580057373229428 80.678866624500159 ;
 	setAttr -l on ".int" 2;
@@ -36847,7 +36865,7 @@ createNode parentConstraint -n "Max__rHipCurveLctr_parentConstraint1" -p "Max__r
 	setAttr ".tg[0].tot" -type "double3" 5.7471990736386687 0.0054726011038105371 2.3333830302174619e-05 ;
 	setAttr ".tg[0].tor" -type "double3" 0.48863187335375008 -0.00023262277378970135 
 		0.05455820259912101 ;
-	setAttr ".lr" -type "double3" -93.490325713222333 -18.519692509213304 88.820569895070761 ;
+	setAttr ".lr" -type "double3" -100.0072425990935 20.219532802782318 89.928263459778535 ;
 	setAttr ".rst" -type "double3" -1.7740344466480822 14.411152574823284 0.44869725571962599 ;
 	setAttr ".rsrr" -type "double3" -114.1027172320141 -3.6105133817945547 84.186065149484193 ;
 	setAttr -l on ".int" 2;
@@ -36874,6 +36892,7 @@ createNode parentConstraint -n "Max__rKneeTopCurveLctr_parentConstraint1" -p "Ma
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -1.4265324295505237 4.9472016792470743 -4.4408920985006262e-16 ;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr ".rst" -type "double3" -1.4265324295505237 20.109161408112232 -0.3199337941775473 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
@@ -36969,7 +36988,7 @@ createNode parentConstraint -n "Max__rUpperLegBtmClstrG_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.894049649706702 -14.341161556123316 88.520613890349438 ;
+	setAttr ".lr" -type "double3" -100.81334869037026 24.335776680969825 89.091341742653356 ;
 	setAttr ".rst" -type "double3" -2.3550604463258349 8.7048623434841712 0.086774991465612614 ;
 	setAttr ".rsrr" -type "double3" -114.60506292356391 4.0580057373229428 80.678866624500159 ;
 	setAttr -l on ".int" 2;
@@ -37069,7 +37088,7 @@ createNode parentConstraint -n "Max__rUpperLegBtmGuideClstrG_parentConstraint1" 
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.894049649706702 -14.341161556123316 88.520613890349438 ;
+	setAttr ".lr" -type "double3" -100.81334869037026 24.335776680969825 89.091341742653356 ;
 	setAttr ".rst" -type "double3" -2.3550604463258349 8.7048623434841712 0.086774991465612614 ;
 	setAttr ".rsrr" -type "double3" -114.60506292356391 4.0580057373229428 80.678866624500159 ;
 	setAttr -l on ".int" 2;
@@ -37188,7 +37207,7 @@ createNode orientConstraint -n "Max__rKneeCurveCG_orientConstraint1" -p "Max__rK
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.894049649706716 -14.341161556123316 88.520613890349452 ;
+	setAttr ".lr" -type "double3" -100.81334869037028 24.335776680969815 89.091341742653341 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -37219,7 +37238,7 @@ createNode parentConstraint -n "Max__rLowerLegCurveJ1_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -92.515879238492047 -18.574135309564589 88.824318909449971 ;
+	setAttr ".lr" -type "double3" -98.344446409798167 20.165844788251356 89.938607405319615 ;
 	setAttr ".rst" -type "double3" -2.6050944983915194 7.0258250956867467 0.081269889904393697 ;
 	setAttr ".rsrr" -type "double3" -112.18092221617104 -3.6222628566172803 82.325665028140207 ;
 	setAttr -l on ".int" 2;
@@ -37248,7 +37267,7 @@ createNode parentConstraint -n "Max__rLowerLegCurveJ2_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -91.051608289128481 -18.574135309564966 88.824318909450582 ;
+	setAttr ".lr" -type "double3" -96.196588743782655 20.16584478824991 89.938607405319445 ;
 	setAttr ".rst" -type "double3" -2.8107991144197029 5.3479949851939379 -0.079844496019036384 ;
 	setAttr ".rsrr" -type "double3" -109.89993197105956 -6.4766514996349844 83.642514734850351 ;
 	setAttr -l on ".int" 2;
@@ -37277,9 +37296,9 @@ createNode parentConstraint -n "Max__rLowerLegCurveJ3_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -89.587337458974574 -18.574135309564497 88.824318909452188 ;
+	setAttr ".lr" -type "double3" -94.0487310777673 20.165844788246936 89.938607405318677 ;
 	setAttr ".rst" -type "double3" -2.9710651274651436 3.6658498256387855 -0.26080202045187828 ;
-	setAttr ".rsrr" -type "double3" -107.81705279499153 -5.1278788960206141 85.808432942402007 ;
+	setAttr ".rsrr" -type "double3" -107.81705279499154 -5.1278788960206141 85.808432942402007 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode joint -n "Max__rKneeCurveJ" -p "Max__curveNodesG";
@@ -37306,7 +37325,7 @@ createNode parentConstraint -n "Max__rKneeCurveJ_parentConstraint1" -p "Max__rKn
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.894049649706702 -14.341161556123316 88.520613890349438 ;
+	setAttr ".lr" -type "double3" -100.81334869037026 24.335776680969825 89.091341742653356 ;
 	setAttr ".rst" -type "double3" -2.3550604463258349 8.7048623434841712 0.086774991465612614 ;
 	setAttr ".rsrr" -type "double3" -114.60506292356391 4.0580057373229428 80.678866624500159 ;
 	setAttr -l on ".int" 2;
@@ -37335,9 +37354,9 @@ createNode parentConstraint -n "Max__rUpperLegCurveJ1_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.98014964101111 -18.574111920942912 88.824317192680795 ;
+	setAttr ".lr" -type "double3" -100.49230564377673 20.165867841397027 89.938602857057063 ;
 	setAttr ".rst" -type "double3" -1.5388458602828201 12.929304276911234 -0.27073887013015513 ;
-	setAttr ".rsrr" -type "double3" -114.53603338412117 3.5675887783161162 81.816756244341676 ;
+	setAttr ".rsrr" -type "double3" -114.53603338412117 3.5675887783161162 81.81675624434169 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode joint -n "Max__rUpperLegCurveJ2" -p "Max__curveNodesG";
@@ -37364,7 +37383,7 @@ createNode parentConstraint -n "Max__rUpperLegCurveJ2_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.98014964101101 -18.574111920945171 88.824317192680539 ;
+	setAttr ".lr" -type "double3" -100.49230564377753 20.165867841399809 89.938602857054747 ;
 	setAttr ".rst" -type "double3" -1.7953782084067977 11.517700133122277 -0.15837395557065587 ;
 	setAttr ".rsrr" -type "double3" -114.81683745682764 5.0509275743120332 78.358690873510227 ;
 	setAttr -l on ".int" 2;
@@ -37393,7 +37412,7 @@ createNode parentConstraint -n "Max__rUpperLegCurveJ3_parentConstraint1" -p "Max
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -93.980149641010954 -18.574111920945349 88.824317192680368 ;
+	setAttr ".lr" -type "double3" -100.49230564377781 20.16586784140118 89.938602857053866 ;
 	setAttr ".rst" -type "double3" -2.0893399151076895 10.114571006255808 -0.02961444483119454 ;
 	setAttr ".rsrr" -type "double3" -114.81670490989652 5.0504218963417564 78.359877209676995 ;
 	setAttr -l on ".int" 2;
@@ -37473,8 +37492,8 @@ createNode orientConstraint -n "Max__rArmUpLctr_orientConstraint1" -p "Max__rArm
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
 	setAttr -s 2 ".tg";
-	setAttr ".lr" -type "double3" -1.5455666929901386 -40.822485189787606 -0.32054724423573039 ;
-	setAttr ".o" -type "double3" 1.3791751422631118 -8.6949928087608743 -0.10485556218475915 ;
+	setAttr ".lr" -type "double3" -1.5039425935668449 -31.610028654665175 -0.18760369583407061 ;
+	setAttr ".o" -type "double3" 1.379175142263112 -8.6949928087608743 -0.10485556218475915 ;
 	setAttr -l on ".ox";
 	setAttr -l on ".oy";
 	setAttr -l on ".oz";
@@ -37523,9 +37542,9 @@ createNode parentConstraint -n "Max__rArmUpLctrG_parentConstraint1" -p "Max__rAr
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -4.5280015786218684 -0.32010878369730733 6.644083881863831 ;
 	setAttr ".tg[0].tor" -type "double3" 2.8902471212951308 -17.36919610774321 -0.86348610584651986 ;
-	setAttr ".lr" -type "double3" 25.317602037226877 124.48828294171068 -84.42007410791075 ;
+	setAttr ".lr" -type "double3" -15.430258747831113 72.634344512587688 -140.60876956850521 ;
 	setAttr ".rst" -type "double3" -7.7437363043328462 20.19798252104502 -7.0824587773015395 ;
-	setAttr ".rsrr" -type "double3" -176.24568161039301 18.853391683874857 29.092837142117361 ;
+	setAttr ".rsrr" -type "double3" -176.24568161039304 18.853391683874857 29.092837142117361 ;
 	setAttr -l on ".int" 2;
 	setAttr -l on -k on ".w0";
 createNode transform -n "Max__EyeLidsFollowLctr" -p "Max__MainC";
@@ -37551,6 +37570,7 @@ createNode parentConstraint -n "Max__EyeLidsFollowLctr_parentConstraint1" -p "Ma
 	setAttr ".erp" yes;
 	setAttr ".tg[0].tot" -type "double3" -1.9009108912931593e-16 1.1995306421669092 
 		4.9651975573624378 ;
+	setAttr ".lr" -type "double3" 0.022764001145485043 -0.13032028473715623 -4.2068982874234422 ;
 	setAttr ".rst" -type "double3" -1.1102230246251563e-16 26.00027825220084 4.7351779742897122 ;
 	setAttr -l on ".int";
 	setAttr -l on -k on ".w0";
@@ -37573,6 +37593,7 @@ createNode parentConstraint -n "Max__SH_ROOTJ_parentConstraint1" -p "Max__SH_ROO
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 0 0 15.609707607570368 ;
 	setAttr ".rst" -type "double3" 0 15.16195972886516 -0.31993379417754686 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
@@ -37612,7 +37633,7 @@ createNode parentConstraint -n "Max__SH_Spine01J_parentConstraint1" -p "Max__SH_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -3.9259971849315285e-15 0 0 ;
+	setAttr ".lr" -type "double3" 3.0628384597796234 -1.1082245218224436e-14 -11.233944275153823 ;
 	setAttr ".rst" -type "double3" 0 1.9691199322118962 -0.013211405674342425 ;
 	setAttr ".rsrr" -type "double3" -0.38440849459659432 0 0 ;
 	setAttr ".int" 2;
@@ -37652,7 +37673,7 @@ createNode parentConstraint -n "Max__SH_Spine02J_parentConstraint1" -p "Max__SH_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -3.9259971849315285e-15 0 0 ;
+	setAttr ".lr" -type "double3" 4.3647927415400032 -0.23106121721584957 -4.3437322232406501 ;
 	setAttr ".rst" -type "double3" 0 1.9691642513193486 -1.5210055437364645e-14 ;
 	setAttr ".rsrr" -type "double3" -3.9259971849315285e-15 0 0 ;
 	setAttr ".int" 2;
@@ -37692,7 +37713,7 @@ createNode parentConstraint -n "Max__SH_Spine03J_parentConstraint1" -p "Max__SH_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -3.9259971849315285e-15 0 0 ;
+	setAttr ".lr" -type "double3" 1.3597616048551682 -0.16907615870270945 -1.2959020495395552 ;
 	setAttr ".rst" -type "double3" -1.2325951644078309e-32 1.9691642513193486 -1.5099033134902129e-14 ;
 	setAttr ".rsrr" -type "double3" -3.9259971849315285e-15 0 0 ;
 	setAttr ".int" 2;
@@ -37733,7 +37754,7 @@ createNode parentConstraint -n "Max__SH_SpineTopJ_parentConstraint1" -p "Max__SH
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -2.5444437451708226e-14 -2.5444437451708033e-14 4.2619432731611116e-13 ;
+	setAttr ".lr" -type "double3" -0.50237235861962881 2.8768190628407178 -1.1578559687305738 ;
 	setAttr ".rst" -type "double3" 2.186260695177027e-16 1.9691642513193486 -1.5654144647214707e-14 ;
 	setAttr ".rsrr" -type "double3" -90 4.2937488199757479e-13 90 ;
 	setAttr ".int" 2;
@@ -37758,7 +37779,7 @@ createNode parentConstraint -n "Max__SH_Neck01J_parentConstraint1" -p "Max__SH_N
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.272221872585407e-14 1.2722218725854065e-14 2.544443745170814e-14 ;
+	setAttr ".lr" -type "double3" -0.040572021519565141 -0.0035230873038569854 -0.0052813062626620201 ;
 	setAttr ".rst" -type "double3" 0.44032767315283294 -0.038645049794440584 2.2291653192466004e-16 ;
 	setAttr ".rsrr" -type "double3" 95.015672439897912 89.999999999999986 0 ;
 	setAttr ".int" 2;
@@ -37798,7 +37819,7 @@ createNode parentConstraint -n "Max__SH_Neck02J_parentConstraint1" -p "Max__SH_N
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 5.9635400277440935e-14 0 0 ;
+	setAttr ".lr" -type "double3" -2.0451215082644901e-13 2.3257806108201993e-14 1.3442813145873103e-14 ;
 	setAttr ".rst" -type "double3" 6.9320696090506311e-17 0.44202024797265693 0 ;
 	setAttr ".rsrr" -type "double3" 3.0215269473903408e-14 0 0 ;
 	setAttr ".int" 2;
@@ -37838,7 +37859,7 @@ createNode parentConstraint -n "Max__SH_Neck03J_parentConstraint1" -p "Max__SH_N
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.5107634736951704e-14 0 0 ;
+	setAttr ".lr" -type "double3" -1.1214561262590013e-13 2.2363275104040365e-14 1.0212562297511741e-14 ;
 	setAttr ".rst" -type "double3" 6.93206960905071e-17 0.44202024797265338 0 ;
 	setAttr ".rsrr" -type "double3" -1.4312496066585827e-14 0 0 ;
 	setAttr ".int" 2;
@@ -37879,7 +37900,7 @@ createNode parentConstraint -n "Max__SH_HeadJ_parentConstraint1" -p "Max__SH_Hea
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 2.862499213317166e-14 2.5444437451708147e-14 3.1805546814635247e-15 ;
+	setAttr ".lr" -type "double3" 1.908332808878111e-14 -6.3611093629270375e-15 1.272221872585407e-14 ;
 	setAttr ".rst" -type "double3" 1.483894827573088e-16 0.44202024797266048 -1.3322676295501878e-15 ;
 	setAttr ".rsrr" -type "double3" -90 4.6312639453008799 90 ;
 	setAttr ".int" 2;
@@ -37944,9 +37965,9 @@ createNode parentConstraint -n "Max__SH_lClavicleJ_parentConstraint1" -p "Max__S
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.0177774980683254e-13 6.3611093629270193e-15 1.590277340731759e-14 ;
+	setAttr ".lr" -type "double3" -0.035742659280451589 -0.018341794933548327 -0.0085058802524036452 ;
 	setAttr ".rst" -type "double3" 0.093822377469933826 -0.00062948196796452915 -0.79869387681793869 ;
-	setAttr ".rsrr" -type "double3" 79.232254769553109 113.12476400757819 -10.304898267490398 ;
+	setAttr ".rsrr" -type "double3" 79.232254769553109 113.12476400757821 -10.304898267490398 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Max__SH_lClavicleJ_scaleConstraint1" -p "Max__SH_lClavicleJ";
@@ -37986,7 +38007,7 @@ createNode parentConstraint -n "Max__SH_lShoulderCurveJ_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.3221256940447854 -35.398114486826366 -56.996747001004152 ;
+	setAttr ".lr" -type "double3" 1.322125694064838 5.9584555413484352 -51.633323879779986 ;
 	setAttr ".rst" -type "double3" 2.8278722534606988 3.5527136788005009e-15 -1.1102230246251565e-16 ;
 	setAttr ".rsrr" -type "double3" 2.7758725319951711 -5.2128270471162237 -5.3276950067097788 ;
 	setAttr ".int" 2;
@@ -38028,7 +38049,7 @@ createNode parentConstraint -n "Max__SH_lUpperArmCurveJ1_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -9.5416640408211409e-15 -1.471960706581316e-11 -2.778771111327638e-11 ;
+	setAttr ".lr" -type "double3" 7.9513867048716861e-15 -5.1970263495113839e-12 -2.6743694039085976e-11 ;
 	setAttr ".rst" -type "double3" 0.88538614837732332 0 -2.1094237467877974e-15 ;
 	setAttr ".rsrr" -type "double3" 3.6843247253072759e-12 -3.7509175889502659e-12 -2.3349107284825849e-12 ;
 	setAttr ".int" 2;
@@ -38070,7 +38091,7 @@ createNode parentConstraint -n "Max__SH_lUpperArmCurveJ2_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -3.1805546808645826e-14 -1.9818036220199182e-11 -3.4631469649115499e-11 ;
+	setAttr ".lr" -type "double3" 1.1131941387397974e-14 -7.8400672898075667e-12 -3.3261445720075093e-11 ;
 	setAttr ".rst" -type "double3" 0.8859381905430217 -4.2632564145606011e-14 9.7366559259626229e-14 ;
 	setAttr ".rsrr" -type "double3" 3.6838277636383584e-12 -5.2057728748853135e-12 -3.0405862038984484e-12 ;
 	setAttr ".int" 2;
@@ -38112,7 +38133,7 @@ createNode parentConstraint -n "Max__SH_lUpperArmCurveJ3_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -3.8166656168475205e-14 -2.8052492290508229e-11 -3.7119458548690324e-11 ;
+	setAttr ".lr" -type "double3" 1.0336802719436592e-14 -1.5071058358114872e-11 -3.5585238484219376e-11 ;
 	setAttr ".rst" -type "double3" 0.88593819054300393 -3.907985046680551e-14 1.2334577803585489e-13 ;
 	setAttr ".rsrr" -type "double3" 3.684275029140533e-12 -7.7589879935135888e-12 -3.4173475987008115e-12 ;
 	setAttr ".int" 2;
@@ -38155,7 +38176,7 @@ createNode parentConstraint -n "Max__SH_lElbowCurveJ_parentConstraint1" -p "Max_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 179.99999999998221 -126.15941755432539 179.99999999999307 ;
+	setAttr ".lr" -type "double3" -1.5702075405654821e-11 -48.93845721856426 -8.8365049734142364e-12 ;
 	setAttr ".rst" -type "double3" 0.88538614837730645 -6.7501559897209518e-14 3.326228181776969e-13 ;
 	setAttr ".rsrr" -type "double3" 2.8902471212989691 -17.369196107750302 -0.86348610585023755 ;
 	setAttr ".int" 2;
@@ -38198,7 +38219,7 @@ createNode parentConstraint -n "Max__SH_lLowerArmCurveJ1_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -158.01607964868822 -126.17109632930293 178.10897279618689 ;
+	setAttr ".lr" -type "double3" 183.35861788135279 -131.07341868951042 178.41374399157039 ;
 	setAttr ".rst" -type "double3" 0.8326723920288539 3.5527136788005009e-14 4.0578651550049472e-14 ;
 	setAttr ".rsrr" -type "double3" -1.3820391893418051 -2.9019621303742283e-12 2.3700458380662189e-12 ;
 	setAttr ".int" 2;
@@ -38241,7 +38262,7 @@ createNode parentConstraint -n "Max__SH_lLowerArmCurveJ2_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -158.97611701488495 -179.99999999999423 180.00000000000182 ;
+	setAttr ".lr" -type "double3" 182.63690984249118 -179.9999999999942 179.99999999999977 ;
 	setAttr ".rst" -type "double3" 0.83319156693513197 3.1974423109204508e-14 4.188316360398403e-14 ;
 	setAttr ".rsrr" -type "double3" -1.3820391893386947 -2.7200601619854332e-12 1.7890979357870896e-12 ;
 	setAttr ".int" 2;
@@ -38284,7 +38305,7 @@ createNode parentConstraint -n "Max__SH_lLowerArmCurveJ3_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 21.023881196975697 -1.4125499170516637e-12 1.4173555532111661e-13 ;
+	setAttr ".lr" -type "double3" 182.63690996170033 -179.99999999999901 179.99999999999918 ;
 	setAttr ".rst" -type "double3" 0.83319156693512686 2.1316282072803006e-14 3.5416114485542494e-14 ;
 	setAttr ".rsrr" -type "double3" -1.3820393085479634 -1.9768171920873365e-12 1.0747942731213373e-12 ;
 	setAttr ".int" 2;
@@ -38327,7 +38348,7 @@ createNode parentConstraint -n "Max__SH_lWristJ_parentConstraint1" -p "Max__SH_l
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 21.697218168731006 -7.8942776226195219 -2.6020678280297798 ;
+	setAttr ".lr" -type "double3" 2.7181641429998633 -0.76742245922003482 -0.78102364200475838 ;
 	setAttr ".rst" -type "double3" 0.83267239202885812 -2.8421709430404007e-14 -2.042810365310288e-14 ;
 	setAttr ".rsrr" -type "double3" -1.380495318447071 5.9376368021626282 -5.3143782446348187 ;
 	setAttr ".int" 2;
@@ -38551,7 +38572,7 @@ createNode parentConstraint -n "Max__SH_lThumbJ1_parentConstraint1" -p "Max__SH_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.590277340731758e-15 -3.1805546814635168e-15 -1.2722218725854067e-14 ;
+	setAttr ".lr" -type "double3" -2.9420130803537528e-14 -3.1805546814635152e-15 6.3611093629270351e-15 ;
 	setAttr ".rst" -type "double3" 0.38518103117240354 -0.09644621842022616 0.47646210307154724 ;
 	setAttr ".rsrr" -type "double3" 99.134312129797848 -44.075597043930472 -28.399795171399916 ;
 	setAttr ".int" 2;
@@ -38591,7 +38612,7 @@ createNode parentConstraint -n "Max__SH_lThumbJ2_parentConstraint1" -p "Max__SH_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 6.7673273934574708e-15 -1.7843113262371616e-14 -41.540298223856936 ;
+	setAttr ".lr" -type "double3" -1.3433108226824122e-14 8.511745144852343e-15 -41.540298223856936 ;
 	setAttr ".rst" -type "double3" 0.72306888144585368 -8.8817841970012523e-16 1.0658141036401503e-14 ;
 	setAttr ".rsrr" -type "double3" 0 -2.5444437451708134e-14 0 ;
 	setAttr ".int" 2;
@@ -38713,6 +38734,7 @@ createNode parentConstraint -n "Max__SH_rClavicleJ_parentConstraint1" -p "Max__S
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" -0.038880836620024242 -0.012967077143474847 0.0025621182749300964 ;
 	setAttr ".rst" -type "double3" 0.093822377469930274 -0.00062948196796408507 0.79869387681794279 ;
 	setAttr ".rsrr" -type "double3" -100.76774523044659 66.875235992421835 -10.304898267490142 ;
 	setAttr ".int" 2;
@@ -38754,7 +38776,7 @@ createNode parentConstraint -n "Max__SH_rShoulderCurveJ_parentConstraint1" -p "M
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -13.297308535617967 -39.178777871686016 56.729058227047481 ;
+	setAttr ".lr" -type "double3" -13.297308535813777 -97.255985667324978 46.001481154570648 ;
 	setAttr ".rst" -type "double3" -2.8278722534607015 -7.1054273576010019e-15 6.2727600891321345e-15 ;
 	setAttr ".rsrr" -type "double3" 177.2241274680047 5.212827047118421 -185.32769500670824 ;
 	setAttr ".int" 2;
@@ -38797,7 +38819,7 @@ createNode parentConstraint -n "Max__SH_rUpperArmCurveJ1_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -180 180.00000000001808 179.99999999997436 ;
+	setAttr ".lr" -type "double3" -180.00000000000023 180.0000000000253 179.99999999997942 ;
 	setAttr ".rst" -type "double3" 0.88538614837731622 3.5527136788005009e-15 4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" -179.99999999999727 1.7501002134751986e-12 180.00000000000423 ;
 	setAttr ".int" 2;
@@ -38839,7 +38861,7 @@ createNode parentConstraint -n "Max__SH_rUpperArmCurveJ2_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -180.00000000000003 180.00000000000691 179.99999999999423 ;
+	setAttr ".lr" -type "double3" -179.99999999999989 180.00000000000821 179.99999999999557 ;
 	setAttr ".rst" -type "double3" -0.88593819054302436 -3.5527136788005009e-15 -6.1284310959308641e-14 ;
 	setAttr ".rsrr" -type "double3" -2.6374252734367132e-12 -4.6740238890782341e-12 
 		-2.3854160110965615e-13 ;
@@ -38882,7 +38904,7 @@ createNode parentConstraint -n "Max__SH_rUpperArmCurveJ3_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -179.99999999999994 180.00000000000858 179.99999999999818 ;
+	setAttr ".lr" -type "double3" -179.99999999999974 180.00000000000858 179.99999999999864 ;
 	setAttr ".rst" -type "double3" -0.88593819054299594 3.5527136788005009e-15 -8.8262730457699945e-14 ;
 	setAttr ".rsrr" -type "double3" -2.6295235828999682e-12 -7.2713443558283696e-12 
 		9.5416640444072331e-14 ;
@@ -38926,7 +38948,7 @@ createNode parentConstraint -n "Max__SH_rElbowCurveJ_parentConstraint1" -p "Max_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 7.2050929422193231e-12 -49.514457605566811 8.1579514786270055e-13 ;
+	setAttr ".lr" -type "double3" 5.1737370774570419e-12 -40.300987218470951 9.8161710496766139e-13 ;
 	setAttr ".rst" -type "double3" -0.88538614837731577 5.3290705182007514e-14 -2.6401103525586223e-13 ;
 	setAttr ".rsrr" -type "double3" 2.8902471212924827 -17.369196107749904 -0.86348610584561802 ;
 	setAttr ".int" 2;
@@ -38969,7 +38991,7 @@ createNode parentConstraint -n "Max__SH_rLowerArmCurveJ1_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 18.714442058829121 -49.491144726902093 -1.6181825765386033 ;
+	setAttr ".lr" -type "double3" 0.81635698837484294 -40.284718423819662 -1.1717298089740784 ;
 	setAttr ".rst" -type "double3" -0.83267239202885301 -1.4210854715202004e-14 -1.27675647831893e-14 ;
 	setAttr ".rsrr" -type "double3" -1.3820391893386803 -1.1642497568795964e-12 1.3118028864564042e-12 ;
 	setAttr ".int" 2;
@@ -39012,7 +39034,7 @@ createNode parentConstraint -n "Max__SH_rLowerArmCurveJ2_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 17.968562245368982 -5.3018050768395951e-12 2.0293421990602574e-12 ;
+	setAttr ".lr" -type "double3" 0.38656926155090893 -4.4340155856635221e-12 3.9883404533772854e-13 ;
 	setAttr ".rst" -type "double3" -0.83319156693513818 -1.7763568394002505e-14 -1.6153745008296028e-14 ;
 	setAttr ".rsrr" -type "double3" -1.3820391893386896 -9.9228214488984268e-13 1.3288134750398307e-12 ;
 	setAttr ".int" 2;
@@ -39055,7 +39077,7 @@ createNode parentConstraint -n "Max__SH_rLowerArmCurveJ3_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 17.968560457229607 -4.1182635326774796e-12 4.5496287424386931e-12 ;
+	setAttr ".lr" -type "double3" 0.38656949996948342 -4.3058943760771128e-12 1.1659006832147802e-12 ;
 	setAttr ".rst" -type "double3" -0.83319156693512864 -1.4210854715202004e-14 -1.1102230246251565e-14 ;
 	setAttr ".rsrr" -type "double3" 358.61796069145203 -3.1238681466936489e-13 9.9935376720529608e-13 ;
 	setAttr ".int" 2;
@@ -39081,7 +39103,7 @@ createNode joint -n "Max__SH_rWristJ" -p "Max__SH_rLowerArmCurveJ3";
 	rename -uid "566EFB46-453E-01C8-FD66-3C8294F84A4D";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" -1.3804953184474271 5.9376368021644339 -5.3143782446358721 ;
+	setAttr ".jo" -type "double3" -1.3804953184474271 5.9376368021644348 -5.3143782446358721 ;
 	setAttr ".radi" 0.5;
 createNode parentConstraint -n "Max__SH_rWristJ_parentConstraint1" -p "Max__SH_rWristJ";
 	rename -uid "E78A5D72-4D28-0E3F-5EB7-83B1BBE292B8";
@@ -39098,9 +39120,9 @@ createNode parentConstraint -n "Max__SH_rWristJ_parentConstraint1" -p "Max__SH_r
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 16.404132692007252 8.4740407861564133 -0.20634500619572882 ;
+	setAttr ".lr" -type "double3" -0.98756093099305564 7.0619946920281507 13.465982801533579 ;
 	setAttr ".rst" -type "double3" -0.83267239202885146 5.3290705182007514e-14 4.5519144009631418e-14 ;
-	setAttr ".rsrr" -type "double3" -1.380495318447422 5.9376368021644037 -5.3143782446358774 ;
+	setAttr ".rsrr" -type "double3" -1.380495318447422 5.9376368021644046 -5.3143782446358774 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 createNode joint -n "Max__SH_rPalmJ" -p "Max__SH_rWristJ";
@@ -39329,7 +39351,6 @@ createNode parentConstraint -n "Max__SH_rThumbJ1_parentConstraint1" -p "Max__SH_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 6.3611093629270335e-15 -1.7655625192200639e-31 3.1805546814635168e-15 ;
 	setAttr ".rst" -type "double3" -0.3851810311724102 0.096446218420247476 -0.47646210307154679 ;
 	setAttr ".rsrr" -type "double3" -56.667057308363752 44.075597043931218 151.60020482859915 ;
 	setAttr ".int" 2;
@@ -39370,7 +39391,7 @@ createNode parentConstraint -n "Max__SH_rThumbJ2_parentConstraint1" -p "Max__SH_
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 9.9891901892715502 -29.022870724371437 -37.314301499219361 ;
+	setAttr ".lr" -type "double3" 9.9891901892715573 -29.022870724371458 -37.31430149921939 ;
 	setAttr ".rst" -type "double3" 0.7230688814458599 -7.1054273576010019e-15 5.3290705182007514e-15 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
@@ -39450,6 +39471,7 @@ createNode parentConstraint -n "Max__SH_rThumbJTip_parentConstraint1" -p "Max__S
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
+	setAttr ".lr" -type "double3" 0 0 -6.3611093629270351e-15 ;
 	setAttr ".rst" -type "double3" 0.44869188380806957 7.1054273576010019e-15 5.3290705182007514e-15 ;
 	setAttr ".rsrr" -type "double3" -90 47.532745178565236 -90 ;
 	setAttr ".int" 2;
@@ -39491,9 +39513,9 @@ createNode parentConstraint -n "Max__SH_lHipCurveJ_parentConstraint1" -p "Max__S
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -18.338663478054045 -6.6199918058555181 105.96608878374617 ;
+	setAttr ".lr" -type "double3" 5.0421404141857913 -29.482791590103837 25.263732513371924 ;
 	setAttr ".rst" -type "double3" 1.4265324295505233 -0.80000000000000071 0 ;
-	setAttr ".rsrr" -type "double3" 65.394937002866968 -4.0580080018063303 -80.678865584894339 ;
+	setAttr ".rsrr" -type "double3" 65.394937002866968 -4.0580080018063303 -80.678865584894353 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Max__SH_lHipCurveJ_scaleConstraint1" -p "Max__SH_lHipCurveJ";
@@ -39532,9 +39554,9 @@ createNode parentConstraint -n "Max__SH_lUpperLegCurveJ1_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -3.1805546825254403e-15 -4.2416672370667816e-12 2.8688603226800921e-11 ;
+	setAttr ".lr" -type "double3" -1.3317395317630545e-24 -8.468226839396614e-12 1.8021022825172287e-11 ;
 	setAttr ".rst" -type "double3" 1.4363526337129784 4.4408920985006262e-16 0 ;
-	setAttr ".rsrr" -type "double3" 1.5078274682268379e-25 3.8230267271191473e-12 4.5195682023596576e-12 ;
+	setAttr ".rsrr" -type "double3" 1.5078274682268381e-25 3.8230267271191473e-12 4.5195682023596576e-12 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Max__SH_lUpperLegCurveJ1_scaleConstraint1" -p "Max__SH_lUpperLegCurveJ1";
@@ -39574,7 +39596,7 @@ createNode parentConstraint -n "Max__SH_lUpperLegCurveJ2_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -1.4312496068131385e-14 -5.2411565457166882e-12 3.3791803213209132e-11 ;
+	setAttr ".lr" -type "double3" -7.3152757675580831e-14 -1.040359436306715e-11 2.1147508077050929e-11 ;
 	setAttr ".rst" -type "double3" 1.4372482059105476 1.283417816466681e-13 -1.1057821325266559e-13 ;
 	setAttr ".rsrr" -type "double3" 3.4986101496328795e-14 4.7867347956025916e-12 5.5087207082948133e-12 ;
 	setAttr ".int" 2;
@@ -39616,7 +39638,7 @@ createNode parentConstraint -n "Max__SH_lUpperLegCurveJ3_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 4.7708320220540044e-14 -5.4796981468264686e-12 2.9542582158773874e-11 ;
+	setAttr ".lr" -type "double3" 1.2722218724060824e-14 -1.0972913651049135e-11 1.8727105964457192e-11 ;
 	setAttr ".rst" -type "double3" 1.4372482059105653 1.425526363618701e-13 -1.2434497875801753e-13 ;
 	setAttr ".rsrr" -type "double3" 5.4069429585141179e-14 5.1238735918377235e-12 5.8458595045299468e-12 ;
 	setAttr ".int" 2;
@@ -39642,7 +39664,7 @@ createNode joint -n "Max__SH_lKneeCurveJ" -p "Max__SH_lUpperLegCurveJ3";
 	rename -uid "E9A4DF08-4F99-5121-C19A-9C83F4F73AA6";
 	setAttr ".mnrl" -type "double3" -360 -360 -360 ;
 	setAttr ".mxrl" -type "double3" 360 360 360 ;
-	setAttr ".jo" -type "double3" 0 0 -2.490633044167607e-06 ;
+	setAttr ".jo" -type "double3" 0 0 -2.4906330441676066e-06 ;
 createNode parentConstraint -n "Max__SH_lKneeCurveJ_parentConstraint1" -p "Max__SH_lKneeCurveJ";
 	rename -uid "63405F28-4FB3-3DCC-F2B3-6FBEDAE67508";
 	addAttr -dcb 0 -ci true -k true -sn "w0" -ln "Max__lKneeCurveJW0" -dv 1 -min 0 
@@ -39659,7 +39681,7 @@ createNode parentConstraint -n "Max__SH_lKneeCurveJ_parentConstraint1" -p "Max__
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 3.31943939522292e-12 -2.1560590895190952e-12 -56.762261761058809 ;
+	setAttr ".lr" -type "double3" 3.8999138826107744e-12 -6.8868799511978862e-12 -29.474999798174199 ;
 	setAttr ".rst" -type "double3" 1.4363526337129819 1.6120438317557273e-13 -1.318944953254686e-13 ;
 	setAttr ".rsrr" -type "double3" 3.1804752522953092e-15 3.6544573290707095e-12 -2.4906330537092709e-06 ;
 	setAttr ".int" 2;
@@ -39702,9 +39724,9 @@ createNode parentConstraint -n "Max__SH_lLowerLegCurveJ1_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 2.3599153773720061 -1.9271759588879662 -56.741007486240349 ;
+	setAttr ".lr" -type "double3" -0.51621388013816094 -1.133589183994185 -29.455148626928654 ;
 	setAttr ".rst" -type "double3" 1.6763838989463524 -0.25011647765792944 -1.532107773982716e-13 ;
-	setAttr ".rsrr" -type "double3" 2.3043091297144271 5.0625236738023073e-12 -8.48593236157852 ;
+	setAttr ".rsrr" -type "double3" 2.3043091297144271 5.0625236738023073e-12 -8.4859323615785218 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Max__SH_lLowerLegCurveJ1_scaleConstraint1" -p "Max__SH_lLowerLegCurveJ1";
@@ -39745,7 +39767,7 @@ createNode parentConstraint -n "Max__SH_lLowerLegCurveJ2_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.3191075325011605 -3.2992929812315676e-13 -6.5588901793379478e-12 ;
+	setAttr ".lr" -type "double3" -0.81419765949253764 -1.011444072637591e-13 -5.3521030957199247e-12 ;
 	setAttr ".rst" -type "double3" 1.6959966919984124 -2.6090241078691179e-14 -1.4566126083082054e-13 ;
 	setAttr ".rsrr" -type "double3" 2.3043091297149894 4.7122771328392958e-12 -1.3113180079751736e-12 ;
 	setAttr ".int" 2;
@@ -39788,7 +39810,7 @@ createNode parentConstraint -n "Max__SH_lLowerLegCurveJ3_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 1.3191070556641098 1.1242294145118311e-13 -7.6409412873707658e-12 ;
+	setAttr ".lr" -type "double3" -0.81419777870175969 1.2743295153548734e-13 -8.87732165631858e-12 ;
 	setAttr ".rst" -type "double3" 1.6959966919984133 -4.7628567756419216e-14 -1.2789769243681803e-13 ;
 	setAttr ".rsrr" -type "double3" 2.3043093681335267 3.7617748547064925e-12 -1.6612786993183099e-12 ;
 	setAttr ".int" 2;
@@ -39830,7 +39852,7 @@ createNode parentConstraint -n "Max__SH_lAnkleJ_parentConstraint1" -p "Max__SH_l
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 11.435243836732573 10.539833724705934 8.0883796366828076 ;
+	setAttr ".lr" -type "double3" 5.2595916989714429 10.668174556244397 -15.649997361428357 ;
 	setAttr ".rst" -type "double3" 1.6949398895071746 -2.6867397195928788e-14 4.8849813083506888e-15 ;
 	setAttr ".rsrr" -type "double3" -7.0603256841248712 -2.8339744788321837 40.457983925869733 ;
 	setAttr ".int" 2;
@@ -39877,7 +39899,7 @@ createNode parentConstraint -n "Max__SH_lBallJ_parentConstraint1" -p "Max__SH_lB
 	setAttr ".erp" yes;
 	setAttr ".lr" -type "double3" -3.975693351829396e-16 -2.2026426936558897e-32 -6.3486853212025667e-15 ;
 	setAttr ".rst" -type "double3" 2.5287076184204929 7.1054273576010019e-15 -1.2301271112846734e-13 ;
-	setAttr ".rsrr" -type "double3" 0 -4.9257985427124344 51.22351167459162 ;
+	setAttr ".rsrr" -type "double3" 0 -4.9257985427124353 51.22351167459162 ;
 	setAttr ".int" 2;
 	setAttr -k on ".w0";
 createNode scaleConstraint -n "Max__SH_lBallJ_scaleConstraint1" -p "Max__SH_lBallJ";
@@ -39958,7 +39980,7 @@ createNode parentConstraint -n "Max__SH_rHipCurveJ_parentConstraint1" -p "Max__S
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -21.216860798072229 2.1679022560043819 23.920360662126932 ;
+	setAttr ".lr" -type "double3" -15.275041890006991 -1.2201197002861528 -17.212643614123618 ;
 	setAttr ".rst" -type "double3" -1.4265324295505233 -0.80000000000000071 0 ;
 	setAttr ".rsrr" -type "double3" -65.394937002866968 -4.0580080018067477 -99.321134415105931 ;
 	setAttr ".int" 2;
@@ -40000,7 +40022,7 @@ createNode parentConstraint -n "Max__SH_rUpperLegCurveJ1_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -2.2263882770356301e-14 1.2410719257063773e-12 -1.0254108293038379e-11 ;
+	setAttr ".lr" -type "double3" 6.3611093636180142e-15 6.5271538062987444e-12 1.2117913336375999e-11 ;
 	setAttr ".rst" -type "double3" 1.4363526337129819 4.4408920985006262e-16 4.4408920985006262e-16 ;
 	setAttr ".rsrr" -type "double3" -180.00000000000003 -3.7085267585864622e-12 179.99999999999591 ;
 	setAttr ".int" 2;
@@ -40042,7 +40064,7 @@ createNode parentConstraint -n "Max__SH_rUpperLegCurveJ2_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 6.3611093627501118e-15 1.6252634422278579e-12 -1.2474135460699913e-11 ;
+	setAttr ".lr" -type "double3" 2.8624992134257196e-14 8.1549422032724497e-12 1.5253940252299026e-11 ;
 	setAttr ".rst" -type "double3" -1.4372482059105476 -1.6431300764452317e-14 1.0880185641326534e-13 ;
 	setAttr ".rsrr" -type "double3" 2.2263882770288488e-14 4.7040403738845413e-12 1.0686663729717425e-12 ;
 	setAttr ".int" 2;
@@ -40084,7 +40106,7 @@ createNode parentConstraint -n "Max__SH_rUpperLegCurveJ3_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -6.3611093631252451e-15 1.7970133950268863e-12 -1.2639524304136016e-11 ;
+	setAttr ".lr" -type "double3" 4.1347210860300886e-14 8.7210809365729575e-12 1.6755162061949809e-11 ;
 	setAttr ".rst" -type "double3" -1.4372482059105636 -3.1530333899354446e-14 1.2212453270876722e-13 ;
 	setAttr ".rsrr" -type "double3" 3.1805546815261626e-15 5.0157347326679651e-12 1.4312496066585823e-12 ;
 	setAttr ".int" 2;
@@ -40127,7 +40149,7 @@ createNode parentConstraint -n "Max__SH_rKneeCurveJ_parentConstraint1" -p "Max__
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" 8.9003046089534078e-14 1.2857111468936117e-12 4.242955791104877 ;
+	setAttr ".lr" -type "double3" 4.8892264197917576e-13 6.239147808408064e-12 4.2429557911259934 ;
 	setAttr ".rst" -type "double3" -1.4363526337129855 -3.2418512319054571e-14 1.2967404927621828e-13 ;
 	setAttr ".rsrr" -type "double3" -1.5902852145340634e-14 3.6226517818413002e-12 -2.4906376209857935e-06 ;
 	setAttr ".int" 2;
@@ -40170,7 +40192,7 @@ createNode parentConstraint -n "Max__SH_rLowerLegCurveJ1_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.83372951494142511 0.17044063448237531 4.2395371664224131 ;
+	setAttr ".lr" -type "double3" -0.15014279828939883 0.17044063448304894 4.2395371664272705 ;
 	setAttr ".rst" -type "double3" -1.676383898946356 0.25011647765791611 1.496580637194711e-13 ;
 	setAttr ".rsrr" -type "double3" 2.3043091297144427 5.025052763961315e-12 -8.4859323615786604 ;
 	setAttr ".int" 2;
@@ -40213,7 +40235,7 @@ createNode parentConstraint -n "Max__SH_rLowerLegCurveJ2_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.84003818035125322 -5.698638416535843e-13 -3.5980602113877647e-13 ;
+	setAttr ".lr" -type "double3" -0.15645146369936991 3.0106157562149484e-13 -1.3871451097806918e-12 ;
 	setAttr ".rst" -type "double3" -1.6959966919984089 2.5313084961453569e-14 1.4477308241112041e-13 ;
 	setAttr ".rsrr" -type "double3" 2.3043091297149791 4.6920465068712682e-12 -1.2544633170307812e-12 ;
 	setAttr ".int" 2;
@@ -40256,7 +40278,7 @@ createNode parentConstraint -n "Max__SH_rLowerLegCurveJ3_parentConstraint1" -p "
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.84003853797904049 -2.1150959383483891e-12 1.4395929770442486e-13 ;
+	setAttr ".lr" -type "double3" -0.15645170211788562 1.1740541527231969e-12 -4.2881418798802451e-12 ;
 	setAttr ".rst" -type "double3" -1.6959966919984137 4.6629367034256575e-14 1.2745360322696797e-13 ;
 	setAttr ".rsrr" -type "double3" 2.3043093681334814 3.7513397760502766e-12 -1.6169517956343919e-12 ;
 	setAttr ".int" 2;
@@ -40298,7 +40320,7 @@ createNode parentConstraint -n "Max__SH_rAnkleJ_parentConstraint1" -p "Max__SH_r
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -3.6813803876647104 -3.8238299656835038 3.1170712161282994 ;
+	setAttr ".lr" -type "double3" 7.3714084461628504 12.991522277892235 -21.082303276714477 ;
 	setAttr ".rst" -type "double3" -1.6949398895071746 2.964295475749168e-14 -3.9968028886505635e-15 ;
 	setAttr ".rsrr" -type "double3" -7.0603256841252406 -2.8339744788322414 40.45798392586974 ;
 	setAttr ".int" 2;
@@ -40340,7 +40362,7 @@ createNode parentConstraint -n "Max__SH_rBallJ_parentConstraint1" -p "Max__SH_rB
 	setAttr -k off ".sy";
 	setAttr -k off ".sz";
 	setAttr ".erp" yes;
-	setAttr ".lr" -type "double3" -0.11391269435828431 -0.090241112984655161 0.0041235336951587747 ;
+	setAttr ".lr" -type "double3" 0.24576202576597289 0.27088207415110599 -1.0966100298557131 ;
 	setAttr ".rst" -type "double3" -2.5287076184204915 -1.5543122344752192e-14 1.2168044349891716e-13 ;
 	setAttr ".rsrr" -type "double3" 0 -4.9257985427127426 51.223511674592302 ;
 	setAttr ".int" 2;
@@ -40476,18 +40498,18 @@ createNode displayPoints -n "displayPoints4" -p "transform6";
 createNode transform -n "group1";
 	rename -uid "3543DF9D-475E-977F-C5AB-42A903F65B97";
 createNode lightLinker -s -n "lightLinker1";
-	rename -uid "059A0FAB-4575-6568-AB40-D9AFF185DE30";
+	rename -uid "18BFEC7B-4485-0690-ADF1-59BAA0913B38";
 	setAttr -s 12 ".lnk";
 	setAttr -s 12 ".slnk";
 createNode shapeEditorManager -n "shapeEditorManager";
-	rename -uid "F5D9E297-4890-FAC3-DDC8-5D8C8D6A5B7B";
+	rename -uid "24E62BAA-4392-CBB5-B754-4783F56953B8";
 	setAttr ".bsdt[0].bscd" -type "Int32Array" 2 0 1 ;
 	setAttr -s 2 ".bspr";
 	setAttr -s 2 ".obsv";
 createNode poseInterpolatorManager -n "poseInterpolatorManager";
-	rename -uid "241695CD-40EA-1A08-7639-4587C3EEDC12";
+	rename -uid "FF568CEE-4A9E-B9A1-ADC9-E5903697BB57";
 createNode displayLayerManager -n "layerManager";
-	rename -uid "22039886-4213-4E13-F6EA-A196F3E9EE12";
+	rename -uid "C33DBEE2-4686-6B95-FF6F-77B9FBD52465";
 	setAttr ".cdl" 3;
 	setAttr -s 12 ".dli[1:11]"  1 12 2 3 4 5 7 8 
 		9 10 11;
@@ -40495,7 +40517,7 @@ createNode displayLayerManager -n "layerManager";
 createNode displayLayer -n "defaultLayer";
 	rename -uid "579B607C-4075-C98F-4C2F-F9B3762E6CA7";
 createNode renderLayerManager -n "renderLayerManager";
-	rename -uid "C606DFD7-400A-5AA3-C389-E3B8F7BB63DB";
+	rename -uid "643C985B-4A9F-F0AC-2C42-F19A2CF5F283";
 createNode renderLayer -n "defaultRenderLayer";
 	rename -uid "F86A5F56-41FB-F3A5-10D6-F0B0FF659BF3";
 	setAttr ".g" yes;
@@ -40565,7 +40587,7 @@ createNode script -n "uiConfigurationScriptNode";
 		+ "            -mapMotionTrails 0\n            -ignoreHiddenAttribute 0\n            -ignoreOutlinerColor 0\n            -renderFilterVisible 0\n            $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"graphEditor\" (localizedPanelLabel(\"Graph Editor\")) `;\n\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Graph Editor\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n"
 		+ "                -autoExpand 1\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n                -showUpstreamCurves 1\n                -showUnitlessCurves 1\n                -showCompounds 0\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 1\n                -doNotSelectNewObjects 0\n                -dropIsParent 1\n                -transmitFilters 1\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -isSet 0\n                -isSetMember 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n"
 		+ "                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 1\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                -selectionOrder \"display\" \n                -expandAttribute 1\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"GraphEd\");\n            animCurveEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 1\n                -displayInfinities 0\n                -displayValues 0\n"
-		+ "                -autoFit 1\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1.041667\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n"
+		+ "                -autoFit 1\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -showResults \"off\" \n                -showBufferCurves \"off\" \n                -smoothness \"fine\" \n                -resultSamples 1\n                -resultScreenSamples 0\n                -resultUpdate \"delayed\" \n                -showUpstreamCurves 1\n                -showCurveNames 0\n                -showActiveCurveNames 0\n                -clipTime \"on\" \n                -stackedCurves 0\n                -stackedCurvesMin -1\n                -stackedCurvesMax 1\n                -stackedCurvesSpace 0.2\n                -displayNormalized 0\n                -preSelectionHighlight 0\n                -constrainDrag 0\n                -classicMode 1\n                -valueLinesToggle 1\n                -outliner \"graphEditor1OutlineEd\" \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"dopeSheetPanel\" (localizedPanelLabel(\"Dope Sheet\")) `;\n"
 		+ "\tif (\"\" != $panelName) {\n\t\t$label = `panel -q -label $panelName`;\n\t\tscriptedPanel -edit -l (localizedPanelLabel(\"Dope Sheet\")) -mbv $menusOkayInPanels  $panelName;\n\n\t\t\t$editorName = ($panelName+\"OutlineEd\");\n            outlinerEditor -e \n                -showShapes 1\n                -showAssignedMaterials 0\n                -showTimeEditor 1\n                -showReferenceNodes 0\n                -showReferenceMembers 0\n                -showAttributes 1\n                -showConnected 1\n                -showAnimCurvesOnly 1\n                -showMuteInfo 0\n                -organizeByLayer 1\n                -organizeByClip 1\n                -showAnimLayerWeight 1\n                -autoExpandLayers 1\n                -autoExpand 0\n                -showDagOnly 0\n                -showAssets 1\n                -showContainedOnly 0\n                -showPublishedAsConnected 0\n                -showParentContainers 1\n                -showContainerContents 0\n                -ignoreDagHierarchy 0\n                -expandConnections 1\n"
 		+ "                -showUpstreamCurves 1\n                -showUnitlessCurves 0\n                -showCompounds 1\n                -showLeafs 1\n                -showNumericAttrsOnly 1\n                -highlightActive 0\n                -autoSelectNewObjects 0\n                -doNotSelectNewObjects 1\n                -dropIsParent 1\n                -transmitFilters 0\n                -setFilter \"0\" \n                -showSetMembers 0\n                -allowMultiSelection 1\n                -alwaysToggleSelect 0\n                -directSelect 0\n                -displayMode \"DAG\" \n                -expandObjects 0\n                -setsIgnoreFilters 1\n                -containersIgnoreFilters 0\n                -editAttrName 0\n                -showAttrValues 0\n                -highlightSecondary 0\n                -showUVAttrsOnly 0\n                -showTextureNodesOnly 0\n                -attrAlphaOrder \"default\" \n                -animLayerFilterOptions \"allAffecting\" \n                -sortOrder \"none\" \n                -longNames 0\n"
 		+ "                -niceNames 1\n                -showNamespace 1\n                -showPinIcons 0\n                -mapMotionTrails 1\n                -ignoreHiddenAttribute 0\n                -ignoreOutlinerColor 0\n                -renderFilterVisible 0\n                $editorName;\n\n\t\t\t$editorName = ($panelName+\"DopeSheetEd\");\n            dopeSheetEditor -e \n                -displayKeys 1\n                -displayTangents 0\n                -displayActiveKeys 0\n                -displayActiveKeyTangents 0\n                -displayInfinities 0\n                -displayValues 0\n                -autoFit 0\n                -autoFitTime 0\n                -snapTime \"integer\" \n                -snapValue \"none\" \n                -outliner \"dopeSheetPanel1OutlineEd\" \n                -showSummary 1\n                -showScene 0\n                -hierarchyBelow 0\n                -showTicks 1\n                -selectionWindow 0 0 0 0 \n                $editorName;\n\t\tif (!$useSceneConfig) {\n\t\t\tpanel -e -l $label $panelName;\n\t\t}\n\t}\n\n\n\t$panelName = `sceneUIReplacement -getNextScriptedPanel \"timeEditorPanel\" (localizedPanelLabel(\"Time Editor\")) `;\n"
@@ -40591,7 +40613,7 @@ createNode script -n "uiConfigurationScriptNode";
 	setAttr ".st" 3;
 createNode script -n "sceneConfigurationScriptNode";
 	rename -uid "3BF2A3A7-4DDF-73D9-B314-75A59BFA5ACD";
-	setAttr ".b" -type "string" "playbackOptions -min 0 -max 24 -ast 0 -aet 100 ";
+	setAttr ".b" -type "string" "playbackOptions -min 0 -max 24 -ast 0 -aet 96 ";
 	setAttr ".st" 6;
 createNode cluster -n "Max__Spine_ribbonBlend_lClusterCluster";
 	rename -uid "76091E8A-4B1E-A716-7954-76806D08FB53";
@@ -40807,9 +40829,9 @@ createNode skinCluster -n "Max__Spine_ribbonSkinClstr";
 		3 0 0.60708581008067897 1 0.12141716201613582 2 0.27149702790318514;
 	setAttr -k off ".wl[0].w";
 	setAttr -s 3 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 -2 -0 1;
-	setAttr ".pm[1]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 2 -0 1;
-	setAttr ".pm[2]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 -2 0 1;
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 2 0 1;
+	setAttr ".pm[2]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 3 ".ma";
 	setAttr -s 3 ".dpf[0:2]"  1 1 1;
@@ -41151,9 +41173,9 @@ createNode skinCluster -n "Max__Neck_ribbonSkinClstr";
 		3 0 0.60708581008067897 1 0.12141716201613582 2 0.27149702790318514;
 	setAttr -k off ".wl[0].w";
 	setAttr -s 3 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 -2 -0 1;
-	setAttr ".pm[1]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 2 -0 1;
-	setAttr ".pm[2]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 0 -0 1;
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 -2 0 1;
+	setAttr ".pm[1]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 2 0 1;
+	setAttr ".pm[2]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr ".gm" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0 1;
 	setAttr -s 3 ".ma";
 	setAttr -s 3 ".dpf[0:2]"  1 1 1;
@@ -44180,7 +44202,7 @@ createNode dagPose -n "bindPose6";
 		 0.0084963608533143997 0 6.7818731630111708 6.6613381477509392e-16 0 0 0 0 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.0073438857798741562 -0.065077139633209172 0.3402781805803522 0.938041466599285 1
 		 1 1 yes;
-	setAttr ".xm[18]" -type "matrix" "xform" 1 1 1 -2.5898597044715643e-08 -1.180099547722903e-23
+	setAttr ".xm[18]" -type "matrix" "xform" 1 1 1 -2.5898597044715643e-08 -1.1800995477229031e-23
 		 -1.3877989129522468e-24 0 2.5287076184204929 5.2041704279304213e-16 -6.6613381477509392e-16 0
 		 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 0.018575740661265817 -0.038750155888346592 0.43187146885184802 0.90091087332169628 1
 		 1 1 yes;
@@ -44328,7 +44350,7 @@ createNode dagPose -n "bindPose6";
 	setAttr ".xm[63]" -type "matrix" "xform" 1 1 1 0 0 0 0 0.44869188380806879 1.2065019798760964e-14
 		 4.2188474935755949e-15 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 -0.25609406292448356 0.65910229170807066 -0.25609406292448356 0.65910229170807066 1
 		 1 1 yes;
-	setAttr ".xm[64]" -type "matrix" "xform" 1 1 1 0 -0 0 0 -0.67393012166298494
+	setAttr ".xm[64]" -type "matrix" "xform" 1 1 1 0 0 0 0 -0.67393012166298494
 		 -0.031888859229805888 -0.10751861428631471 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 1 
 		0 0 0 1 1 1 1 yes;
 	setAttr ".xm[65]" -type "matrix" "xform" 1 1 1 0 0 0 0 -1.1351280969343649 -1.0658141036401503e-14
@@ -46049,7 +46071,7 @@ createNode skinCluster -n "skinCluster1";
 		38 0.0019222526020988568 39 0.00078009133164077084
 		5 34 6.4470670103196765e-05 35 0.012241177435978454 36 0.88084319190887894 
 		37 0.10425455123186111 38 0.002596608753178283
-		5 34 8.244524513444703e-05 35 0.011962813986835016 36 0.90412002724580676 
+		5 34 8.2445245134447044e-05 35 0.011962813986835016 36 0.90412002724580676 
 		37 0.077437177300453186 38 0.0063975362217706614
 		5 34 7.2267250418427642e-06 35 0.00032549615558372401 36 0.23054682391231562 
 		37 0.65033423900604248 38 0.1187862142010163
@@ -46093,7 +46115,7 @@ createNode skinCluster -n "skinCluster1";
 		40 0.49166383585169493 41 0.014614501968026161
 		5 35 0.0084589277346452784 36 0.0011712699026342733 39 0.42859824072174685 
 		40 0.55583593181120927 41 0.0059356298297643661
-		5 36 5.924884642580126e-05 39 0.40637660579118717 40 0.56524097170977927 
+		5 36 5.9248846425801254e-05 39 0.40637660579118717 40 0.56524097170977927 
 		41 0.028284292668104172 42 3.8880984503642577e-05
 		5 34 0.0039705234118834337 39 0.50196649036375063 40 0.46625694982475002 
 		41 0.025953967124223709 42 0.0018520692753922516
@@ -46447,7 +46469,7 @@ createNode skinCluster -n "skinCluster1";
 		71 0.23511164953119951 72 0.12448585560728197
 		5 2 0.63376077378383289 3 0.00029018885106779635 70 0.0097245449785921378 
 		71 0.1392068909833348 72 0.21701760140317239
-		5 2 0.86668694019317627 3 0.013058578782282284 70 4.152955475524163e-05 
+		5 2 0.86668694019317627 3 0.013058578782282284 70 4.1529554755241624e-05 
 		71 0.027471454264680825 72 0.092741497205105369
 		5 2 0.80725245582168825 3 0.010255559098538491 70 0.00091853852756697881 
 		71 0.091828378064173447 72 0.089745068488032861
@@ -46770,7 +46792,7 @@ createNode skinCluster -n "skinCluster1";
 		37 0.2402750700712204 38 0.0030630409598848612
 		5 34 1.0595453750610417e-05 35 0.0016369742262405161 36 0.73987698199300589 
 		37 0.25385931134223938 38 0.0046161369847636151
-		5 34 2.011471088971158e-05 35 0.002866271597159633 36 0.79856441925543253 
+		5 34 2.0114710889711576e-05 35 0.002866271597159633 36 0.79856441925543253 
 		37 0.1915716826915741 38 0.0069775117449439447
 		5 34 1.1304762491400018e-05 35 0.0014803160963409551 36 0.77809005122311503 
 		37 0.21306177973747253 38 0.0073565481805800527
@@ -46886,7 +46908,7 @@ createNode skinCluster -n "skinCluster1";
 		72 0.0033060732745061813
 		4 3 0.99695216367365724 70 1.0442928123686747e-05 71 0.00012505725379180946 
 		72 0.0029123361444272095
-		4 3 0.99702091236490487 70 1.106894945394976e-05 71 0.00013053428373415867 
+		4 3 0.99702091236490487 70 1.1068949453949758e-05 71 0.00013053428373415867 
 		72 0.0028374844019071412
 		4 3 0.99985104331930008 70 4.284126242233304e-07 71 5.4699330255864659e-06 
 		72 0.00014305833505011203
@@ -47006,7 +47028,7 @@ createNode skinCluster -n "skinCluster1";
 		72 0.0020499178616977675
 		4 3 0.99682161323079033 70 1.1616970197728183e-05 71 0.00013760829035153142 
 		72 0.0030291615086604842
-		4 3 0.99674973681264967 70 1.158284411702507e-05 71 0.00013789204276266399 
+		4 3 0.99674973681264967 70 1.1582844117025071e-05 71 0.00013789204276266399 
 		72 0.0031007883004706637
 		4 3 0.99721672923536564 70 9.3545157819907418e-06 71 0.00011344432158898844 
 		72 0.0026604719272633492
@@ -48901,7 +48923,7 @@ createNode skinCluster -n "skinCluster1";
 		79 0.039776963291357062 80 0.11266439334464738
 		5 7 0.79271697998046875 8 5.9222959360109322e-05 78 0.00014959755556862668 
 		79 0.044988919260813595 80 0.1620852802437889
-		5 7 0.86668694019317627 8 0.013058578782282284 78 4.152955475524163e-05 
+		5 7 0.86668694019317627 8 0.013058578782282284 78 4.1529554755241624e-05 
 		79 0.027471454264680825 80 0.092741497205105369
 		5 7 0.80725245582168825 8 0.010255559098538491 78 0.00091853852756697881 
 		79 0.091828378064173447 80 0.089745068488032861
@@ -49071,7 +49093,7 @@ createNode skinCluster -n "skinCluster1";
 		4 8 0.99993555594260219 78 1.768533791683658e-07 79 2.2615629196306964e-06 
 		80 6.2005641099085142e-05
 		5 7 0.001221588274655753 8 0.64191189092934875 79 1.6906377247936443e-06 
-		80 2.26103287113369e-05 87 0.35684221982955933
+		80 2.2610328711336896e-05 87 0.35684221982955933
 		4 8 0.99991800227395211 78 2.6058570748703275e-07 79 3.2576160841127831e-06 
 		80 7.8479524256333378e-05
 		4 8 0.99991099501198577 78 2.6691670757558623e-07 79 3.3900678611085686e-06 
@@ -49300,7 +49322,7 @@ createNode skinCluster -n "skinCluster1";
 		47 0.10425455123186111 48 0.002596608753178283
 		5 45 0.017472866744308358 46 0.87159869120173938 47 0.10822609812021255 
 		48 0.0019222526020988568 49 0.00078009133164077084
-		5 44 8.244524513444703e-05 45 0.011962813986835016 46 0.90412002724580676 
+		5 44 8.2445245134447044e-05 45 0.011962813986835016 46 0.90412002724580676 
 		47 0.077437177300453186 48 0.0063975362217706614
 		5 44 6.8769296000962299e-05 45 0.010776604540161761 46 0.91219753268220571 
 		47 0.072674870491027832 48 0.0042822229906037306
@@ -49387,7 +49409,7 @@ createNode skinCluster -n "skinCluster1";
 		50 0.49166383585169493 51 0.014614501968026161
 		5 45 0.0084589277346452784 46 0.0011712699026342733 49 0.42859824072174685 
 		50 0.55583593181120927 51 0.0059356298297643661
-		5 46 5.924884642580126e-05 49 0.40637660579118717 50 0.56524097170977927 
+		5 46 5.9248846425801254e-05 49 0.40637660579118717 50 0.56524097170977927 
 		51 0.028284292668104172 52 3.8880984503642577e-05
 		5 44 0.0039705234118834337 49 0.50196649036375063 50 0.46625694982475002 
 		51 0.025953967124223709 52 0.0018520692753922516
@@ -49474,7 +49496,7 @@ createNode skinCluster -n "skinCluster1";
 		53 0.0034895195437777532
 		5 46 0.0025386291614990764 49 0.037737800268719771 50 0.46383613348007202 
 		51 0.49540095698267095 52 0.00048648010703819706
-		4 49 5.697605651009654e-05 51 0.96483185541691197 52 6.5443964000957876e-06 
+		4 49 5.6976056510096547e-05 51 0.96483185541691197 52 6.5443964000957876e-06 
 		53 0.035104624130177779
 		5 46 0.0041712280304455141 49 0.0014848708452214632 50 0.43706449866294861 
 		51 0.5545589587690456 52 0.0027204436923388533
@@ -49596,7 +49618,7 @@ createNode skinCluster -n "skinCluster1";
 		48 0.0043074618715813369 49 1.7216215450669095e-05
 		5 44 1.0595453750610417e-05 45 0.0016369742262405161 46 0.73987698199300589 
 		47 0.25385931134223938 48 0.0046161369847636151
-		5 44 2.011471088971158e-05 45 0.002866271597159633 46 0.79856441925543253 
+		5 44 2.0114710889711576e-05 45 0.002866271597159633 46 0.79856441925543253 
 		47 0.1915716826915741 48 0.0069775117449439447
 		5 44 1.1304762491400018e-05 45 0.0014803160963409551 46 0.77809005122311503 
 		47 0.21306177973747253 48 0.0073565481805800527
@@ -49671,7 +49693,7 @@ createNode skinCluster -n "skinCluster1";
 		80 0.0029540545827170285
 		4 8 0.99695216367365724 78 1.0442928123686747e-05 79 0.00012505725379180946 
 		80 0.0029123361444272095
-		4 8 0.99702091236490487 78 1.106894945394976e-05 79 0.00013053428373415867 
+		4 8 0.99702091236490487 78 1.1068949453949758e-05 79 0.00013053428373415867 
 		80 0.0028374844019071412
 		4 8 0.99634185650152185 78 1.3689809139425711e-05 79 0.00016003292739574603 
 		80 0.003484420761943028
@@ -49706,7 +49728,7 @@ createNode skinCluster -n "skinCluster1";
 		1 87 1
 		1 87 1
 		1 87 1
-		4 8 0.99674973681264967 78 1.158284411702507e-05 79 0.00013789204276266399 
+		4 8 0.99674973681264967 78 1.1582844117025071e-05 79 0.00013789204276266399 
 		80 0.0031007883004706637
 		1 87 1
 		1 87 1
@@ -49980,7 +50002,7 @@ createNode skinCluster -n "skinCluster1";
 		42 0.0038027586992051983 43 0.0078985111250765745
 		5 39 0.00024467259551700911 40 0.18902413547039032 41 0.810137292404843 
 		42 0.00055246890753851403 43 4.1430621711290849e-05
-		4 39 5.697605651009654e-05 41 0.96483185541691197 42 6.5443964000957876e-06 
+		4 39 5.6976056510096547e-05 41 0.96483185541691197 42 6.5443964000957876e-06 
 		43 0.035104624130177779
 		5 39 0.0026534907618506426 40 0.00072562496643513441 41 0.68191813346723651 
 		42 0.21013098128314464 43 0.10457176952133301
@@ -50429,255 +50451,255 @@ createNode skinCluster -n "skinCluster1";
 		29 0.0026412647297983068;
 	setAttr -k off ".wl[0].w";
 	setAttr -s 88 ".pm";
-	setAttr ".pm[0]" -type "matrix" 1 -0 0 -0 -0 1 -0 0 0 -0 1 -0 -0 -15.16195972886516 0.31993379417754686 1;
-	setAttr ".pm[1]" -type "matrix" 0.12902720410577442 -0.0044548259476604743 -0.99163104788344703 -0
-		 -0.98856868898832628 0.07807838994435902 -0.12897950292817312 0 0.077999536873938138 0.99693726961603402 0.0056703349088510664 -0
+	setAttr ".pm[0]" -type "matrix" 1 0 0 0 0 1 0 0 0 0 1 0 0 -15.16195972886516 0.31993379417754686 1;
+	setAttr ".pm[1]" -type "matrix" 0.12902720410577442 -0.0044548259476604743 -0.99163104788344703 0
+		 -0.98856868898832628 0.07807838994435902 -0.12897950292817312 0 0.077999536873938138 0.99693726961603402 0.0056703349088510664 0
 		 14.038676897292417 -0.79604981516791218 3.2688064066200195 1;
-	setAttr ".pm[2]" -type "matrix" 0.1282720131441292 0.014634053352693212 -0.99163104788344725 -0
-		 -0.98926772000489915 -0.068656143066082101 -0.12897950292817315 0 -0.069969056019509354 0.99753304632065254 0.0056703349088510647 -0
+	setAttr ".pm[2]" -type "matrix" 0.1282720131441292 0.014634053352693212 -0.99163104788344725 0
+		 -0.98926772000489915 -0.068656143066082101 -0.12897950292817315 0 -0.069969056019509354 0.99753304632065254 0.0056703349088510647 0
 		 8.3181715086155261 0.43621021646210184 3.2688064066200195 1;
-	setAttr ".pm[3]" -type "matrix" 0.22955716414571997 0.28575147882471541 -0.93040292386624823 -0
-		 -0.77959492082064119 0.6262840884380334 5.620751197810139e-09 0 0.58269654865979237 0.72533739247251683 0.36653840080015726 -0
+	setAttr ".pm[3]" -type "matrix" 0.22955716414571997 0.28575147882471541 -0.93040292386624823 0
+		 -0.77959492082064119 0.6262840884380334 5.620751197810139e-09 0 0.58269654865979237 0.72533739247251683 0.36653840080015726 0
 		 1.0411887573668799 -1.851655613285623 2.9534530206071214 1;
-	setAttr ".pm[4]" -type "matrix" 0.28529512922749084 -3.3860925680671733e-08 -0.95843971601716726 -0
-		 1.7420709061972525e-07 0.99999999999998468 1.6526348410627332e-08 -0 0.95843971601715217 -1.7168188157878021e-07 0.28529512922749234 -0
+	setAttr ".pm[4]" -type "matrix" 0.28529512922749084 -3.3860925680671733e-08 -0.95843971601716726 0
+		 1.7420709061972525e-07 0.99999999999998468 1.6526348410627332e-08 0 0.95843971601715217 -1.7168188157878021e-07 0.28529512922749234 0
 		 -2.1127788094524882 3.3496252739261179e-08 3.1464887286409038 1;
-	setAttr ".pm[5]" -type "matrix" 0.99999999999999967 -3.3860925680671733e-08 5.05502841123633e-09 -0
-		 3.3860924885360543e-08 0.9999999999999849 1.7168188133838295e-07 -0 -5.0550342091801718e-09 -1.7168188157878027e-07 0.99999999999998557 -0
+	setAttr ".pm[5]" -type "matrix" 0.99999999999999967 -3.3860925680671733e-08 5.05502841123633e-09 0
+		 3.3860924885360543e-08 0.9999999999999849 1.7168188133838295e-07 0 -5.0550342091801718e-09 -1.7168188157878027e-07 0.99999999999998557 0
 		 -4.209576128849708 3.3496251795195068e-08 -3.1130438308034543 1;
-	setAttr ".pm[6]" -type "matrix" 0.12909524650013496 -0.0036080159850274207 -0.99162563477943688 -0
+	setAttr ".pm[6]" -type "matrix" 0.12909524650013496 -0.0036080159850274207 -0.99162563477943688 0
 		 0.98855983886064525 -0.078188532667044383 0.12898061230739105 0 -0.077999117449394348 -0.99693206166720616 -0.0065270281973703864 0
 		 -14.038452593244843 0.79884134858773759 -3.2690887026454982 1;
-	setAttr ".pm[7]" -type "matrix" 0.12821434973446999 0.015481633326165551 -0.99162563477943688 -0
-		 0.98927522015666902 0.068545900189468906 0.12898061230739108 0 0.069968702332837321 -0.99752783349476981 -0.0065270281973703864 -0
+	setAttr ".pm[7]" -type "matrix" 0.12821434973446999 0.015481633326165551 -0.99162563477943688 0
+		 0.98927522015666902 0.068545900189468906 0.12898061230739108 0 0.069968702332837321 -0.99752783349476981 -0.0065270281973703864 0
 		 -8.3183615973733929 -0.43341614462982658 -3.2690887026454942 1;
-	setAttr ".pm[8]" -type "matrix" 0.22955720405306179 0.28575151047232938 -0.93040290430013339 -0
+	setAttr ".pm[8]" -type "matrix" 0.22955720405306179 0.28575151047232938 -0.93040290430013339 0
 		 0.77959491406270043 -0.62628409685027975 2.2640237462567817e-09 0 -0.58269654197953802 -0.72533737274127252 -0.36653845046580941 0
 		 -1.0411886290339993 1.8516557196442345 -2.9534529865562682 1;
-	setAttr ".pm[9]" -type "matrix" 0.28529518038976254 -4.5158390466415309e-08 -0.95843970078788487 -0
-		 -1.842807550781756e-07 -0.99999999999998268 -7.7375978058133595e-09 0 -0.958439700787868 1.7882949095956773e-07 -0.28529518038976581 -0
+	setAttr ".pm[9]" -type "matrix" 0.28529518038976254 -4.5158390466415309e-08 -0.95843970078788487 0
+		 -1.842807550781756e-07 -0.99999999999998268 -7.7375978058133595e-09 0 -0.958439700787868 1.7882949095956773e-07 -0.28529518038976581 0
 		 2.1127789750626631 -6.6953905120234823e-08 -3.1464887087367597 1;
-	setAttr ".pm[10]" -type "matrix" -0.99999999999999722 -4.5158390466415303e-08 -5.8435821821523194e-08 -0
-		 4.5158379886520702e-08 -0.99999999999998279 1.7882949375875264e-07 0 -5.8435829812686155e-08 1.7882949095956773e-07 0.9999999999999819 -0
+	setAttr ".pm[10]" -type "matrix" -0.99999999999999722 -4.5158390466415303e-08 -5.8435821821523194e-08 0
+		 4.5158379886520702e-08 -0.99999999999998279 1.7882949375875264e-07 0 -5.8435829812686155e-08 1.7882949095956773e-07 0.9999999999999819 0
 		 -4.209576157020563 -6.6953905732147531e-08 -3.1130439952093787 1;
-	setAttr ".pm[11]" -type "matrix" 1 -0 -0 -0 -0 0.99997749344300835 0.0067091435696515619 0
-		 0 -0.0067091435696515619 0.99997749344300835 -0 -0 -17.132929218431681 0.21820282895115856 1;
-	setAttr ".pm[12]" -type "matrix" 1 -0 -0 -0 -0 0.99997749344300835 0.0067091435696516304 0
-		 0 -0.0067091435696516304 0.99997749344300835 -0 -0 -19.102093469751029 0.21820282895117243 1;
-	setAttr ".pm[13]" -type "matrix" 1 -0 -0 -0 -0 0.99997749344300835 0.0067091435696516304 0
-		 0 -0.0067091435696516304 0.99997749344300835 -0 1.2325951644078309e-32 -21.071257721070378 0.21820282895118742 1;
-	setAttr ".pm[14]" -type "matrix" 1.6503997646579664e-16 -2.2315690431545848e-16 -1 -0
+	setAttr ".pm[11]" -type "matrix" 1 0 0 0 0 0.99997749344300835 0.0067091435696515619 0
+		 0 -0.0067091435696515619 0.99997749344300835 0 0 -17.132929218431681 0.21820282895115856 1;
+	setAttr ".pm[12]" -type "matrix" 1 0 0 0 0 0.99997749344300835 0.0067091435696516304 0
+		 0 -0.0067091435696516304 0.99997749344300835 0 0 -19.102093469751029 0.21820282895117243 1;
+	setAttr ".pm[13]" -type "matrix" 1 0 0 0 0 0.99997749344300835 0.0067091435696516304 0
+		 0 -0.0067091435696516304 0.99997749344300835 0 1.2325951644078309e-32 -21.071257721070378 0.21820282895118742 1;
+	setAttr ".pm[14]" -type "matrix" 1.6503997646579664e-16 -2.2315690431545848e-16 -1 0
 		 0.99997749344300813 -0.0067091435696589579 2.2315690431545848e-16 0 -0.0067091435696589024 -0.99997749344300813 1.6503997646579664e-16 0
 		 -23.040421972389726 -0.21820282895103404 -4.8610372539366174e-15 1;
-	setAttr ".pm[15]" -type "matrix" 0.91965183802590755 0.3858195961292919 0.073373946726338568 -0
-		 -0.3868623840303837 0.92213746037254529 4.5623227418190003e-15 0 -0.067660864891734465 -0.028385619956273853 0.99730449910837171 -0
+	setAttr ".pm[15]" -type "matrix" 0.91965183802590755 0.3858195961292919 0.073373946726338568 0
+		 -0.3868623840303837 0.92213746037254529 4.5623227418190003e-15 0 -0.067660864891734465 -0.028385619956273853 0.99730449910837171 0
 		 8.1892599089028089 -21.649860452454405 0.31317126765595094 1;
-	setAttr ".pm[16]" -type "matrix" 0.88288222849951858 0.46866060738124754 -0.02960077175959179 -0
-		 -0.46886606395291641 0.8832692760836296 1.5803330866148705e-15 0 0.026145452243612172 0.013878797344887117 0.99956180114650051 -0
+	setAttr ".pm[16]" -type "matrix" 0.88288222849951858 0.46866060738124754 -0.02960077175959179 0
+		 -0.46886606395291641 0.8832692760836296 1.5803330866148705e-15 0 0.026145452243612172 0.013878797344887117 0.99956180114650051 0
 		 7.3465170655013337 -21.051036765731091 0.66449194103252618 1;
-	setAttr ".pm[17]" -type "matrix" 0.82695060066779014 0.46669311082663018 -0.31360842520911864 -0
-		 -0.46013940037850287 0.88224590576764694 0.099568539085070504 0 0.32314770040105883 0.061965329525357174 0.94431766988779842 -0
+	setAttr ".pm[17]" -type "matrix" 0.82695060066779014 0.46669311082663018 -0.31360842520911864 0
+		 -0.46013940037850287 0.88224590576764694 0.099568539085070504 0 0.32314770040105883 0.061965329525357174 0.94431766988779842 0
 		 4.1311480858297216 -20.994668877263404 0.46325736855085964 1;
-	setAttr ".pm[18]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.1834364292625143 -0
-		 -0.55297469775317465 0.82356361881428486 0.12634060871431693 0 0.22273498376071404 -5.9674487573602154e-16 0.97487903198761761 -0
+	setAttr ".pm[18]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.1834364292625143 0
+		 -0.55297469775317465 0.82356361881428486 0.12634060871431693 0 0.22273498376071404 -5.9674487573602154e-16 0.97487903198761761 0
 		 2.8330668664315288 -20.78450490020597 -1.2680258057071103 1;
-	setAttr ".pm[19]" -type "matrix" 0.82695060066779014 0.46669311082663018 -0.31360842520911864 -0
-		 -0.46013940037850287 0.88224590576764694 0.099568539085070504 0 0.32314770040105883 0.061965329525357174 0.94431766988779842 -0
+	setAttr ".pm[19]" -type "matrix" 0.82695060066779014 0.46669311082663018 -0.31360842520911864 0
+		 -0.46013940037850287 0.88224590576764694 0.099568539085070504 0 0.32314770040105883 0.061965329525357174 0.94431766988779842 0
 		 2.4652841268657317 -20.994668877263408 0.4632573685508582 1;
-	setAttr ".pm[20]" -type "matrix" 0.91965183802590811 0.38581959612929168 0.073373946726336126 -0
-		 0.38686238403038309 -0.92213746037254563 -4.975186929101482e-15 0 0.067660864891732245 0.028385619956273214 -0.99730449910837216 -0
+	setAttr ".pm[20]" -type "matrix" 0.91965183802590811 0.38581959612929168 0.073373946726336126 0
+		 0.38686238403038309 -0.92213746037254563 -4.975186929101482e-15 0 0.067660864891732245 0.028385619956273214 -0.99730449910837216 0
 		 -8.1892599089027929 21.649860452454412 -0.31317126765594389 1;
-	setAttr ".pm[21]" -type "matrix" 0.88288222849951903 0.46866060738124726 -0.029600771759592165 -0
-		 0.46886606395291597 -0.88326927608363004 -8.7256590841633377e-16 0 -0.026145452243612019 -0.013878797344887893 -0.99956180114650073 -0
+	setAttr ".pm[21]" -type "matrix" 0.88288222849951903 0.46866060738124726 -0.029600771759592165 0
+		 0.46886606395291597 -0.88326927608363004 -8.7256590841633377e-16 0 -0.026145452243612019 -0.013878797344887893 -0.99956180114650073 0
 		 -7.3465170655013168 21.051036765731098 -0.66449194103254428 1;
-	setAttr ".pm[22]" -type "matrix" 0.82695060066779036 0.46669311082662918 -0.31360842520912008 -0
-		 0.46013940037850265 -0.88224590576764772 -0.099568539085067603 0 -0.32314770040105856 -0.061965329525360074 -0.94431766988779842 -0
+	setAttr ".pm[22]" -type "matrix" 0.82695060066779036 0.46669311082662918 -0.31360842520912008 0
+		 0.46013940037850265 -0.88224590576764772 -0.099568539085067603 0 -0.32314770040105856 -0.061965329525360074 -0.94431766988779842 0
 		 -4.1311480858297092 20.994668877263404 -0.46325736855092836 1;
-	setAttr ".pm[23]" -type "matrix" 0.80287490348988955 0.5672239114895623 -0.1834364292625143 -0
-		 0.55297469775317443 -0.82356361881428497 -0.12634060871431652 0 -0.22273498376071357 3.4694469519536127e-16 -0.97487903198761749 -0
+	setAttr ".pm[23]" -type "matrix" 0.80287490348988955 0.5672239114895623 -0.1834364292625143 0
+		 0.55297469775317443 -0.82356361881428497 -0.12634060871431652 0 -0.22273498376071357 3.4694469519536127e-16 -0.97487903198761749 0
 		 -2.8330668664315222 20.784504900205963 1.2680258057070977 1;
-	setAttr ".pm[24]" -type "matrix" 0.82695060066779036 0.46669311082662918 -0.31360842520912008 -0
-		 0.46013940037850265 -0.88224590576764772 -0.099568539085067603 0 -0.32314770040105856 -0.061965329525360074 -0.94431766988779842 -0
+	setAttr ".pm[24]" -type "matrix" 0.82695060066779036 0.46669311082662918 -0.31360842520912008 0
+		 0.46013940037850265 -0.88224590576764772 -0.099568539085067603 0 -0.32314770040105856 -0.061965329525360074 -0.94431766988779842 0
 		 -2.4652841268657228 20.994668877263404 -0.46325736855092947 1;
-	setAttr ".pm[25]" -type "matrix" 1 -0 0 -0 -0 0.99673496881878265 -0.08074281351191806 0
-		 0 0.08074281351191806 0.99673496881878265 -0 -0 -23.375139223551567 2.2317507011948177 1;
-	setAttr ".pm[26]" -type "matrix" 1 -0 0 -0 -0 0.99673496881878265 -0.080742813511918046 0
-		 0 0.080742813511918046 0.99673496881878265 -0 -0 -23.817159471524228 2.2317507011948177 1;
-	setAttr ".pm[27]" -type "matrix" 1 -0 0 -0 -0 0.99673496881878276 -0.080742813511917283 0
-		 0 0.080742813511917283 0.99673496881878276 -0 -0 -24.259179719496881 2.231750701194799 1;
-	setAttr ".pm[28]" -type "matrix" 2.2204460492503131e-16 -2.2204460492503131e-16 -1 -0
-		 1 4.9303806576313238e-32 2.2204460492503131e-16 -0 -4.9303806576313238e-32 -1 2.2204460492503131e-16 -0
+	setAttr ".pm[25]" -type "matrix" 1 0 0 0 0 0.99673496881878265 -0.08074281351191806 0
+		 0 0.08074281351191806 0.99673496881878265 0 0 -23.375139223551567 2.2317507011948177 1;
+	setAttr ".pm[26]" -type "matrix" 1 0 0 0 0 0.99673496881878265 -0.080742813511918046 0
+		 0 0.080742813511918046 0.99673496881878265 0 0 -23.817159471524228 2.2317507011948177 1;
+	setAttr ".pm[27]" -type "matrix" 1 0 0 0 0 0.99673496881878276 -0.080742813511917283 0
+		 0 0.080742813511917283 0.99673496881878276 0 0 -24.259179719496881 2.231750701194799 1;
+	setAttr ".pm[28]" -type "matrix" 2.2204460492503131e-16 -2.2204460492503131e-16 -1 0
+		 1 4.9303806576313238e-32 2.2204460492503131e-16 0 -4.9303806576313238e-32 -1 2.2204460492503131e-16 0
 		 -24.80074761003393 -0.23001958307272574 -5.3767288108001948e-15 1;
-	setAttr ".pm[29]" -type "matrix" 1 1.1102230246251552e-16 2.7755575615628918e-16 -0
-		 -1.6653345369377348e-16 1 5.5511151231257827e-16 0 -2.2204460492503131e-16 -4.9960036108132044e-16 1 -0
+	setAttr ".pm[29]" -type "matrix" 1 1.1102230246251552e-16 2.7755575615628918e-16 0
+		 -1.6653345369377348e-16 1 5.5511151231257827e-16 0 -2.2204460492503131e-16 -4.9960036108132044e-16 1 0
 		 4.4556371574146516e-15 -27.536692777430304 0.23001958307271192 1;
-	setAttr ".pm[30]" -type "matrix" 1 1.1102230246251552e-16 2.7755575615628918e-16 -0
-		 -1.6653345369377348e-16 1 5.5511151231257827e-16 0 -2.2204460492503131e-16 -4.9960036108132044e-16 1 -0
+	setAttr ".pm[30]" -type "matrix" 1 1.1102230246251552e-16 2.7755575615628918e-16 0
+		 -1.6653345369377348e-16 1 5.5511151231257827e-16 0 -2.2204460492503131e-16 -4.9960036108132044e-16 1 0
 		 4.2612347030035792e-15 -25.857856178785521 0.32879655392506962 1;
-	setAttr ".pm[31]" -type "matrix" 1 1.1102230246251552e-16 2.7755575615628918e-16 -0
-		 -1.6653345369377348e-16 1 5.5511151231257827e-16 0 -2.2204460492503131e-16 -4.9960036108132044e-16 1 -0
+	setAttr ".pm[31]" -type "matrix" 1 1.1102230246251552e-16 2.7755575615628918e-16 0
+		 -1.6653345369377348e-16 1 5.5511151231257827e-16 0 -2.2204460492503131e-16 -4.9960036108132044e-16 1 0
 		 4.2612347030035792e-15 -24.414470623924924 -1.4518923068906846 1;
-	setAttr ".pm[32]" -type "matrix" 1 1.1102230246251552e-16 2.7755575615628918e-16 -0
-		 -1.6653345369377348e-16 1 5.5511151231257827e-16 0 -2.2204460492503131e-16 -4.9960036108132044e-16 1 -0
+	setAttr ".pm[32]" -type "matrix" 1 1.1102230246251552e-16 2.7755575615628918e-16 0
+		 -1.6653345369377348e-16 1 5.5511151231257827e-16 0 -2.2204460492503131e-16 -4.9960036108132044e-16 1 0
 		 -0.56999999999999584 -26.00027825220084 -1.0112798062678992 1;
-	setAttr ".pm[33]" -type "matrix" 1 1.1102230246251552e-16 2.7755575615628918e-16 -0
-		 -1.6653345369377348e-16 1 5.5511151231257827e-16 0 -2.2204460492503131e-16 -4.9960036108132044e-16 1 -0
+	setAttr ".pm[33]" -type "matrix" 1 1.1102230246251552e-16 2.7755575615628918e-16 0
+		 -1.6653345369377348e-16 1 5.5511151231257827e-16 0 -2.2204460492503131e-16 -4.9960036108132044e-16 1 0
 		 0.57000000000000406 -26.00027825220084 -1.0112798062678992 1;
-	setAttr ".pm[34]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 -0
-		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 -0
+	setAttr ".pm[34]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 0
+		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 0
 		 2.8330668664315395 -20.784504900205967 -1.2680258057070901 1;
-	setAttr ".pm[35]" -type "matrix" 0.80053469079255601 -0.56970208706546444 0.18596704232449665 -0
-		 0.56696823586958278 0.61944763079948462 -0.54298402574278259 0 0.19414228893417412 0.54011495506989948 0.81889230485897246 -0
+	setAttr ".pm[35]" -type "matrix" 0.80053469079255601 -0.56970208706546444 0.18596704232449665 0
+		 0.56696823586958278 0.61944763079948462 -0.54298402574278259 0 0.19414228893417412 0.54011495506989948 0.81889230485897246 0
 		 -18.341286612141285 -6.7698464370893081 7.4025360368500568 1;
-	setAttr ".pm[36]" -type "matrix" 0.80053469079255601 -0.56970208706546444 0.18596704232449665 -0
-		 0.56696823586958278 0.61944763079948462 -0.54298402574278259 0 0.19414228893417412 0.54011495506989948 0.81889230485897246 -0
+	setAttr ".pm[36]" -type "matrix" 0.80053469079255601 -0.56970208706546444 0.18596704232449665 0
+		 0.56696823586958278 0.61944763079948462 -0.54298402574278259 0 0.19414228893417412 0.54011495506989948 0.81889230485897246 0
 		 -18.341286612141278 -6.7698464370893072 6.6794671554042058 1;
-	setAttr ".pm[37]" -type "matrix" 0.80053469079255601 -0.56970208706546444 0.18596704232449665 -0
-		 0.56696823586958278 0.61944763079948462 -0.54298402574278259 0 0.19414228893417412 0.54011495506989948 0.81889230485897246 -0
+	setAttr ".pm[37]" -type "matrix" 0.80053469079255601 -0.56970208706546444 0.18596704232449665 0
+		 0.56696823586958278 0.61944763079948462 -0.54298402574278259 0 0.19414228893417412 0.54011495506989948 0.81889230485897246 0
 		 -18.341286612141278 -6.7698464370893348 5.8712099613014761 1;
-	setAttr ".pm[38]" -type "matrix" 0.80053469079255601 -0.56970208706546444 0.18596704232449665 -0
-		 0.56696823586958278 0.61944763079948462 -0.54298402574278259 0 0.19414228893417412 0.54011495506989948 0.81889230485897246 -0
+	setAttr ".pm[38]" -type "matrix" 0.80053469079255601 -0.56970208706546444 0.18596704232449665 0
+		 0.56696823586958278 0.61944763079948462 -0.54298402574278259 0 0.19414228893417412 0.54011495506989948 0.81889230485897246 0
 		 -18.341286612141264 -6.769846437089349 5.4225180774934101 1;
-	setAttr ".pm[39]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 -0
-		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 -0
+	setAttr ".pm[39]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 0
+		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 0
 		 2.1591367447685581 -20.816393759435801 -1.3755444199934022 1;
-	setAttr ".pm[40]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 -0
-		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 -0
+	setAttr ".pm[40]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 0
+		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 0
 		 1.0240086478341777 -20.816393759435819 -1.393124831880882 1;
-	setAttr ".pm[41]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 -0
-		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 -0
+	setAttr ".pm[41]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 0
+		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 0
 		 0.49862034032229552 -20.816393759435833 -1.3931248318808804 1;
-	setAttr ".pm[42]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 -0
-		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 -0
+	setAttr ".pm[42]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 0
+		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 0
 		 0.0074988206272728064 -20.816393759435865 -1.3931248318808813 1;
-	setAttr ".pm[43]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 -0
-		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 -0
+	setAttr ".pm[43]" -type "matrix" 0.80287490348988966 0.56722391148956253 -0.18343642926251388 0
+		 -0.55297469775317509 0.82356361881428497 0.12634060871431591 0 0.2227349837607131 -1.3877787807814457e-17 0.97487903198761794 0
 		 -0.5169510191376343 -20.816393759435858 -1.3931248318808824 1;
-	setAttr ".pm[44]" -type "matrix" 0.80287490348988955 0.56722391148956286 -0.18343642926251388 -0
-		 0.55297469775317531 -0.82356361881428497 -0.12634060871431615 0 -0.22273498376071327 1.1102230246251568e-16 -0.97487903198761805 -0
+	setAttr ".pm[44]" -type "matrix" 0.80287490348988955 0.56722391148956286 -0.18343642926251388 0
+		 0.55297469775317531 -0.82356361881428497 -0.12634060871431615 0 -0.22273498376071327 1.1102230246251568e-16 -0.97487903198761805 0
 		 -2.8330668664315422 20.78450490020597 1.2680258057070921 1;
 	setAttr ".pm[45]" -type "matrix" -0.18596704232448066 -0.12024765947246634 -0.975170118266797 0
-		 -0.54298402574277893 0.83974302485234464 7.6327832942979542e-16 0 0.81889230485897868 0.52950179660056729 -0.22145708487090995 -0
+		 -0.54298402574277893 0.83974302485234464 7.6327832942979542e-16 0 0.81889230485897868 0.52950179660056729 -0.22145708487090995 0
 		 7.4025360368501207 -17.377330705380093 -8.9589057884507426 1;
 	setAttr ".pm[46]" -type "matrix" -0.18596704232448066 -0.12024765947246634 -0.975170118266797 0
-		 -0.54298402574277893 0.83974302485234464 7.6327832942979542e-16 0 0.81889230485897868 0.52950179660056729 -0.22145708487090995 -0
+		 -0.54298402574277893 0.83974302485234464 7.6327832942979542e-16 0 0.81889230485897868 0.52950179660056729 -0.22145708487090995 0
 		 6.6794671554042626 -17.377330705380086 -8.9589057884507479 1;
 	setAttr ".pm[47]" -type "matrix" -0.18596704232448066 -0.12024765947246634 -0.975170118266797 0
-		 -0.54298402574277893 0.83974302485234464 7.6327832942979542e-16 0 0.81889230485897868 0.52950179660056729 -0.22145708487090995 -0
+		 -0.54298402574277893 0.83974302485234464 7.6327832942979542e-16 0 0.81889230485897868 0.52950179660056729 -0.22145708487090995 0
 		 5.8712099613015365 -17.3773307053801 -8.9589057884507586 1;
-	setAttr ".pm[48]" -type "matrix" 0.80053469079255768 0.56970208706546699 -0.18596704232448064 -0
-		 -0.56696823586957745 0.6194476307994925 -0.54298402574277882 0 -0.19414228893418192 0.54011495506988738 0.81889230485897868 -0
+	setAttr ".pm[48]" -type "matrix" 0.80053469079255768 0.56970208706546699 -0.18596704232448064 0
+		 -0.56696823586957745 0.6194476307994925 -0.54298402574277882 0 -0.19414228893418192 0.54011495506988738 0.81889230485897868 0
 		 18.341286612141218 -6.7698464370893996 5.4225180774934651 1;
-	setAttr ".pm[49]" -type "matrix" 0.80287490348988955 0.56722391148956286 -0.18343642926251388 -0
-		 0.55297469775317531 -0.82356361881428497 -0.12634060871431615 0 -0.22273498376071327 1.1102230246251568e-16 -0.97487903198761805 -0
+	setAttr ".pm[49]" -type "matrix" 0.80287490348988955 0.56722391148956286 -0.18343642926251388 0
+		 0.55297469775317531 -0.82356361881428497 -0.12634060871431615 0 -0.22273498376071327 1.1102230246251568e-16 -0.97487903198761805 0
 		 -2.1591367447685545 20.816393759435773 1.3755444199934066 1;
-	setAttr ".pm[50]" -type "matrix" 0.80287490348988955 -0.56722391148956286 0.1834364292625138 -0
-		 0.55297469775317531 0.82356361881428497 0.12634060871431624 -0 -0.22273498376071327 -2.3592239273284581e-16 0.97487903198761805 -0
+	setAttr ".pm[50]" -type "matrix" 0.80287490348988955 -0.56722391148956286 0.1834364292625138 0
+		 0.55297469775317531 0.82356361881428497 0.12634060871431624 0 -0.22273498376071327 -2.3592239273284581e-16 0.97487903198761805 0
 		 -1.0240086478341892 -20.816393759435783 -1.3931248318808878 1;
-	setAttr ".pm[51]" -type "matrix" 0.80287490348988955 -0.56722391148956286 0.1834364292625138 -0
-		 0.55297469775317531 0.82356361881428497 0.12634060871431624 -0 -0.22273498376071327 -2.3592239273284581e-16 0.97487903198761805 -0
+	setAttr ".pm[51]" -type "matrix" 0.80287490348988955 -0.56722391148956286 0.1834364292625138 0
+		 0.55297469775317531 0.82356361881428497 0.12634060871431624 0 -0.22273498376071327 -2.3592239273284581e-16 0.97487903198761805 0
 		 -0.49862034032229985 -20.816393759435737 -1.3931248318808875 1;
-	setAttr ".pm[52]" -type "matrix" 0.80287490348988955 -0.56722391148956286 0.1834364292625138 -0
-		 0.55297469775317531 0.82356361881428497 0.12634060871431624 -0 -0.22273498376071327 -2.3592239273284581e-16 0.97487903198761805 -0
+	setAttr ".pm[52]" -type "matrix" 0.80287490348988955 -0.56722391148956286 0.1834364292625138 0
+		 0.55297469775317531 0.82356361881428497 0.12634060871431624 0 -0.22273498376071327 -2.3592239273284581e-16 0.97487903198761805 0
 		 -0.007498820627269899 -20.816393759435758 -1.3931248318808884 1;
-	setAttr ".pm[53]" -type "matrix" 0.80287490348988955 -0.56722391148956286 0.1834364292625138 -0
-		 0.55297469775317531 0.82356361881428497 0.12634060871431624 -0 -0.22273498376071327 -2.3592239273284581e-16 0.97487903198761805 -0
+	setAttr ".pm[53]" -type "matrix" 0.80287490348988955 -0.56722391148956286 0.1834364292625138 0
+		 0.55297469775317531 0.82356361881428497 0.12634060871431624 0 -0.22273498376071327 -2.3592239273284581e-16 0.97487903198761805 0
 		 0.51695101913763908 -20.816393759435762 -1.3931248318808889 1;
-	setAttr ".pm[54]" -type "matrix" 0.88288222849954356 0.46866060738120957 -0.029600771759451749 -0
-		 -0.46886606395287833 0.8832692760836498 -7.0676103858247062e-14 0 0.026145452243455179 0.013878797344884062 0.99956180114650461 -0
+	setAttr ".pm[54]" -type "matrix" 0.88288222849954356 0.46866060738120957 -0.029600771759451749 0
+		 -0.46886606395287833 0.8832692760836498 -7.0676103858247062e-14 0 0.026145452243455179 0.013878797344884062 0.99956180114650461 0
 		 7.3465170655003238 -21.051036765731418 0.66449194103364495 1;
-	setAttr ".pm[55]" -type "matrix" 0.82695060066779424 0.4741212069854005 -0.30226112079108292 -0
-		 -0.460139400378482 0.87958778682579897 0.1208182829137382 0 0.32314770040107926 0.039171499251369514 0.94553749654463437 -0
+	setAttr ".pm[55]" -type "matrix" 0.82695060066779424 0.4741212069854005 -0.30226112079108292 0
+		 -0.460139400378482 0.87958778682579897 0.1208182829137382 0 0.32314770040107926 0.039171499251369514 0.94553749654463437 0
 		 3.2984756938004218 -20.999734728182084 -0.043243513231895354 1;
-	setAttr ".pm[56]" -type "matrix" 0.82695060066779114 0.48127345899574847 -0.29073796057867496 -0
-		 -0.46013940037849033 0.87641792291141241 0.14199773455576381 0 0.32314770040107488 0.016354878963582176 0.9462072086279959 -0
+	setAttr ".pm[56]" -type "matrix" 0.82695060066779114 0.48127345899574847 -0.29073796057867496 0
+		 -0.46013940037849033 0.87641792291141241 0.14199773455576381 0 0.32314770040107488 0.016354878963582176 0.9462072086279959 0
 		 2.4652841268654759 -20.992582914380364 -0.54971923589932792 1;
-	setAttr ".pm[57]" -type "matrix" 0.82695060066778958 0.48814570625152148 -0.27904564774134188 -0
-		 -0.46013940037850198 0.87273815791486875 0.16309457360278382 0 0.32314770040106183 -0.0064712585765473434 0.94632641648531646 -0
+	setAttr ".pm[57]" -type "matrix" 0.82695060066778958 0.48814570625152148 -0.27904564774134188 0
+		 -0.46013940037850198 0.87273815791486875 0.16309457360278382 0 0.32314770040106183 -0.0064712585765473434 0.94632641648531646 0
 		 1.6320925599305889 -20.97321759459329 -1.0558751750532314 1;
-	setAttr ".pm[58]" -type "matrix" 0.8269506006677908 0.46669311082662945 -0.3136084252091188 -0
-		 -0.46013940037850215 0.88224590576764783 0.099568539085070462 0 0.32314770040105906 0.061965329525356827 0.94431766988779853 -0
+	setAttr ".pm[58]" -type "matrix" 0.8269506006677908 0.46669311082662945 -0.3136084252091188 0
+		 -0.46013940037850215 0.88224590576764783 0.099568539085070462 0 0.32314770040105906 0.061965329525356827 0.94431766988779853 0
 		 4.1311480858297003 -20.994668877263418 0.46325736855086008 1;
-	setAttr ".pm[59]" -type "matrix" 0.8828822284995228 0.46866060738124388 -0.029600771759539679 -0
-		 -0.46886606395291275 0.88326927608363204 -2.6100649419547046e-14 0 0.026145452243553195 0.013878797344886947 0.99956180114650239 -0
+	setAttr ".pm[59]" -type "matrix" 0.8828822284995228 0.46866060738124388 -0.029600771759539679 0
+		 -0.46886606395291275 0.88326927608363204 -2.6100649419547046e-14 0 0.026145452243553195 0.013878797344886947 0.99956180114650239 0
 		 6.4611309171238824 -21.051036765731165 0.66449194103304754 1;
-	setAttr ".pm[60]" -type "matrix" 0.88288222849951625 0.4686606073812547 -0.029600771759562095 -0
-		 -0.46886606395292357 0.88326927608362638 -1.4188303310014308e-14 0 0.026145452243578407 0.013878797344887263 0.99956180114650173 -0
+	setAttr ".pm[60]" -type "matrix" 0.88288222849951625 0.4686606073812547 -0.029600771759562095 0
+		 -0.46886606395292357 0.88326927608362638 -1.4188303310014308e-14 0 0.026145452243578407 0.013878797344887263 0.99956180114650173 0
 		 5.5751927265811343 -21.051036765731094 0.66449194103289377 1;
-	setAttr ".pm[61]" -type "matrix" 0.88288222849951181 0.46866060738126042 -0.029600771759601428 -0
-		 -0.46886606395292924 0.88326927608362305 6.6942978937944986e-15 0 0.026145452243622851 0.013878797344887435 0.99956180114650039 -0
+	setAttr ".pm[61]" -type "matrix" 0.88288222849951181 0.46866060738126042 -0.029600771759601428 0
+		 -0.46886606395292924 0.88326927608362305 6.6942978937944986e-15 0 0.026145452243622851 0.013878797344887435 0.99956180114650039 0
 		 4.6892545360382973 -21.051036765731059 0.6644919410326694 1;
-	setAttr ".pm[62]" -type "matrix" -0.88288222849955578 0.46866060738118426 0.029600771759488685 -0
-		 -0.46886606395285307 -0.88326927608366324 -5.2487528212630227e-14 0 0.026145452243496726 -0.013878797344884571 0.99956180114650373 -0
+	setAttr ".pm[62]" -type "matrix" -0.88288222849955578 0.46866060738118426 0.029600771759488685 0
+		 -0.46886606395285307 -0.88326927608366324 -5.2487528212630227e-14 0 0.026145452243496726 -0.013878797344884571 0.99956180114650373 0
 		 7.3465170654997429 21.05103676573162 0.66449194103336995 1;
-	setAttr ".pm[63]" -type "matrix" 0.8269506006677948 0.47412120698539845 -0.30226112079108425 -0
-		 0.46013940037848072 -0.87958778682579974 -0.12081828291373541 0 -0.32314770040107915 -0.039171499251371984 -0.94553749654463404 -0
+	setAttr ".pm[63]" -type "matrix" 0.8269506006677948 0.47412120698539845 -0.30226112079108425 0
+		 0.46013940037848072 -0.87958778682579974 -0.12081828291373541 0 -0.32314770040107915 -0.039171499251371984 -0.94553749654463404 0
 		 -3.2984756938003894 20.999734728182084 0.043243513231826063 1;
-	setAttr ".pm[64]" -type "matrix" 0.82695060066779624 0.48127345899573848 -0.29073796057867707 -0
-		 0.46013940037848061 -0.87641792291141818 -0.1419977345557614 0 -0.32314770040107588 -0.016354878963581617 -0.9462072086279959 -0
+	setAttr ".pm[64]" -type "matrix" 0.82695060066779624 0.48127345899573848 -0.29073796057867707 0
+		 0.46013940037848061 -0.87641792291141818 -0.1419977345557614 0 -0.32314770040107588 -0.016354878963581617 -0.9462072086279959 0
 		 -2.4652841268652366 20.992582914380399 0.54971923589925986 1;
-	setAttr ".pm[65]" -type "matrix" 0.82695060066779724 0.48814570625150677 -0.27904564774134533 -0
-		 0.46013940037848688 -0.87273815791487719 -0.16309457360278237 0 -0.32314770040106394 0.0064712585765500392 -0.9463264164853159 -0
+	setAttr ".pm[65]" -type "matrix" 0.82695060066779724 0.48814570625150677 -0.27904564774134533 0
+		 0.46013940037848688 -0.87273815791487719 -0.16309457360278237 0 -0.32314770040106394 0.0064712585765500392 -0.9463264164853159 0
 		 -1.6320925599302285 20.973217594593333 1.0558751750531712 1;
-	setAttr ".pm[66]" -type "matrix" 0.82695060066779036 0.46669311082662918 -0.31360842520911997 -0
-		 0.46013940037850287 -0.88224590576764761 -0.099568539085067659 0 -0.32314770040105867 -0.061965329525359963 -0.94431766988779831 -0
+	setAttr ".pm[66]" -type "matrix" 0.82695060066779036 0.46669311082662918 -0.31360842520911997 0
+		 0.46013940037850287 -0.88224590576764761 -0.099568539085067659 0 -0.32314770040105867 -0.061965329525359963 -0.94431766988779831 0
 		 -4.1311480858297136 20.994668877263404 -0.46325736855092592 1;
-	setAttr ".pm[67]" -type "matrix" 0.88288222849952047 0.4686606073812481 -0.029600771759538014 -0
-		 0.46886606395291691 -0.88326927608362982 2.791863962237074e-14 0 -0.026145452243550804 -0.013878797344887893 -0.99956180114650239 0
+	setAttr ".pm[67]" -type "matrix" 0.88288222849952047 0.4686606073812481 -0.029600771759538014 0
+		 0.46886606395291691 -0.88326927608362982 2.7918639622370737e-14 0 -0.026145452243550804 -0.013878797344887893 -0.99956180114650239 0
 		 -6.4611309171239801 21.051036765731158 -0.66449194103304432 1;
-	setAttr ".pm[68]" -type "matrix" 0.88288222849951725 0.46866060738125265 -0.029600771759561412 -0
+	setAttr ".pm[68]" -type "matrix" 0.88288222849951725 0.46866060738125265 -0.029600771759561412 0
 		 0.46886606395292152 -0.88326927608362749 1.532281246330314e-14 0 -0.026145452243577304 -0.013878797344887882 -0.99956180114650173 0
 		 -5.5751927265810819 21.05103676573113 -0.66449194103288045 1;
-	setAttr ".pm[69]" -type "matrix" 0.88288222849951858 0.46866060738124743 -0.029600771759601498 -0
-		 0.46886606395291625 -0.88326927608362971 -5.8165278149502318e-15 0 -0.026145452243622701 -0.013878797344887861 -0.99956180114650017 -0
+	setAttr ".pm[69]" -type "matrix" 0.88288222849951858 0.46866060738124743 -0.029600771759601498 0
+		 0.46886606395291625 -0.88326927608362971 -5.8165278149502318e-15 0 -0.026145452243622701 -0.013878797344887861 -0.99956180114650017 0
 		 -4.6892545360379927 21.051036765731151 -0.66449194103265463 1;
-	setAttr ".pm[70]" -type "matrix" 0.12827201314415684 0.080231434167689492 -0.98848834470384184 -0
-		 -0.98926772000489416 -0.059969317199546929 -0.13324060623900921 0 -0.069969056019527756 0.99497065181140709 0.071677982907726603 -0
+	setAttr ".pm[70]" -type "matrix" 0.12827201314415684 0.080231434167689492 -0.98848834470384184 0
+		 -0.98926772000489416 -0.059969317199546929 -0.13324060623900921 0 -0.069969056019527756 0.99497065181140709 0.071677982907726603 0
 		 6.6232316191082496 0.21891325244514809 3.2905093321264776 1;
-	setAttr ".pm[71]" -type "matrix" 0.12827201314415071 0.14547699667954364 -0.98101107745073213 -0
-		 -0.98926772000489349 -0.051019523287673355 -0.13691744373825374 0 -0.069969056019544951 0.98804526803208659 0.13737131985656706 -0
+	setAttr ".pm[71]" -type "matrix" 0.12827201314415071 0.14547699667954364 -0.98101107745073213 0
+		 -0.98926772000489349 -0.051019523287673355 -0.13691744373825374 0 -0.069969056019544951 0.98804526803208659 0.13737131985656706 0
 		 4.9272349271098497 0.00065634436384243112 3.2977832321302558 1;
-	setAttr ".pm[72]" -type "matrix" 0.12827201314413281 0.21008463224624147 -0.96923203513808465 -0
-		 -0.98926772000489627 -0.041846007145733222 -0.13999389216059946 0 -0.069969056019541509 0.97678726393208104 0.20246227357167934 -0
+	setAttr ".pm[72]" -type "matrix" 0.12827201314413281 0.21008463224624147 -0.96923203513808465 0
+		 -0.98926772000489627 -0.041846007145733222 -0.13999389216059946 0 -0.069969056019541509 0.97678726393208104 0.20246227357167934 0
 		 3.2312382351115003 -0.21760342812315062 3.2905962111714655 1;
-	setAttr ".pm[73]" -type "matrix" 0.12902720429942519 -0.0044548203388704768 -0.99163104788344703 -0
-		 -0.9885686923823791 0.078078346971453286 -0.12897950292817337 0 0.077999493537251566 0.99693727300665891 0.0056703349088514229 -0
+	setAttr ".pm[73]" -type "matrix" 0.12902720429942519 -0.0044548203388704768 -0.99163104788344703 0
+		 -0.9885686923823791 0.078078346971453286 -0.12897950292817337 0 0.077999493537251566 0.99693727300665891 0.0056703349088514229 0
 		 8.2914752526494802 -0.79604945473895372 3.2688064066200209 1;
-	setAttr ".pm[74]" -type "matrix" 0.12902720410577756 -0.0044548259476609297 -0.99163104788344647 -0
-		 -0.98856868898832562 0.07807838994436142 -0.12897950292817609 0 0.07799953687394022 0.99693726961603368 0.0056703349088513483 -0
+	setAttr ".pm[74]" -type "matrix" 0.12902720410577756 -0.0044548259476609297 -0.99163104788344647 0
+		 -0.98856868898832562 0.07807838994436142 -0.12897950292817609 0 0.07799953687394022 0.99693726961603368 0.0056703349088513483 0
 		 12.602324263579426 -0.79604981516787521 3.268806406619956 1;
-	setAttr ".pm[75]" -type "matrix" 0.12902720410579588 -0.0044548259476621466 -0.99163104788344414 -0
-		 -0.98856868898832251 0.078078389944370746 -0.12897950292819438 0 0.077999536873949518 0.99693726961603291 0.0056703349088528454 -0
+	setAttr ".pm[75]" -type "matrix" 0.12902720410579588 -0.0044548259476621466 -0.99163104788344414 0
+		 -0.98856868898832251 0.078078389944370746 -0.12897950292819438 0 0.077999536873949518 0.99693726961603291 0.0056703349088528454 0
 		 11.165076057668806 -0.79604981516798934 3.2688064066201794 1;
-	setAttr ".pm[76]" -type "matrix" 0.12902720410580157 -0.0044548259476623678 -0.99163104788344336 -0
-		 -0.9885686889883214 0.078078389944374119 -0.1289795029281999 0 0.077999536873952793 0.99693726961603268 0.0056703349088534907 -0
+	setAttr ".pm[76]" -type "matrix" 0.12902720410580157 -0.0044548259476623678 -0.99163104788344336 0
+		 -0.9885686889883214 0.078078389944374119 -0.1289795029281999 0 0.077999536873952793 0.99693726961603268 0.0056703349088534907 0
 		 9.7278278517582208 -0.79604981516802531 3.268806406620238 1;
-	setAttr ".pm[77]" -type "matrix" 0.12902720410570559 -0.0044548259476547792 -0.99163104788345591 -0
-		 -0.98856868898833883 0.078078389944312709 -0.12897950292810414 0 0.077999536873891634 0.99693726961603768 0.0056703349088453245 -0
+	setAttr ".pm[77]" -type "matrix" 0.12902720410570559 -0.0044548259476547792 -0.99163104788345591 0
+		 -0.98856868898833883 0.078078389944312709 -0.12897950292810414 0 0.077999536873891634 0.99693726961603768 0.0056703349088453245 0
 		 14.038676897292682 -0.7960498151672537 3.2688064066190399 1;
-	setAttr ".pm[78]" -type "matrix" 0.1282143497344968 0.080863325228701002 -0.98844433487936856 -0
-		 0.98927522015666403 0.059888015835307423 0.13322148604220643 0 0.069968702332857222 -0.99492439320395953 -0.072317580861009742 -0
+	setAttr ".pm[78]" -type "matrix" 0.1282143497344968 0.080863325228701002 -0.98844433487936856 0
+		 0.98927522015666403 0.059888015835307423 0.13322148604220643 0 0.069968702332857222 -0.99492439320395953 -0.072317580861009742 0
 		 -6.6234217078661244 -0.2168172901378671 -3.2905593389101746 1;
-	setAttr ".pm[79]" -type "matrix" 0.12821434973449089 0.14589273585280763 -0.98095687476440319 -0
-		 0.9892752201566638 0.050969229190504936 0.1368819800401446 0 0.069968702332874541 -0.98798656230796433 -0.13779308180291555 -0
+	setAttr ".pm[79]" -type "matrix" 0.12821434973449089 0.14589273585280763 -0.98095687476440319 0
+		 0.9892752201566638 0.050969229190504936 0.1368819800401446 0 0.069968702332874541 -0.98798656230796433 -0.13779308180291555 0
 		 -4.9274250158677226 0.00072612942028144089 -3.2976946451919487 1;
-	setAttr ".pm[80]" -type "matrix" 0.12821434973447399 0.21028655634258861 -0.96919587532332274 -0
-		 0.98927522015666625 0.041828396136035964 0.1399461470018622 0 0.069968702332871335 -0.9767445671711017 -0.20266827871078372 -0
+	setAttr ".pm[80]" -type "matrix" 0.12821434973447399 0.21028655634258861 -0.96919587532332274 0
+		 0.98927522015666625 0.041828396136035964 0.1399461470018622 0 0.069968702332871335 -0.9767445671711017 -0.20266827871078372 0
 		 -3.2314283238693675 0.21826635820942147 -3.2904635383278662 1;
-	setAttr ".pm[81]" -type "matrix" 0.12909524665697433 -0.0036080103732795167 -0.99162563477943688 -0
+	setAttr ".pm[81]" -type "matrix" 0.12909524665697433 -0.0036080103732795167 -0.99162563477943688 0
 		 0.98855984225948601 -0.078188489694523772 0.12898061230739083 0 -0.07799907411293458 -0.99693206505781318 -0.006527028197371056 0
 		 -8.2912509487232455 0.7988409881685361 -3.2690887026454916 1;
-	setAttr ".pm[82]" -type "matrix" 0.12909524650013618 -0.0036080159850276549 -0.99162563477943688 -0
+	setAttr ".pm[82]" -type "matrix" 0.12909524650013618 -0.0036080159850276549 -0.99162563477943688 0
 		 0.98855983886064502 -0.078188532667047173 0.12898061230739238 0 -0.077999117449397012 -0.99693206166720627 -0.0065270281973707853 0
 		 -12.602099959531861 0.7988413485877176 -3.2690887026454174 1;
-	setAttr ".pm[83]" -type "matrix" 0.1290952465001543 -0.0036080159850291962 -0.99162563477943444 -0
+	setAttr ".pm[83]" -type "matrix" 0.1290952465001543 -0.0036080159850291962 -0.99162563477943444 0
 		 0.9885598388606418 -0.078188532667058205 0.12898061230741051 0 -0.077999117449408087 -0.99693206166720527 -0.0065270281973721644 0
 		 -11.164851753621235 0.79884134858785183 -3.2690887026456381 1;
-	setAttr ".pm[84]" -type "matrix" 0.12909524650016085 -0.0036080159850297618 -0.99162563477943366 -0
+	setAttr ".pm[84]" -type "matrix" 0.12909524650016085 -0.0036080159850297618 -0.99162563477943366 0
 		 0.98855983886064069 -0.07818853266706198 0.12898061230741714 0 -0.077999117449411876 -0.99693206166720494 -0.006527028197372573 0
 		 -9.7276035477106486 0.79884134858789191 -3.2690887026457092 1;
-	setAttr ".pm[85]" -type "matrix" -0.1290952465000669 -0.0036080159850222651 0.99162563477944587 -0
-		 -0.98855983886065735 -0.078188532667006039 -0.12898061230732308 0 0.077999117449356045 -0.99693206166720927 0.006527028197365229 -0
+	setAttr ".pm[85]" -type "matrix" -0.1290952465000669 -0.0036080159850222651 0.99162563477944587 0
+		 -0.98855983886065735 -0.078188532667006039 -0.12898061230732308 0 0.077999117449356045 -0.99693206166720927 0.006527028197365229 0
 		 14.038452593245099 0.79884134858719358 3.2690887026445337 1;
 	setAttr ".pm[86]" -type "matrix" 0.28529512922749262 -3.3860857233577778e-08 -0.95843971601716649 0
 		 1.7420709270282472e-07 0.99999999999998401 1.6526421065565145e-08 0 0.95843971601715139 -1.7168190397284691e-07 0.28529512922749395 0
@@ -50765,1976 +50787,1703 @@ createNode materialInfo -n "materialInfo10";
 	rename -uid "45A00309-4499-0E10-2575-06BA55E31F8C";
 createNode animCurveTA -n "Max__MainC_rotateX";
 	rename -uid "A24C0C9D-433B-82ED-D2E1-BBA5311B5943";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__MainC_rotateY";
 	rename -uid "C8FE1506-4B6B-BB6E-C992-8D887F6A5512";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__MainC_rotateZ";
 	rename -uid "CCC43A36-4915-8A6D-5C7D-2E8D3864AB91";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__HeadC_rotateX";
 	rename -uid "1CA65D64-4C0E-594D-FEA8-8D80264433BF";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__HeadC_rotateY";
 	rename -uid "5594DD8F-427E-9724-A948-B7A379E22B00";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__HeadC_rotateZ";
 	rename -uid "66ED776B-4BE0-F24F-9A1A-8CAF60B279FC";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__MainHipC_rotateX";
 	rename -uid "DC5ED358-4AF9-16DE-156B-38A16DA0B362";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__MainHipC_rotateY";
 	rename -uid "3B680B15-4D90-E976-1766-5DA4EA827982";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__MainHipC_rotateZ";
 	rename -uid "0A887C8E-4A38-F608-FA04-C48C44E3BA6B";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Neck01FKC_rotateX";
 	rename -uid "F25971C7-46A7-3416-9DFF-CFA2C73D20C3";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Neck01FKC_rotateY";
 	rename -uid "817230E4-4BF2-CCC7-F0A0-83949D65F503";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Neck01FKC_rotateZ";
 	rename -uid "60FCC874-48C1-D756-3895-3CA0F1621C3C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Neck02FKC_rotateX";
 	rename -uid "37562451-4A9B-670C-AFE1-CAAD9684B753";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Neck02FKC_rotateY";
 	rename -uid "66F77F95-473E-0A24-5994-E7B2B0E8464E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Neck02FKC_rotateZ";
 	rename -uid "44A7653A-4095-4183-57B0-3885A8926C3A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Neck03FKC_rotateX";
 	rename -uid "E212389B-48D4-E2EB-171E-3EAFCFD6DE78";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Neck03FKC_rotateY";
 	rename -uid "B91FC6B9-4B79-0F12-7F4F-06B824F9A6CC";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Neck03FKC_rotateZ";
 	rename -uid "44BF8AB9-45D1-048E-8E96-738C90E613DE";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__ROOTC_rotateX";
 	rename -uid "BC6A297F-496C-EE40-70DD-AC97273BD76F";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__ROOTC_rotateY";
 	rename -uid "712BD8B6-49EE-CD93-431C-D8968A3FF9D6";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__ROOTC_rotateZ";
 	rename -uid "D336570B-4CFF-E6B3-9B06-92971E59DE47";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 15.609707607570368 4 12.995828594198739
+		 7 8.9677604777015318 10 -6.4450485545948277 13 -14.999999999999998 16 -10.447586098710399
+		 19 -7.434965944976855 22 -1.5469058970409768 25 15.609707607570368;
 createNode animCurveTA -n "Max__Spine01FKC_rotateX";
 	rename -uid "F331F90D-44A2-F635-F7BE-7D82D50C1316";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Spine01FKC_rotateY";
 	rename -uid "6B58ACFE-4482-9D54-24E2-369BFF5F34EE";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Spine01FKC_rotateZ";
 	rename -uid "26B29EAF-463B-37B7-0E4E-DB9B8C9A9AF8";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -19.81701718000074 4 -11.779283761184217
+		 7 -8.8164466607056937 10 5.796363422884399 13 19 16 12.111429374045802 19 11.225742268435223
+		 22 1.7577667169345408 25 -19.81701718000074;
 createNode animCurveTA -n "Max__Spine02FKC_rotateX";
 	rename -uid "6C461FD0-459C-C77C-70A6-A7AE93425E55";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 9.8812494222892102 4 9.8812494222892102
+		 7 9.8812494222892102 10 9.8812494222892102 13 9.8812494222892102 16 9.8812494222892102
+		 19 9.8812494222892102 22 9.8812494222892102 25 9.8812494222892102;
 createNode animCurveTA -n "Max__Spine02FKC_rotateY";
 	rename -uid "560D06E8-4E35-8A7E-1415-B89FE8506DA5";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Spine02FKC_rotateZ";
 	rename -uid "43DC3F19-4CEE-1DEB-17CD-7297BBFF7CAD";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Spine03FKC_rotateX";
 	rename -uid "EAF0C719-4074-9080-DA1E-D0A4F3C76310";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Spine03FKC_rotateY";
 	rename -uid "04CEC3A2-4D2B-2D23-A8E7-4EA55B180450";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__Spine03FKC_rotateZ";
 	rename -uid "EF4A0C54-4B88-ACD0-A52A-17AF8A857A20";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__SpineTopIKC_rotateX";
 	rename -uid "26F52E03-4AA9-458D-77F3-D792D8B84BFB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__SpineTopIKC_rotateY";
 	rename -uid "BBA54C4A-4E94-C5D4-9B16-AAB1C08B632F";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__SpineTopIKC_rotateZ";
 	rename -uid "B7C9E117-4C05-C604-6A27-9F9E55E7FB52";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lClavicleC_rotateX";
 	rename -uid "DAE48060-4B29-5669-C095-8FB0A1A01B74";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lClavicleC_rotateY";
 	rename -uid "E10A6FAF-4617-B347-1594-6098BF04DAF9";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lClavicleC_rotateZ";
 	rename -uid "A6E7FE5B-4AD2-F799-809A-8DBA5F46C73D";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lElbowFKC_rotateY";
 	rename -uid "C5969CFA-420F-C51E-A34E-4AA55B88A25C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -107.69229808103383 7 -107.69229808103383
-		 13 -107.69229808103383 19 -107.69229808103383 25 -107.69229808103383;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -97.884173643474739 4 -97.884173643474739
+		 7 -97.884173643474739 10 -97.884173643474739 13 -97.884173643474739 16 -97.884173643474739
+		 19 -97.884173643474739 22 -97.884173643474739 25 -97.884173643474739;
 createNode animCurveTA -n "Max__lFootIKC_rotateX";
 	rename -uid "42F01F11-4157-E39D-864D-B4A478799D9A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 43.243560648051371 4 43.243560648051371
+		 7 23.562898724319137 10 11.867204628284357 13 1.7197008536727068 16 1.7197008536727068
+		 19 1.7197008536727068 22 18.835504643965102 25 43.243560648051371;
 createNode animCurveTA -n "Max__lFootIKC_rotateY";
 	rename -uid "3452D132-4974-F3A1-B903-B9A6921BE440";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -18.454447093742587 7 -18.454447093742587
-		 13 -18.454447093742587 19 -18.454447093742587 25 -18.454447093742587;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -12.849199958699964 4 -12.849199958699964
+		 7 -12.849199958699964 10 -12.849199958699964 13 -12.849199958699964 16 -12.849199958699964
+		 19 -12.849199958699964 22 -12.849199958699964 25 -12.849199958699964;
 createNode animCurveTA -n "Max__lFootIKC_rotateZ";
 	rename -uid "A4CA8D55-45F4-BD74-DFE0-DBA3F75DBDA3";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 16.617659154744153 4 16.617659154744153
+		 7 16.617659154744153 10 7.2637245019420256 13 -3.7838105884728126 16 -3.7838105884728126
+		 19 -3.7838105884728126 22 5.4117830936150222 25 16.617659154744153;
 createNode animCurveTA -n "Max__lHipFKC_rotateX";
 	rename -uid "50FCE52A-487B-16B8-8964-61B9FA027FB7";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lHipFKC_rotateY";
 	rename -uid "2FB49A4E-4BEF-9430-5E7A-6D82094C93B4";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lHipFKC_rotateZ";
 	rename -uid "0EEFEAC8-44EC-D2FA-7C61-858DF1A2D2D5";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lPalmC_rotateX";
 	rename -uid "2DD28DC8-42FA-1511-9D37-8CBFAA4106C1";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lPalmC_rotateY";
 	rename -uid "164964EA-4D5B-EF95-CDF1-E196BD9848D1";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lPalmC_rotateZ";
 	rename -uid "16DEEA27-4FE3-19B3-82EB-1A901C133439";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lFinger1J1C_rotateX";
 	rename -uid "3B1FC979-4400-8ABB-6817-E7915A530872";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lFinger1J1C_rotateY";
 	rename -uid "D4DC41E1-4944-AEFB-4401-80B7744DE4B8";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lFinger1J1C_rotateZ";
 	rename -uid "03D73F71-47F5-7F34-BB86-CCB2BF7A684B";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -75.499938483651604 7 -75.499938483651604
-		 13 -75.499938483651604 19 -75.499938483651604 25 -75.499938483651604;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -75.499938483651604 4 -75.499938483651604
+		 7 -75.499938483651604 10 -75.499938483651604 13 -75.499938483651604 16 -75.499938483651604
+		 19 -75.499938483651604 22 -75.499938483651604 25 -75.499938483651604;
 createNode animCurveTA -n "Max__lFinger1J2C_rotateX";
 	rename -uid "81D4A9E4-4D63-3F1C-0D91-AAA8DF66F460";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lFinger1J2C_rotateY";
 	rename -uid "04021D2E-4FEB-9C9B-28B2-73ACC442E60E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lFinger1J2C_rotateZ";
 	rename -uid "259D66CF-42AC-4801-B4D9-9AA2A1FACFF4";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -52.792495722048912 7 -52.792495722048912
-		 13 -52.792495722048912 19 -52.792495722048912 25 -52.792495722048912;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -52.792495722048912 4 -52.792495722048912
+		 7 -52.792495722048912 10 -52.792495722048912 13 -52.792495722048912 16 -52.792495722048912
+		 19 -52.792495722048912 22 -52.792495722048912 25 -52.792495722048912;
 createNode animCurveTA -n "Max__lFinger1J3C_rotateX";
 	rename -uid "3FF02DB6-4E99-A986-6D49-F490FADAED52";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lFinger1J3C_rotateY";
 	rename -uid "FDEA0114-4E16-B703-B63D-EBB1AC803F58";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lFinger1J3C_rotateZ";
 	rename -uid "B5B1649C-480F-0246-94C9-37BE0474536A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -77.69365288301168 7 -77.69365288301168
-		 13 -77.69365288301168 19 -77.69365288301168 25 -77.69365288301168;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -77.69365288301168 4 -77.69365288301168
+		 7 -77.69365288301168 10 -77.69365288301168 13 -77.69365288301168 16 -77.69365288301168
+		 19 -77.69365288301168 22 -77.69365288301168 25 -77.69365288301168;
 createNode animCurveTA -n "Max__lShoulderFKC_rotateX";
 	rename -uid "6CFE9BCB-4011-FD43-897E-0FBBC13DA3A9";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1.3221256412015252 7 1.3221256412015252
-		 13 1.3221256412015252 19 1.3221256412015252 25 1.3221256412015252;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1.3221256412015252 4 1.3221256412015252
+		 7 1.3221256412015252 10 1.3221256412015252 13 1.3221256412015252 16 1.3221256412015252
+		 19 1.3221256412015252 22 1.3221256412015252 25 1.3221256412015252;
 createNode animCurveTA -n "Max__lShoulderFKC_rotateY";
 	rename -uid "BEAE1E10-436E-7AFF-2860-B98975B880C6";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -35.398112781428004 7 -35.398112781428004
-		 13 -35.398112781428004 19 -35.398112781428004 25 -35.398112781428004;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 5.95845545290923 4 5.95845545290923 7 5.95845545290923
+		 10 5.95845545290923 13 5.95845545290923 16 5.95845545290923 19 5.95845545290923 22 5.95845545290923
+		 25 5.95845545290923;
 createNode animCurveTA -n "Max__lShoulderFKC_rotateZ";
 	rename -uid "B266513A-49B1-221C-91ED-20AAD9996AB8";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -56.996747261231647 7 -56.996747261231647
-		 13 -56.996747261231647 19 -56.996747261231647 25 -56.996747261231647;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -51.633323041447738 4 -51.633323041447738
+		 7 -51.633323041447738 10 -51.633323041447738 13 -51.633323041447738 16 -51.633323041447738
+		 19 -51.633323041447738 22 -51.633323041447738 25 -51.633323041447738;
 createNode animCurveTA -n "Max__lToeIKC_rotateX";
 	rename -uid "BA096705-44FF-3975-E6A2-2A939E3D0757";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lToeIKC_rotateY";
 	rename -uid "05276284-4215-59AF-9C70-D1ABAA3133BB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lToeIKC_rotateZ";
 	rename -uid "ADA7A013-4175-AC38-2ED6-DC9121C7BF9C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lWristFKC_rotateX";
 	rename -uid "B5C7BCD0-41B3-481F-AF80-188D03155037";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 84.095530591899845 7 84.095530591899845
-		 13 84.095530591899845 19 84.095530591899845 25 84.095530591899845;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 10.547638301767178 4 10.547638301767178
+		 7 10.547638301767178 10 10.547638301767178 13 10.547638301767178 16 10.547638301767178
+		 19 10.547638301767178 22 10.547638301767178 25 10.547638301767178;
 createNode animCurveTA -n "Max__lWristFKC_rotateY";
 	rename -uid "C3172BCA-4B9C-8A16-CF5F-4EB3BDF06901";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lWristFKC_rotateZ";
 	rename -uid "87F4E9AC-4F70-4366-A3BE-93B445A92194";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lThumbJ1C_rotateX";
 	rename -uid "6E4FD5AD-4A64-0282-F73F-7FB1245FD022";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lThumbJ1C_rotateY";
 	rename -uid "6C82F6E2-4233-80A6-3D6F-A9A361595B5D";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lThumbJ1C_rotateZ";
 	rename -uid "3834C69A-439B-97DB-E116-1AA983472A37";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lThumbJ2C_rotateX";
 	rename -uid "590A22AB-4321-27DA-EEE9-BEBC7D1D01FB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lThumbJ2C_rotateY";
 	rename -uid "E66A7DC9-4F95-44E4-0B2D-1BB43FAB8C40";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lThumbJ2C_rotateZ";
 	rename -uid "67B33555-4B45-C6EE-7570-57A3A3AAE492";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -41.540298223856936 7 -41.540298223856936
-		 13 -41.540298223856936 19 -41.540298223856936 25 -41.540298223856936;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -41.540298223856936 4 -41.540298223856936
+		 7 -41.540298223856936 10 -41.540298223856936 13 -41.540298223856936 16 -41.540298223856936
+		 19 -41.540298223856936 22 -41.540298223856936 25 -41.540298223856936;
 createNode animCurveTA -n "Max__lThumbJ3C_rotateX";
 	rename -uid "4C997D66-4484-9A5A-AF8C-C09BE9BB4912";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lThumbJ3C_rotateY";
 	rename -uid "C0F9DDDE-4BB2-159F-0012-D796EDE18E5F";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__lThumbJ3C_rotateZ";
 	rename -uid "068E3A97-4E2F-E0D6-397F-1C8D90A09123";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rClavicleC_rotateX";
 	rename -uid "D47B0BB9-47FB-F536-6433-E2BC9264CC61";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rClavicleC_rotateY";
 	rename -uid "0E9956E9-4DD2-6FAF-DF4C-BF872B7016C2";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rClavicleC_rotateZ";
 	rename -uid "A57993AA-4476-31E4-BAB4-88BC6C1A1420";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rElbowFKC_rotateY";
 	rename -uid "C991D3CB-4E78-97AA-4820-B08A0E0B0057";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -99.025121444394074 7 -99.025121444394074
-		 13 -99.025121444394074 19 -99.025121444394074 25 -99.025121444394074;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -80.599840696655335 4 -80.599840696655335
+		 7 -80.599840696655335 10 -80.599840696655335 13 -80.599840696655335 16 -80.599840696655335
+		 19 -80.599840696655335 22 -80.599840696655335 25 -80.599840696655335;
 createNode animCurveTA -n "Max__rFootIKC_rotateX";
 	rename -uid "A6C927D0-48A7-75B0-04A7-9F8400F11D25";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 34.473819361512142 7 34.473819361512142
-		 13 34.473819361512142 19 34.473819361512142 25 34.473819361512142;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -3.6207871336189732 4 -3.6207871336189732
+		 7 -3.6207871336189732 10 33.342672653142259 13 43.825505360616638 16 43.825505360616638
+		 19 13.216392353287929 22 0.087275911968443545 25 -3.6207871336189732;
 createNode animCurveTA -n "Max__rFootIKC_rotateY";
 	rename -uid "D1A08B74-4726-7263-1B7B-A0BFDA75FB55";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 17.625826888111561 7 17.625826888111561
-		 13 17.625826888111561 19 17.625826888111561 25 17.625826888111561;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 14.412523397084533 4 14.412523397084533
+		 7 14.412523397084533 10 14.412523397084533 13 14.412523397084533 16 14.412523397084533
+		 19 14.412523397084533 22 20.492701937187157 25 14.412523397084533;
 createNode animCurveTA -n "Max__rFootIKC_rotateZ";
 	rename -uid "E4D43AD8-4437-BAAD-B905-70A52FE8C95E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -5.3198949455339042 4 -5.3198949455339042
+		 7 -5.3198949455339042 10 -12.225463323872624 13 -5.3198949455339042 16 -5.3198949455339042
+		 19 -5.3198949455339042 22 -5.3198949455339042 25 -5.3198949455339042;
 createNode animCurveTA -n "Max__rHipFKC_rotateX";
 	rename -uid "D5C62BFB-48AE-F36E-66C4-46A51E4ED235";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rHipFKC_rotateY";
 	rename -uid "2E711C61-4144-B5A7-32C8-3C9C097A7CB3";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rHipFKC_rotateZ";
 	rename -uid "971CF253-4A2C-7C52-75FA-4182DA8B22FA";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rPalmC_rotateX";
 	rename -uid "061EBB68-4ECB-34FD-4C10-3BAE8AE3DE75";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rPalmC_rotateY";
 	rename -uid "C1025722-4934-3DAE-30AA-11AA36117C60";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rPalmC_rotateZ";
 	rename -uid "43E94399-433A-74D8-B1E0-85A1073165E8";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rFinger1J1C_rotateX";
 	rename -uid "AA634D1B-4FC1-EABF-6E0B-029EC5D30843";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rFinger1J1C_rotateY";
 	rename -uid "63E153AB-40B0-0BFC-F780-7096A24F7496";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rFinger1J1C_rotateZ";
 	rename -uid "CBC23797-4390-F410-A37C-7B9AD68CE46A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -68.339586023865635 7 -68.339586023865635
-		 13 -68.339586023865635 19 -68.339586023865635 25 -68.339586023865635;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -68.339586023865635 4 -68.339586023865635
+		 7 -68.339586023865635 10 -68.339586023865635 13 -68.339586023865635 16 -68.339586023865635
+		 19 -68.339586023865635 22 -68.339586023865635 25 -68.339586023865635;
 createNode animCurveTA -n "Max__rFinger1J2C_rotateX";
 	rename -uid "655A4A6C-4743-0130-A752-A488A3737EBC";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rFinger1J2C_rotateY";
 	rename -uid "03F5A998-4A90-E033-41D6-98943E7EC34A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rFinger1J2C_rotateZ";
 	rename -uid "CEB143AE-469B-C2DC-8CAC-28B08D66B456";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -43.216389493385179 7 -43.216389493385179
-		 13 -43.216389493385179 19 -43.216389493385179 25 -43.216389493385179;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -43.216389493385179 4 -43.216389493385179
+		 7 -43.216389493385179 10 -43.216389493385179 13 -43.216389493385179 16 -43.216389493385179
+		 19 -43.216389493385179 22 -43.216389493385179 25 -43.216389493385179;
 createNode animCurveTA -n "Max__rFinger1J3C_rotateX";
 	rename -uid "953ECD7A-4DBA-84B3-6E6F-68B71CA8BB32";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rFinger1J3C_rotateY";
 	rename -uid "7157AFE9-4021-B1D3-8E05-BFAF51BADC9B";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rFinger1J3C_rotateZ";
 	rename -uid "7336D89D-4CC4-7AA4-E328-03B9A284F972";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -67.466655394178801 7 -67.466655394178801
-		 13 -67.466655394178801 19 -67.466655394178801 25 -67.466655394178801;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -67.466655394178801 4 -67.466655394178801
+		 7 -67.466655394178801 10 -67.466655394178801 13 -67.466655394178801 16 -67.466655394178801
+		 19 -67.466655394178801 22 -67.466655394178801 25 -67.466655394178801;
 createNode animCurveTA -n "Max__rShoulderFKC_rotateX";
 	rename -uid "C691535E-4114-59C4-D610-DC865B22A66D";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 13.297308655792564 7 13.297308655792564
-		 13 13.297308655792564 19 13.297308655792564 25 13.297308655792564;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 13.297308655792564 4 13.297308655792564
+		 7 13.297308655792564 10 13.297308655792564 13 13.297308655792564 16 13.297308655792564
+		 19 13.297308655792564 22 13.297308655792564 25 13.297308655792564;
 createNode animCurveTA -n "Max__rShoulderFKC_rotateY";
 	rename -uid "CD0FF95F-4F9F-5BA9-F231-45BB883AEB5C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -39.178780246894071 7 -39.178780246894071
-		 13 -39.178780246894071 19 -39.178780246894071 25 -39.178780246894071;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -97.255988308206824 4 -97.255988308206824
+		 7 -97.255988308206824 10 -97.255988308206824 13 -97.255988308206824 16 -97.255988308206824
+		 19 -97.255988308206824 22 -97.255988308206824 25 -97.255988308206824;
 createNode animCurveTA -n "Max__rShoulderFKC_rotateZ";
 	rename -uid "A5A00CB9-4E43-A52D-8CE9-AFB52F9C8A9A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -56.729058136440237 7 -56.729058136440237
-		 13 -56.729058136440237 19 -56.729058136440237 25 -56.729058136440237;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -46.001479998028806 4 -46.001479998028806
+		 7 -46.001479998028806 10 -46.001479998028806 13 -46.001479998028806 16 -46.001479998028806
+		 19 -46.001479998028806 22 -46.001479998028806 25 -46.001479998028806;
 createNode animCurveTA -n "Max__rToeIKC_rotateX";
 	rename -uid "2458D00D-4EC2-EFA9-CCD6-68B13B4A23D4";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -19.827837099024272 7 -19.827837099024272
-		 13 -19.827837099024272 19 -19.827837099024272 25 -19.827837099024272;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 2.254440286941843 4 2.254440286941843
+		 7 2.254440286941843 10 2.254440286941843 13 2.254440286941843 16 2.254440286941843
+		 19 2.254440286941843 22 2.254440286941843 25 2.254440286941843;
 createNode animCurveTA -n "Max__rToeIKC_rotateY";
 	rename -uid "474BDE16-454D-A72C-C62E-54863AC0ACA2";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rToeIKC_rotateZ";
 	rename -uid "34ABB22D-49FF-A7A1-2E9D-178FE7ED1C7A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rWristFKC_rotateX";
 	rename -uid "44E46C87-4A42-6B29-7E83-FB8A004E0B0C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 70.489829419611013 7 70.489829419611013
-		 13 70.489829419611013 19 70.489829419611013 25 70.489829419611013;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0.16185921875405906 4 0.16185921875405906
+		 7 0.16185921875405906 10 0.16185921875405906 13 0.16185921875405906 16 0.16185921875405906
+		 19 0.16185921875405906 22 0.16185921875405906 25 0.16185921875405906;
 createNode animCurveTA -n "Max__rWristFKC_rotateY";
 	rename -uid "A1C4C32D-4EA8-17C7-B718-B48A0DC289E3";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 6.8935634561263823 7 6.8935634561263823
-		 13 6.8935634561263823 19 6.8935634561263823 25 6.8935634561263823;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 6.8935634561263823 4 6.8935634561263823
+		 7 6.8935634561263823 10 6.8935634561263823 13 6.8935634561263823 16 6.8935634561263823
+		 19 6.8935634561263823 22 6.8935634561263823 25 6.8935634561263823;
 createNode animCurveTA -n "Max__rWristFKC_rotateZ";
 	rename -uid "9B73A920-42EA-6B5B-65A9-BD8326EB7BCD";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 13.727634427530552 7 13.727634427530552
-		 13 13.727634427530552 19 13.727634427530552 25 13.727634427530552;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 13.727634427530552 4 13.727634427530552
+		 7 13.727634427530552 10 13.727634427530552 13 13.727634427530552 16 13.727634427530552
+		 19 13.727634427530552 22 13.727634427530552 25 13.727634427530552;
 createNode animCurveTA -n "Max__rThumbJ1C_rotateX";
 	rename -uid "552D64FD-4858-F99E-8173-4C907A52C8AB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rThumbJ1C_rotateY";
 	rename -uid "58464A8C-430D-517F-0FEB-58BCCEB715C3";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rThumbJ1C_rotateZ";
 	rename -uid "ABAE18A1-49DA-D6CC-FF6D-D7976395B669";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rThumbJ2C_rotateX";
 	rename -uid "43B43C42-437B-D2AA-811D-D895EABEA383";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rThumbJ2C_rotateY";
 	rename -uid "6370C5A4-4663-4FDF-F83D-8C9B92631877";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rThumbJ2C_rotateZ";
 	rename -uid "84727E9B-4B97-4167-02C5-548E442258F4";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -45.936872935917719 7 -45.936872935917719
-		 13 -45.936872935917719 19 -45.936872935917719 25 -45.936872935917719;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -45.936872935917719 4 -45.936872935917719
+		 7 -45.936872935917719 10 -45.936872935917719 13 -45.936872935917719 16 -45.936872935917719
+		 19 -45.936872935917719 22 -45.936872935917719 25 -45.936872935917719;
 createNode animCurveTA -n "Max__rThumbJ3C_rotateX";
 	rename -uid "8D90EF81-49D7-8D74-80BB-4E8A9D88AF6B";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rThumbJ3C_rotateY";
 	rename -uid "EE0F0BEA-4DCD-B9A6-9D95-249B223C3156";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTA -n "Max__rThumbJ3C_rotateZ";
 	rename -uid "13FA6F4F-4E3C-6BC4-637C-0A9A1AE816EB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__MainC_translateX";
 	rename -uid "D04258A8-4773-1ECF-4B93-40B749B9F8CF";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__MainC_translateY";
 	rename -uid "84AEFF0C-479B-C097-007E-CD9820839F29";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__MainC_translateZ";
 	rename -uid "28E7850D-4530-509A-7797-5BB7C97CFF09";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__MainC_scaleX";
 	rename -uid "FC67B779-4DA5-B9A5-06C2-DBA0FF32C26A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__MainC_scaleY";
 	rename -uid "ABBD65A7-425A-E9B0-5B31-A8B3F4BFEC13";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__MainC_scaleZ";
 	rename -uid "33A852B6-4DDE-97E9-3B93-5CBB7680D5F4";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__MainC_spineIK";
 	rename -uid "43B0E320-4DE6-8DEF-8F94-29A5976DB4A0";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__MainC_spineMicro";
 	rename -uid "EAEE4285-4C1B-D174-DC10-D3A48491828A";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__MainC_neckIK";
 	rename -uid "E0719AAB-4DD4-C08C-7E7F-3D9BA1052EF2";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__MainC_neckMicro";
 	rename -uid "4B48A779-454E-B3DA-D1B2-D5B6A1464A36";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__MainC_armCurveMacro";
 	rename -uid "3131B852-4EA7-CED2-30C3-B5893CE1FE56";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__MainC_armCurveMicro";
 	rename -uid "5F667D2F-4B5A-1995-0240-039AB7A4B9DE";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__MainC_legCurveMacro";
 	rename -uid "8BDFB6B0-4BFC-69D7-7616-D6A025C6EC2C";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__MainC_legCurveMicro";
 	rename -uid "BAF18B58-4079-4B95-B01E-36B8EBC7F0BC";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_SwitchIkFk";
 	rename -uid "85A0C655-424A-4349-A308-AAAC70A973E8";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lArmSwitchC_AutoVolume";
 	rename -uid "9AB3F6C2-47A2-23F9-154A-969D400837FE";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lArmSwitchC_curve";
 	rename -uid "67265523-42CC-439E-22DC-16B1CF07A981";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_upperCurve";
 	rename -uid "853B68B7-413A-1420-1CF0-7D9D61A0CCEF";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lArmSwitchC_midCurve";
 	rename -uid "DEC3964F-4F98-F119-029D-238D9C3843B6";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lArmSwitchC_lowerCurve";
 	rename -uid "4549033A-4C16-84C4-01F8-7BB7D69C486C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lArmSwitchC_thumbCurl1";
 	rename -uid "3990691F-420E-0098-4250-659B4E68893D";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_thumbCurl2";
 	rename -uid "44C82C4B-434A-3C9C-D1B6-5CAC457FEC91";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_thumbCurl3";
 	rename -uid "8A1A8650-46A9-239E-FD7E-B9984A948A61";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_thumbSplay1";
 	rename -uid "F4F2FC69-43FA-6B87-D715-69BC5830F2B0";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_thumbSplay2";
 	rename -uid "58DE80CB-431F-F814-7E44-7CB8D8FFDF1C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_thumbSplay3";
 	rename -uid "7E841583-4E2E-D649-E132-8AA03A49656E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_thumbTwist1";
 	rename -uid "B44AFF93-4AAF-80C5-C67D-D9974080DB54";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_thumbTwist2";
 	rename -uid "4976EB83-4B55-211A-8CC6-8BA983DF8919";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_thumbTwist3";
 	rename -uid "3FA2A096-4D00-DE0C-7B6F-82A9801156C4";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_finger1Curl1";
 	rename -uid "E365B69C-4382-B890-17DF-DDAC648B6FE6";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_finger1Curl2";
 	rename -uid "6FB7FE5E-4EF9-DCC1-C3E1-C3AA78AFB3B7";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_finger1Curl3";
 	rename -uid "63891D5A-4311-F77D-8C53-12A5CCA0738A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_finger1Splay1";
 	rename -uid "DA84026A-4E23-3A22-7983-D98FAD29C5F9";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_finger1Splay2";
 	rename -uid "DDCE4416-4594-FB12-B146-C88448E7D065";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_finger1Splay3";
 	rename -uid "F2D9293A-423F-C0D7-1FFC-9BAA17076BE5";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_finger1Twist1";
 	rename -uid "3602E1BE-4BA5-1102-C1CB-2688E50BAFE7";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_finger1Twist2";
 	rename -uid "CCD6D207-4EB2-2919-36F4-BDA86D08A134";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lArmSwitchC_finger1Twist3";
 	rename -uid "F9C40FA9-4658-4BAE-5024-6EB0B8BF87D9";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__lClavicleC_translateX";
 	rename -uid "4766E77B-4744-177B-F023-C1BE465B1137";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__lClavicleC_translateY";
 	rename -uid "4C8AE5ED-4A0F-2ED7-3BB2-C79C11F1CE97";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__lClavicleC_translateZ";
 	rename -uid "8B2E3B80-4B97-2E08-DB0C-E79BB9E016D0";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__lShoulderFKC_translateX";
 	rename -uid "086801DD-441A-FD95-60C7-6C9BF9EE51BE";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__lShoulderFKC_translateY";
 	rename -uid "160D1139-4FE7-C303-D1D9-01AD54513B8A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__lShoulderFKC_translateZ";
 	rename -uid "0C8F9501-44D7-6D6B-3ECF-5EBCEF5629D9";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lShoulderFKC_scaleX";
 	rename -uid "F2ED39B1-46C6-FE3D-CCBD-0AA3BB08D5DB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lShoulderFKC_ShoulderOrient";
 	rename -uid "37AC5875-4580-2CBE-4E0C-2491F1407353";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lShoulderFKC_ClavicleInfluence";
 	rename -uid "274FD254-4F8B-D08B-86B9-B29D123D4251";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lWristFKC_scaleX";
 	rename -uid "2D0EB1CE-4735-A28D-B71E-BCA587D1CA61";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lWristFKC_scaleY";
 	rename -uid "0AACF710-4725-5A00-ABD0-21A63E191518";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lWristFKC_scaleZ";
 	rename -uid "0F2A140D-4F05-06BF-85D2-E8B2EEA90F32";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__HeadC_translateX";
 	rename -uid "3E2E5792-4B24-D25A-6453-1AB453640050";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__HeadC_translateY";
 	rename -uid "5AB40644-4814-A184-9E6A-BC87158084BD";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__HeadC_translateZ";
 	rename -uid "22B4C61D-437F-0CF6-63D3-FFBEA1C3E662";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__HeadC_scaleX";
 	rename -uid "03B7045E-4393-6906-B3B2-D289EE97D47A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__HeadC_scaleY";
 	rename -uid "AA25F006-475F-2F91-77D3-3AA70BA8C20C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__HeadC_scaleZ";
 	rename -uid "A63B2383-4C7E-0E33-3432-05A709DC5BCC";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__HeadC_NeckAutoVolume";
 	rename -uid "9DFA3213-4937-9F0E-23BA-8EAAC15C6FD1";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__HeadC_HeadOrient";
 	rename -uid "48D0FBFA-4447-8FBA-6D1B-E683FF852A09";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__HeadC_neckFollowFKC";
 	rename -uid "32C0E854-47BB-8ADC-42D7-DC8E34C15D88";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__HeadC_neckTopCurve";
 	rename -uid "DA9209CE-49E8-DDF7-3AC6-46BDE5002156";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__HeadC_neckMidCurve";
 	rename -uid "CA3E463F-481C-7BED-0DFD-55A0BD3F9959";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__HeadC_neckBtmCurve";
 	rename -uid "A267DB87-46C5-D554-DE83-AA9ACC8D26D2";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__Spine03FKC_translateX";
 	rename -uid "8D864657-4326-601A-E0EF-BA9AA105FE1E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Spine03FKC_translateY";
 	rename -uid "53D8B8B4-4EC1-9F9E-55A7-699F7CE61611";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Spine03FKC_translateZ";
 	rename -uid "9DFEBE06-4DCE-6AB0-3FC5-118EF148E6DB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__Spine03FKC_scaleY";
 	rename -uid "3C45F0D2-49AC-2084-3088-A5B7F1E67264";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__Spine02FKC_translateX";
 	rename -uid "2DEB72C9-4644-8D1E-DD55-DDA19FEED333";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Spine02FKC_translateY";
 	rename -uid "9FD81617-4A60-5366-B23C-7187036770C5";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Spine02FKC_translateZ";
 	rename -uid "A1B1A551-4C0D-7F0E-B939-90AA2213A766";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__Spine02FKC_scaleY";
 	rename -uid "7AFA2B6A-4EF5-C238-8426-0881DD3D5CA6";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__Spine01FKC_translateX";
 	rename -uid "48CE7D9B-42A1-8DEF-4D7F-A0B1A2C00728";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Spine01FKC_translateY";
 	rename -uid "49D52454-47AF-1FDC-8D5C-409DDD2BC8DB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Spine01FKC_translateZ";
 	rename -uid "ADD7803B-4210-A4E3-64D5-2EBB4BADEA0D";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__Spine01FKC_scaleY";
 	rename -uid "4F5D3F8A-4ED3-969F-30DB-358F77973499";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__SpineTopIKC_translateX";
 	rename -uid "65176278-4B93-002E-6FA2-5E8D46EE3502";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__SpineTopIKC_translateY";
 	rename -uid "D287954A-4389-261F-E775-DAB387966F2F";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__SpineTopIKC_translateZ";
 	rename -uid "6016D62A-4E51-E0A3-915E-04853ED5D11E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__SpineTopIKC_scaleX";
 	rename -uid "B8D128B1-4350-070E-CEAF-6693485F1D54";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__SpineTopIKC_scaleY";
 	rename -uid "12ADD607-42B3-5E1E-691A-1C8E51082CA1";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__SpineTopIKC_scaleZ";
 	rename -uid "01278878-43FB-D3B8-E60B-7AB97603DF1C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__SpineTopIKC_SpineAutoVolume";
 	rename -uid "6DE61BC4-4098-BD05-3CCC-F38B7110FF83";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__SpineTopIKC_SpineTopOrient";
 	rename -uid "9F2D15D5-4987-4956-C7E9-A18A2BC3D6E6";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__SpineTopIKC_spineFollowFKC";
 	rename -uid "38975296-4707-4BA1-78D7-C38F0EC3BB3B";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__SpineTopIKC_spineTopCurve";
 	rename -uid "DAAD77C8-4BC4-8721-A0CE-47BAC914A7BC";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__SpineTopIKC_spineMidCurve";
 	rename -uid "8D7CED02-4C90-1984-4710-6DB0CCCB1059";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__SpineTopIKC_spineBtmCurve";
 	rename -uid "8526CCEC-4310-678A-FA7D-1793DDF38740";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rFinger1J1C_scaleX";
 	rename -uid "8395F96E-4175-5733-3DEA-C39846B0772E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rFinger1J1C_scaleY";
 	rename -uid "93431A60-4A63-6DC7-09F8-21B93D63372E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rFinger1J1C_scaleZ";
 	rename -uid "6F21554F-460D-C895-27AC-1ABA40401292";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rFinger1J1C_palmInfluence";
 	rename -uid "16D00FFD-4A50-2E08-AE51-B5BC436867DB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rArmSwitchC_SwitchIkFk";
 	rename -uid "AAD0D4F4-4776-4529-48AE-AAAFB744BDA8";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr ".ktv[0]"  1 1;
 createNode animCurveTU -n "Max__rArmSwitchC_AutoVolume";
 	rename -uid "2CF4647F-4E3C-D76C-559F-E989E6B453F5";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rArmSwitchC_curve";
 	rename -uid "7A4BA00B-4E72-2F03-F3DE-558489596DF0";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_upperCurve";
 	rename -uid "6B63B429-48FA-CDA0-C3D8-3CBCF441608E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rArmSwitchC_midCurve";
 	rename -uid "7E4F3080-48F8-A249-82E9-30B7919FB4B8";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rArmSwitchC_lowerCurve";
 	rename -uid "1D62627C-4BF5-29B9-D93C-58BE51D73E8F";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rArmSwitchC_thumbCurl1";
 	rename -uid "F66A144B-4D3B-84C5-2EF0-85BFE387D3F4";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_thumbCurl2";
 	rename -uid "A3B5C65A-408F-EBD1-C5E0-648AF0D764A5";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_thumbCurl3";
 	rename -uid "3EB12985-4867-32DF-C37D-A1BAA2F7CC92";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_thumbSplay1";
 	rename -uid "097EF9F8-4DB1-3B68-43F4-02BA592466F0";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_thumbSplay2";
 	rename -uid "4FA95E81-42CD-2DDF-EEA8-879B6BB1FDBC";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_thumbSplay3";
 	rename -uid "6126D97C-49B8-9806-C539-7381176DF475";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_thumbTwist1";
 	rename -uid "1C372D1A-42C0-1DFE-088E-B6A9E9473E7E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_thumbTwist2";
 	rename -uid "B7D8B7AB-4A22-69D6-BD6F-EEB6124453DD";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_thumbTwist3";
 	rename -uid "DBF5E0D0-43EE-8DC2-8197-129F267FF998";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_finger1Curl1";
 	rename -uid "DA9D2F83-4922-5C0D-6966-6C805A78EB00";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_finger1Curl2";
 	rename -uid "D55DD05B-4513-5CC2-BC51-61B8EE4647BD";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_finger1Curl3";
 	rename -uid "26A5C4DA-4D4D-1361-7AB1-A0943833C289";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_finger1Splay1";
 	rename -uid "7033BDBF-441C-ADF1-1E33-CBAF6C96992D";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_finger1Splay2";
 	rename -uid "C2D56251-4D6F-BB3A-6BDE-37AAC98C2CF3";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_finger1Splay3";
 	rename -uid "437B5CEA-4C2F-73F8-03CF-E3AA435BB3F7";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_finger1Twist1";
 	rename -uid "76F7B78C-4E4D-1BAF-E2AB-D69995DDE4E2";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_finger1Twist2";
 	rename -uid "C7C9F38D-4DAE-B5F5-1C8F-4F8D21F93510";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rArmSwitchC_finger1Twist3";
 	rename -uid "33759D6A-454F-CAE9-8ED8-06998E533197";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__rHipFKC_translateX";
 	rename -uid "2FEC8F36-407B-5037-73E6-55A3F0DE008B";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__rHipFKC_translateY";
 	rename -uid "30A68A85-46E0-8E51-4EAE-6FBF150A287E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__rHipFKC_translateZ";
 	rename -uid "677E67A9-4B8C-77FC-62F1-23AA85782EAF";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rHipFKC_scaleX";
 	rename -uid "5827646A-43E6-6FB8-D44C-AC925770A9B4";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rHipFKC_HipOrient";
 	rename -uid "C4CE4A89-4470-8258-DE17-429743C93786";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lFinger1J1C_scaleX";
 	rename -uid "16C7B14B-4731-2273-277F-9094767B8731";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lFinger1J1C_scaleY";
 	rename -uid "C59EEB34-44F5-23BD-8A1F-5CA089BBC543";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lFinger1J1C_scaleZ";
 	rename -uid "8A0F1C61-4972-53F7-60DC-4FBE4E722334";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lFinger1J1C_palmInfluence";
 	rename -uid "688F1454-42A3-D893-D3EF-B782C90882F4";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lThumbJ1C_scaleX";
 	rename -uid "69D80AEB-4184-09C0-CBCB-7997183B0DA7";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lThumbJ1C_scaleY";
 	rename -uid "B6203EF1-4AFA-F49C-712D-14A8C3289C09";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lThumbJ1C_scaleZ";
 	rename -uid "06E4EB52-40FF-B1A4-CF41-4DB3D6920E03";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__ROOTC_translateX";
 	rename -uid "06AB6ED6-426A-969A-D27B-F0B6282F47B3";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__ROOTC_translateY";
 	rename -uid "ABF27A0B-4AF4-8FD3-CDF9-23ACFB44D8E1";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0.49583803154474992 7 -0.079179341384309154
-		 13 0.49583803154474992 19 0.10139823817299032 25 0.49583803154474992;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -0.38472061179411732 4 -0.018334080802624442
+		 7 -0.018334080802624442 10 0.36732178303783236 13 -0.38472061179411732 16 -0.38472061179411732
+		 19 -0.38472061179411732 22 -0.38472061179411732 25 -0.38472061179411732;
 createNode animCurveTL -n "Max__ROOTC_translateZ";
 	rename -uid "264AA389-4D59-1BD7-E002-48A805D5D89F";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Neck03FKC_translateX";
 	rename -uid "6C52C4DE-4367-B733-8361-7881BE89C402";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Neck03FKC_translateY";
 	rename -uid "A9133DE1-4D8A-CE12-638C-0B94061953F2";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Neck03FKC_translateZ";
 	rename -uid "00FFB478-4948-73B5-F685-E9A213867EF2";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__Neck03FKC_scaleY";
 	rename -uid "0EE13AE6-457E-F8AD-05F1-88AA0745A494";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__Neck02FKC_translateX";
 	rename -uid "22947AC8-4EEE-4223-3A1F-1597962E4CAA";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Neck02FKC_translateY";
 	rename -uid "99D91B75-4DCF-514C-A916-B8A5D3D83684";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Neck02FKC_translateZ";
 	rename -uid "B910D645-4617-57AF-C6FF-D1B94A54F8DE";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__Neck02FKC_scaleY";
 	rename -uid "D51670B7-414F-9C63-66D4-FC83D478830C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__Neck01FKC_translateX";
 	rename -uid "7FC13228-449D-0B15-B575-F5BE9396A093";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Neck01FKC_translateY";
 	rename -uid "A632918D-4387-3CBA-4F40-868B182ABC67";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__Neck01FKC_translateZ";
 	rename -uid "66C8536C-4A39-7A0A-0687-9A97E401DE7E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__Neck01FKC_scaleY";
 	rename -uid "8C84C565-4C35-4B87-82F0-718A4CF78D10";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__Neck01FKC_NeckOrient";
 	rename -uid "E8622500-4E71-888A-D9B7-7AB95F0E63EA";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__rShoulderFKC_translateX";
 	rename -uid "DE25B559-4BE8-D774-587A-E1BDDFF58FA3";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__rShoulderFKC_translateY";
 	rename -uid "1C91084E-4666-A86E-B933-4F9C727796FB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__rShoulderFKC_translateZ";
 	rename -uid "B7FBF65C-450F-F014-789D-04BD4451BEB0";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rShoulderFKC_scaleX";
 	rename -uid "8B7EA2F2-42F3-BBB8-F691-BF9F4BBFF087";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rShoulderFKC_ShoulderOrient";
 	rename -uid "1A6E1FA4-476B-FC7C-57F3-3CA2EDCB2FB3";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rShoulderFKC_ClavicleInfluence";
 	rename -uid "9136DE7A-414B-2C49-C213-799211C3078E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rWristFKC_scaleX";
 	rename -uid "44EEC0DC-4B68-6A71-22DE-EA9B71687928";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rWristFKC_scaleY";
 	rename -uid "75C9DCD9-49F1-2430-41AC-BAB042A825A5";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rWristFKC_scaleZ";
 	rename -uid "C96DE98D-47B9-B1E1-40E5-8B8FB6CF4E5A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__rClavicleC_translateX";
 	rename -uid "35367591-491E-59ED-3814-6688058442F0";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__rClavicleC_translateY";
 	rename -uid "E7B6485E-4B15-31F1-B1FD-9DA2A003CD57";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__rClavicleC_translateZ";
 	rename -uid "0C58DD02-4C76-282C-FB1E-E486AB2B9321";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rThumbJ1C_scaleX";
 	rename -uid "399BDB1F-4E22-9616-F86E-DDACFCCD6426";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rThumbJ1C_scaleY";
 	rename -uid "D98A4E20-4D25-51C6-AACA-9C8D8B029826";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rThumbJ1C_scaleZ";
 	rename -uid "37706686-4C05-DB8C-2411-1B853FEB394E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__lKneeIKC_translateX";
 	rename -uid "B4E52807-483C-B983-6CEE-29A6C68AFC11";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -3.0476351136096613 7 -3.0476351136096613
-		 13 -3.0476351136096613 19 -3.0476351136096613 25 -3.0476351136096613;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -3.0476351136096613 4 -3.0476351136096613
+		 7 -3.0476351136096613 10 -3.0476351136096613 13 -3.0476351136096613 16 -3.0476351136096613
+		 19 -3.0476351136096613 22 -3.0476351136096613 25 -3.0476351136096613;
 createNode animCurveTL -n "Max__lKneeIKC_translateY";
 	rename -uid "629A4916-4CEA-2ECA-9784-349CE2137991";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0.399333114086527 7 0.399333114086527
-		 13 0.399333114086527 19 0.399333114086527 25 0.399333114086527;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0.399333114086527 4 0.399333114086527
+		 7 0.399333114086527 10 0.399333114086527 13 0.399333114086527 16 0.399333114086527
+		 19 0.399333114086527 22 0.399333114086527 25 0.399333114086527;
 createNode animCurveTL -n "Max__lKneeIKC_translateZ";
 	rename -uid "D661D6AC-402C-0356-5D88-3D95688043A6";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.69307194405697381 7 -0.69307194405697381
-		 13 -0.69307194405697381 19 -0.69307194405697381 25 -0.69307194405697381;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -0.69307194405697381 4 -0.69307194405697381
+		 7 -0.69307194405697381 10 -0.69307194405697381 13 -0.69307194405697381 16 -0.69307194405697381
+		 19 -0.69307194405697381 22 -0.69307194405697381 25 -0.69307194405697381;
 createNode animCurveTU -n "Max__lKneeIKC_Follow";
 	rename -uid "1DC3004B-419E-74B3-6CF4-F8850E9C3B43";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__lFootIKC_translateX";
 	rename -uid "B0D8878A-4C5A-25CA-A1F3-9AACAD07A0A7";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -2.6959968624063877 7 -2.1259778051945086
-		 13 0.12420940693194034 19 -0.78228963814948815 25 -2.6959968624063877;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -1.2743932950485095 4 -1.2743932950485095
+		 7 -2.0678701774692891 10 -2.5153728536956703 13 -2.7557954130072879 16 -0.94061998316341577
+		 19 0.59016108304360337 22 0.35242882522395713 25 -1.2743932950485095;
 createNode animCurveTL -n "Max__lFootIKC_translateY";
 	rename -uid "07C55BF5-49E6-7B74-98BA-EA93E736F867";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 8.4407383985394429 7 -0.45576326061843941
-		 13 -1.1728647853436627 19 6.0657185126956437 25 8.4407383985394429;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1.9824686304280688 4 1.9824686304280688
+		 7 1.26551275388859 10 0.66882142824852142 13 -0.037843020249646475 16 -0.037843020249646475
+		 19 -0.037843020249646475 22 0.89030678001165642 25 1.9824686304280688;
 createNode animCurveTL -n "Max__lFootIKC_translateZ";
 	rename -uid "75275254-4E15-06AE-77E1-D2B8270CE825";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 3.5563480191618781 7 1.9515331429364715
-		 13 -4.3835777040161918 19 -1.8314469736043812 25 3.5563480191618781;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -0.44599282212515534 4 -0.44599282212515534
+		 7 1.7879386381286408 10 3.0478245013688894 13 3.7247030984647265 16 -1.3856883804108824
+		 19 -5.6954043385215245 22 -5.0260999370621695 25 -0.44599282212515534;
 createNode animCurveTU -n "Max__lFootIKC_Stretch";
 	rename -uid "5E930AAD-4FA5-6A4C-FF00-5A9B4EE639D2";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lFootIKC_KneeLock";
 	rename -uid "DD7773E8-41E4-604E-2397-CA8616F66028";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lFootIKC_LegScale";
 	rename -uid "90BCA8F8-4901-8B02-DC4A-3CA9CD0288F1";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lFootIKC_footTilt";
 	rename -uid "4DAD61A5-46EE-A34D-F311-D59AA45EF3BB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lFootIKC_heelBall";
 	rename -uid "249FE716-4A55-840E-4867-A58674489547";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lFootIKC_toeUpDn";
 	rename -uid "8558001C-433B-7C24-EF70-2D84A00EF555";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lFootIKC_ballSwivel";
 	rename -uid "EDD08BBF-40F7-5678-A816-8CBDCE31DC14";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lLegSwitchC_SwitchIkFk";
 	rename -uid "686D6653-4006-53E4-33DC-1DBF5637F47D";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lLegSwitchC_AutoVolume";
 	rename -uid "781638CA-4E9C-4661-1EF1-B99114BC0BC5";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lLegSwitchC_curve";
 	rename -uid "6F258249-409A-C7B7-EF16-3F9C42EBBD3B";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lLegSwitchC_upperCurve";
 	rename -uid "12DFF901-4D0B-25CD-D878-5CB42DE36C7F";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lLegSwitchC_midCurve";
 	rename -uid "3C52BF7B-4BCA-ED81-E8BD-4C95E81115E9";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lLegSwitchC_lowerCurve";
 	rename -uid "0AFFFAB8-4A6B-8178-4B12-C9A3E7AE5B8A";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__rFootIKC_translateX";
 	rename -uid "9893EC83-493B-D34E-64E8-A5B6F4AF72EA";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0.092782861102773229 7 1.0619446570335855
-		 13 2.4925779364168466 19 2.4925779364168466 25 0.092782861102773229;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 3.1899615992045618 4 1.5521756897130399
+		 7 0.19630370863714114 10 0.079863004029934306 13 1.4352518212099423 16 1.4352518212099423
+		 19 2.5020904798592665 22 2.6662095200179139 25 3.1899615992045618;
 createNode animCurveTL -n "Max__rFootIKC_translateY";
 	rename -uid "083A076D-41D6-93AC-49EF-C5AF9ABDD991";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1.8402289582402491 7 7.3831515367536706
-		 13 9.3294684165691617 19 1.2379545820269637 25 1.8402289582402491;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -0.33181878468087245 4 -0.33181878468087245
+		 7 -0.33181878468087245 10 1.465474213827251 13 1.8118548913879611 16 1.8118548913879611
+		 19 0.78386645117822162 22 0.23988477030473021 25 -0.33181878468087245;
 createNode animCurveTL -n "Max__rFootIKC_translateZ";
 	rename -uid "80B44668-4699-B602-764B-7F9CA110B991";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -3.0854306847445225 7 -0.35688108995267731
-		 13 3.6708817367978686 19 3.6708817367978677 25 -3.0854306847445225;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 3.4282104329856575 4 -1.1827638114199759
+		 7 -5.0000458793754969 10 -4.0494428939543621 13 -0.73516636571470761 16 -0.73516636571470761
+		 19 2.268379793438366 22 2.7304357085628537 25 3.4282104329856575;
 createNode animCurveTU -n "Max__rFootIKC_Stretch";
 	rename -uid "18F01A78-4B18-0F85-53C4-DDB31F92F8CC";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rFootIKC_KneeLock";
 	rename -uid "F23BB2C8-4B5E-3DC2-AA07-BBBF7FDEE144";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rFootIKC_LegScale";
 	rename -uid "65715BD8-473E-EA54-E175-5ABEB79BF6CE";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rFootIKC_footTilt";
 	rename -uid "8D4E8D14-4E27-0F9A-0676-3D8542CCE768";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rFootIKC_heelBall";
 	rename -uid "1C9E9D6C-453E-0884-E14D-BB93E030DB92";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rFootIKC_toeUpDn";
 	rename -uid "27CFF5CD-4849-40ED-D985-769330933E49";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rFootIKC_ballSwivel";
 	rename -uid "919F4146-4284-FE4D-2C91-37A7DF91D68F";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rLegSwitchC_SwitchIkFk";
 	rename -uid "B01F258B-4A5A-A42F-E651-5AABE62EC9FB";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rLegSwitchC_AutoVolume";
 	rename -uid "3CC60FB7-4867-985A-80F8-97AAE7F18357";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rLegSwitchC_curve";
 	rename -uid "FE079D49-48C1-55A2-FEB7-2187DCAA4772";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__rLegSwitchC_upperCurve";
 	rename -uid "1E52F15D-4D5C-FBB5-5210-27B2929E8644";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rLegSwitchC_midCurve";
 	rename -uid "F38DD0CD-4F45-A668-32AA-909B9AB74F08";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__rLegSwitchC_lowerCurve";
 	rename -uid "EE8B10D8-43B4-E484-8725-399A91642A43";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__rKneeIKC_translateX";
 	rename -uid "219EF7BA-4EB4-8B79-BC8F-9BBCFF678D42";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 3.0459703387468675 7 3.0459703387468675
-		 13 3.0459703387468675 19 3.0459703387468675 25 3.0459703387468675;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 3.0459703387468675 4 3.0459703387468675
+		 7 3.0459703387468675 10 3.0459703387468675 13 3.0459703387468675 16 3.0459703387468675
+		 19 3.0459703387468675 22 3.0459703387468675 25 3.0459703387468675;
 createNode animCurveTL -n "Max__rKneeIKC_translateY";
 	rename -uid "1DC60BB1-488C-8893-9740-3EA14229C100";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0.39851782406432418 7 0.39851782406432418
-		 13 0.39851782406432418 19 0.39851782406432418 25 0.39851782406432418;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0.39851782406432418 4 0.39851782406432418
+		 7 0.39851782406432418 10 0.39851782406432418 13 0.39851782406432418 16 0.39851782406432418
+		 19 0.39851782406432418 22 0.39851782406432418 25 0.39851782406432418;
 createNode animCurveTL -n "Max__rKneeIKC_translateZ";
 	rename -uid "815D11F0-4915-92D8-837C-BB8EC8CBC810";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 -0.68123259945594217 7 -0.68123259945594217
-		 13 -0.68123259945594217 19 -0.68123259945594217 25 -0.68123259945594217;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 -0.68123259945594217 4 -0.68123259945594217
+		 7 -0.68123259945594217 10 -0.68123259945594217 13 -0.68123259945594217 16 -0.68123259945594217
+		 19 -0.68123259945594217 22 -0.68123259945594217 25 -0.68123259945594217;
 createNode animCurveTU -n "Max__rKneeIKC_Follow";
 	rename -uid "81AFD374-4490-21AF-3F8E-0D85352D680B";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__lHipFKC_translateX";
 	rename -uid "55035434-4275-3FB6-B3D2-12B7E48F5E0C";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__lHipFKC_translateY";
 	rename -uid "579FD422-40BA-FBAE-1FDE-869697BDF462";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__lHipFKC_translateZ";
 	rename -uid "B1FA1896-4452-4E72-6DB0-8AADEEB92996";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__lHipFKC_scaleX";
 	rename -uid "2945DD3D-42FA-9CA5-EBFE-0FA76B948ED4";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__lHipFKC_HipOrient";
 	rename -uid "BC234B63-4F0D-F996-B2A8-FCA76776EE51";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTL -n "Max__MainHipC_translateX";
 	rename -uid "8008E33F-498C-0AC5-3D32-0B94D9B129CE";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__MainHipC_translateY";
 	rename -uid "9A34340C-433A-EBBF-818A-1D98683BC344";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTL -n "Max__MainHipC_translateZ";
 	rename -uid "F8BA4C8E-412E-3980-C3D3-209E098A442E";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 0 7 0 13 0 19 0 25 0;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 0 4 0 7 0 10 0 13 0 16 0 19 0 22 0 25 0;
 createNode animCurveTU -n "Max__MainHipC_scaleX";
 	rename -uid "C0CFC9A8-49C2-BB0F-4FFD-E9B14FFB8F23";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__MainHipC_scaleY";
 	rename -uid "9BB0C5C1-4393-ADA4-01DA-19B1FC276BBE";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max__MainHipC_scaleZ";
 	rename -uid "3DAA9F33-4CB6-0B52-27EE-7584F268D8E9";
-	setAttr ".tan" 3;
+	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 createNode animCurveTU -n "Max_Body1_visibility";
 	rename -uid "E967C652-490E-FEDC-BF69-1D9A3353C1DE";
 	setAttr ".tan" 9;
 	setAttr ".wgt" no;
-	setAttr -s 5 ".ktv[0:4]"  1 1 7 1 13 1 19 1 25 1;
-	setAttr -s 5 ".kot[0:4]"  5 5 5 5 5;
+	setAttr -s 9 ".ktv[0:8]"  1 1 4 1 7 1 10 1 13 1 16 1 19 1 22 1 25 1;
 select -ne :time1;
-	setAttr ".o" 10;
-	setAttr ".unw" 10;
+	setAttr ".o" 2;
+	setAttr ".unw" 2;
 select -ne :hardwareRenderingGlobals;
 	setAttr ".otfna" -type "stringArray" 22 "NURBS Curves" "NURBS Surfaces" "Polygons" "Subdiv Surface" "Particles" "Particle Instance" "Fluids" "Strokes" "Image Planes" "UI" "Lights" "Cameras" "Locators" "Joints" "IK Handles" "Deformers" "Motion Trails" "Components" "Hair Systems" "Follicles" "Misc. UI" "Ornaments"  ;
 	setAttr ".otfva" -type "Int32Array" 22 0 1 1 1 1 1
