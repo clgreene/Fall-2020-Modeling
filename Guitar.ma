@@ -1,6 +1,6 @@
 //Maya ASCII 2019 scene
 //Name: Guitar.ma
-//Last modified: Sun, Nov 15, 2020 12:47:56 AM
+//Last modified: Sun, Nov 15, 2020 12:54:31 AM
 //Codeset: 1252
 requires maya "2019";
 requires -nodeType "aiOptions" -nodeType "aiAOVDriver" -nodeType "aiAOVFilter" "mtoa" "3.1.2";
@@ -15,15 +15,15 @@ fileInfo "license" "student";
 createNode transform -s -n "persp";
 	rename -uid "740A5D3E-40D5-B6D8-844C-B7853E683566";
 	setAttr ".v" no;
-	setAttr ".t" -type "double3" 28.304361037915427 29.552980025008956 30.338966471659248 ;
-	setAttr ".r" -type "double3" -27.338352729974581 44.200000000003143 2.2182365887200745e-15 ;
+	setAttr ".t" -type "double3" 34.659546056864116 34.812647969133572 44.224103215929944 ;
+	setAttr ".r" -type "double3" -27.938352729975591 39.400000000003459 0 ;
 	setAttr ".rp" -type "double3" -1.1102230246251565e-16 1.1102230246251565e-16 -3.5527136788005009e-15 ;
 	setAttr ".rpt" -type "double3" 4.4471605023559968e-14 1.0816865509902503e-14 1.118284860848233e-14 ;
 createNode camera -s -n "perspShape" -p "persp";
 	rename -uid "BD960633-4A8C-B3DA-59F1-4DB8F048DFE6";
 	setAttr -k off ".v" no;
 	setAttr ".fl" 34.999999999999979;
-	setAttr ".coi" 61.435071820157873;
+	setAttr ".coi" 59.298301150031108;
 	setAttr ".imn" -type "string" "persp";
 	setAttr ".den" -type "string" "persp_depth";
 	setAttr ".man" -type "string" "persp_mask";
@@ -5588,6 +5588,17 @@ createNode mesh -n "pPlaneShape3" -p "pPlane4";
 	setAttr ".covm[0]"  0 1 1;
 	setAttr ".cdvm[0]"  0 1 1;
 	setAttr ".ai_translator" -type "string" "polymesh";
+createNode transform -n "spotLight1";
+	rename -uid "FB2F1011-45E6-F627-00EC-D492711118DE";
+	setAttr ".t" -type "double3" 0 31.088813204846794 -6.0685863325912166 ;
+	setAttr ".r" -type "double3" -105.32090153597267 0 0 ;
+	setAttr ".s" -type "double3" 1 1 1596.7015565348256 ;
+createNode spotLight -n "spotLightShape1" -p "spotLight1";
+	rename -uid "E2A574BB-4455-F065-1129-7E8E5018897B";
+	setAttr -k off ".v";
+	setAttr ".cl" -type "float3" 1 0.88061243 0.22399998 ;
+	setAttr ".in" 1000;
+	setAttr ".pa" 7.9518072268959266;
 createNode lightLinker -s -n "lightLinker1";
 	rename -uid "5C5F5B4C-4C09-F346-4746-34B4DACA4723";
 	setAttr -s 2 ".lnk";
@@ -7648,7 +7659,7 @@ select -ne :postProcessList1;
 	setAttr -s 2 ".p";
 select -ne :defaultRenderingList1;
 select -ne :lightList1;
-	setAttr -s 2 ".l";
+	setAttr -s 3 ".l";
 select -ne :initialShadingGroup;
 	setAttr -s 37 ".dsm";
 	setAttr ".ro" yes;
@@ -7662,7 +7673,7 @@ select -ne :defaultRenderGlobals;
 select -ne :defaultResolution;
 	setAttr ".pa" 1;
 select -ne :defaultLightSet;
-	setAttr -s 2 ".dsm";
+	setAttr -s 3 ".dsm";
 select -ne :hardwareRenderGlobals;
 	setAttr ".ctrs" 256;
 	setAttr ".btrs" 512;
@@ -8036,6 +8047,7 @@ connectAttr "groupId37.id" "groupParts49.gi";
 connectAttr "defaultRenderLayer.msg" ":defaultRenderingList1.r" -na;
 connectAttr "directionalLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "pointLightShape1.ltd" ":lightList1.l" -na;
+connectAttr "spotLightShape1.ltd" ":lightList1.l" -na;
 connectAttr "pPlaneShape1.iog.og[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pPlaneShape1.ciog.cog[0]" ":initialShadingGroup.dsm" -na;
 connectAttr "pPlaneShape2.iog.og[0]" ":initialShadingGroup.dsm" -na;
@@ -8111,4 +8123,5 @@ connectAttr "groupId36.msg" ":initialShadingGroup.gn" -na;
 connectAttr "groupId37.msg" ":initialShadingGroup.gn" -na;
 connectAttr "directionalLight1.iog" ":defaultLightSet.dsm" -na;
 connectAttr "pointLight1.iog" ":defaultLightSet.dsm" -na;
+connectAttr "spotLight1.iog" ":defaultLightSet.dsm" -na;
 // End of Guitar.ma
